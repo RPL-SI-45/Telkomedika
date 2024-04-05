@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\informasidokterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/informasidokter',[informasidokterController::class,'index']);
+Route::get('/informasidokter/create',[informasidokterController::class,'create']);
+Route::post('/informasidokter/store',[informasidokterController::class,'store']);
+
