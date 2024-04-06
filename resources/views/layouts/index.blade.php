@@ -21,6 +21,7 @@
             <th>Status Pelayanan</th>
             <th>Action</th>
         </tr>
+
     </thead>
     <tbody>
         @foreach ($antrian as $w)

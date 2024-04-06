@@ -16,7 +16,6 @@ class antrianController extends Controller{
             $antrian = antrian::all();
             return view('welcome', compact(['antrian']));
         }
-
         public function card() {
             $antrian = antrian::all();
             return view('layouts.card', compact('antrian'));}
