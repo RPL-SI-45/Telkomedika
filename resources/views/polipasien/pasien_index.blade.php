@@ -1,9 +1,10 @@
 @extends('layout.master')
 
-
-
+@push('header')
+    <title>Informasi Poli</title>
 
 @section('content')
+<div class="container mt-5">
     <div class = "container">
         <table class="table table-white table-striped">
             <tr>
@@ -13,7 +14,7 @@
                 <th>Nama Dokter</th>
                 <th>Jadwal Dokter</th>
             </tr>
-            @foreach($polipasien as $b)
+            @foreach($poli as $b)
             <tr>
                 <td>{{$b->id}}</td>
                 <td>{{$b->Nama_Poli}}</td>

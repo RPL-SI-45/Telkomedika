@@ -10,6 +10,11 @@ class PoliController extends Controller
         $poli = Poli::all();
         return view('poli.index', compact(['poli']));
     }
+    public function polipasien() {
+        $poli = Poli::all();
+        return view('polipasien.pasien_index', compact(['poli']));
+    }
+
     public function create()
     {
         return view('poli.create');
