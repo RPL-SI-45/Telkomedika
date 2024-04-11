@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class informasidokterController extends Controller
 {
-    function index(){
+    public function index(){
         $informasidokter =informasidokter::all();
         return view('informasidokter.index',compact(['informasidokter']));
     }
@@ -19,7 +19,30 @@ class informasidokterController extends Controller
 
     public function store(Request $request)
     {
-        //dd($request->except(['_token','submit']));
-       informasidokter::create($request->except0(['_token','submit']));
+       // dd($request->except(['_token','SUBMIT']));
+       informasidokter::create($request->except(['_token','SUBMIT']));
+       return redirect('/informasidokter');
+    }
+
+    public function edit($informasidokter)
+    {
+        $informasidokter = informasidokter::find($informasidokter);
+        return view('informasidokter.edit',compact(['informasidokter']));
+    }
+
+    public function update($id, Request $request)
+
+    {
+        $informasidokter = informasidokter::find($id);
+        $informasidokter->update($request->except(['_token','submit']));
+        return redirect('/informasidokter');
+    }
+
+    public function destroy($id)
+
+    {
+        $informasidokter = informasidokter::find($id);
+        $informasidokter->delete();
+        return redirect('/informasidokter');
     }
 }

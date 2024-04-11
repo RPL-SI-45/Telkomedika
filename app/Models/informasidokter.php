@@ -10,6 +10,6 @@ class informasidokter extends Model
     
     use HasFactory;
     protected $table = 'informasidokter';
-    protected $fillable=['Nama Dokter','Nama poli','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu','Status Kehadiran'];
+    protected $fillable=['Nomor','Nama_Dokter','Nama_Poli','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu','Status_Kehadiran'];
     protected $guarded = [];
 }

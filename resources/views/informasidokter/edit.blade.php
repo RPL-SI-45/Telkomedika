@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Tambah Informasi Dokter</h1>
+<h1>Edit Informasi Dokter</h1>
 
 <form action="/informasidokter/store" method="POST">
     @csrf
