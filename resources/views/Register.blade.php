@@ -58,16 +58,41 @@
     <main class="form-signin">
         <form>
             <img class="mb-4" src="/images/telkomedika.png" alt="" width="72" height="57">
-            <h1 class="h3 mb-4 fw-normal">Welcome Back</h1>
+            <h1 class="h3 mb-4 fw-normal">Personal Information</h1>
 
             <!-- Form fields -->
             <!-- You can add styling classes and adjust the design of each form field as needed -->
 
             
             <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="nama" placeholder="masukkan nama lengkap">
+                <label for="nama">Masukkan nama lengkap</label>
+            </div>
+            <div class="form-floating mb-3">
               <input type="email" class="form-control" id="email" placeholder="masukkan email">
               <label for="email">Masukkan Email</label>
             </div>
+            <div class="form-floating mb-3">
+              <input type="telp" class="form-control" id="telp" placeholder="masukkan no telp">
+              <label for="telp">Masukkan nomor telepon</label>
+            </div>
+            <!-- Add more form fields here (email, phone, card number, NIM, user type) -->
+            <div class="form-floating mb-3">
+              <input type="kartu" class="form-control" id="kartu" placeholder="no kartu">
+              <label for="kartu">Masukkan nomor kartu</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="nim" class="form-control" id="nim" placeholder="nim">
+              <label for="nim">Masukkan NIM</label>
+            </div>
+          <div class="form-floating mb-3">
+            <select class="form-select" id="user_type" name="user_type">
+                <option selected disabled>Pilih Jenis Pengguna</option>
+                <option value="1">Admin</option>
+                <option value="2">Pasien</option>
+            </select>
+            <label for="user_type">Jenis Pengguna</label>
+        </div>
         
             <div class="form-floating mb-3">
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">

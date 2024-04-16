@@ -13,15 +13,26 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->unsignedInteger('roles_id');
+            $table->string('nama_lengkap')->unique();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('no_telp')->unique();
+            $table->string('nim')->unique();
             $table->string('password');
-            $table->enum('role', ['admin','pasien'])
-            ->default('admin');
             $table->rememberToken();
             $table->timestamps();
         });
+        Schema::create('roles', function(Blueprint $kolom) {
+            $kolom->id(); 
+            $kolom->string('namaRole'); 
+            $kolom->timestamps();
+        });
+
+        Schema::table('users', function(Blueprint $table) {
+            $table->foreign('roles_id')->references('id')->on('roles')->onDelete('cascade')->onUpdate('cascade');
+        });
+        
     }
 
     /**
@@ -30,5 +41,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('users');
+        Schema::dropIfExists('roles');
     }
 };
