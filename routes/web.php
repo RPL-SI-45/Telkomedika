@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\antrianController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PoliController;
+use App\Http\Controllers\PolipasienController;
 use App\Http\Controllers\FrontAntrianController;
 
 /*
@@ -14,6 +16,20 @@ use App\Http\Controllers\FrontAntrianController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/polipasien', [PolipasienController::class, 'index']);
+
+Route::get('/poli', [PoliController::class, 'index']);
+Route::get('/poli/create', [PoliController::class, 'create']);
+Route::post('/poli/store', [PoliController::class, 'store']);
+Route::get('/poli/{id}/edit', [PoliController::class, 'edit']);
+Route::put('/poli/{id}', [PoliController::class, 'update']);
+Route::delete('/poli/{id}', [PoliController::class, 'destroy']);
 
 Route::get('/', [antrianController::class, 'welcome'])->name("antrian.home");
 Route::get('/antrian', [antrianController::class, 'index'])->name("antrian.home");
@@ -32,4 +48,3 @@ Route::get('/antrian/{id}', [antrianController::class, 'informasi']);
 
 
 Route::get('/antrian/show', [antrianController::class,'informasi'])->name("informasi");
-
