@@ -8,8 +8,10 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 
 
+use App\Http\Controllers\informasidokterController;
 use App\Http\Controllers\ReservasiController;
 use App\Http\Controllers\antrianController;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PoliController;
 use App\Http\Controllers\PolipasienController;
@@ -41,6 +43,16 @@ Route::controller(AuthController::class)->group(function () {
  
     Route::get('logout', 'logout')->middleware('auth')->name('logout');
 });
+
+
+Route::get('/informasidokter',[informasidokterController::class,'index']);
+Route::get('/informasidokter/create',[informasidokterController::class,'create']);
+Route::post('/informasidokter/store',[informasidokterController::class,'store']);
+Route::get('/informasidokter/{id}/edit',[informasidokterController::class,'edit']);
+Route::put('/informasidokter/{id}',[informasidokterController::class,'update']);
+Route::delete('/informasidokter/{id}',[informasidokterController::class,'destroy']);
+
+
 
 //Normal Users Routes List
 Route::middleware(['auth', 'user-access:user'])->group(function () {
