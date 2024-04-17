@@ -6,7 +6,7 @@
 
         <form action="/reservasi/store" method="POST">
             @csrf
-            <div class="row mb-3">
+            <div class="row mb-3"; style= "transform: translateX(5%)";>
                 <div class="col">
                     <label for="nama_pasien" class="form-label">Nama Pasien</label>
                     <input type="text" class="form-control" placeholder="Masukkan Nama Pasien" aria-label="Nama Pasien" style="border-color: red;width: 300px;margin-bottom: 20px;">
@@ -24,8 +24,8 @@
                 </div>
             </div>
 
-            <div class="row mb-3">
-                <div class="col">
+            <div class="row mb-3"; style= "transform: translateX(5%)";>
+            <div class="col">
                     <label for="tanggal_reservasi" class="form-label">Tanggal Reservasi</label>
                     <input type="date" name="tanggal_reservasi" class="form-control" value="{{ old('tanggal') ?? date('Y-m-d') }}"style="border-color: red;width: 300px;margin-bottom: 30px;" >
                     <span class="text-danger">{{ $errors->first('tanggal_reservasi') }}</span>
@@ -50,7 +50,8 @@
             </div>
 
             <div class="text-center">
-                <input type="submit" name="submit" class="btn btn-danger btn-bg" style="background-color: #B6252A" value="Buat Reservasi">
+            <input type="submit" name="submit" class="btn btn-danger btn-bg" style="transform: translateX(-30%); background-color: #B6252A;" value="Buat Reservasi">
+
             </div>
         </form>
     </div>
