@@ -14,15 +14,17 @@
 
 <div class="container">
   <div class="card" style="border: 2px solid black">
-    <div class="card-body">
-      <h5 class="card-title" style="text-align: center">Klinik Telkomedika</h5>
+    < class="card-body">
+      <h5 class="card-title" style="text-align: center; font-size: 50px;">Klinik Telkomedika</h5>
       <h6 class="card-subtitle mb-2 text-muted"style="text-align: center">Nomor Antrian</h6>
       <hr>
 
-        @foreach ($antrian as $w)
-                <h1 style="text-align: center; font-size: 50px; "><strong>{{ $w->no_antrian }}</strong></h1>
-                @break
-        @endforeach
+      @if(isset($array['no_antrian']))
+    // Lakukan sesuatu dengan $array['no_antrian']
+        @else
+    // Kode untuk menangani jika kunci 'no_antrian' tidak ada
+        @endif
+        <h1 style="text-align: center; font-size: 50px; "><strong>{{ $antrian['no_antrian']}}</strong></h1>
 
       <hr>
       <div class="card-footer">
