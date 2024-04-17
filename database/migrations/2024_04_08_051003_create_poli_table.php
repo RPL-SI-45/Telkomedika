@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('Nama_Poli');
             $table->string('Deskripsi_Poli');
             $table->string('Nama_Dokter');
-            $table->string('Jadwal_Dokter');
+            $table->string('Jadwal_dokter');
             $table->timestamps();
         });
     }
