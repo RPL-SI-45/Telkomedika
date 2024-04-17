@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\antrianController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PoliController;
 use App\Http\Controllers\PolipasienController;
+use App\Http\Controllers\FrontAntrianController;
 
 /*
 |--------------------------------------------------------------------------
@@ -10,10 +12,11 @@ use App\Http\Controllers\PolipasienController;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
 |
 */
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,3 +30,21 @@ Route::post('/poli/store', [PoliController::class, 'store']);
 Route::get('/poli/{id}/edit', [PoliController::class, 'edit']);
 Route::put('/poli/{id}', [PoliController::class, 'update']);
 Route::delete('/poli/{id}', [PoliController::class, 'destroy']);
+
+Route::get('/', [antrianController::class, 'welcome'])->name("antrian.home");
+Route::get('/antrian', [antrianController::class, 'index'])->name("antrian.home");
+
+Route::get('/antrian/create', function () {
+    return view('layouts.create'); })->name("antrian.create");
+
+Route::post('/antrian/create', [antrianController::class, 'store'])->name("antrian.home");
+Route::get('/antrian/{id}/edit',[antrianController::class, 'edit']);
+Route::put('/antrian/{id}',[antrianController::class, 'update']);
+Route::delete('/antrian/{id}',[antrianController::class, 'destroy']);
+
+Route::get('/antrian/{id}/show',[antrianController::class, 'informasi']);
+Route::get('/antrian/{id}/card',[antrianController::class, 'card']);
+Route::get('/antrian/{id}', [antrianController::class, 'informasi']);
+
+
+Route::get('/antrian/show', [antrianController::class,'informasi'])->name("informasi");
