@@ -1,5 +1,7 @@
 <?php
 
+
+use App\Http\Controllers\ReservasiController;
 use App\Http\Controllers\antrianController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PoliController;
@@ -22,6 +24,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/reservasi/create', [ReservasiController::class, "create"]);
+Route::post('/reservasi/store', [ReservasiController::class, "store"]);
+Route::put('/reservasi/{id}', [ReservasiController::class, "update"]);
+Route::delete('/reservasi/{id}', [ReservasiController::class, "destroy"]);
 Route::get('/polipasien', [PolipasienController::class, 'index']);
 
 Route::get('/poli', [PoliController::class, 'index']);
