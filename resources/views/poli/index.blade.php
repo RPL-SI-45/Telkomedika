@@ -1,11 +1,11 @@
-@extends('layout.master')
+@extends('layout.polimaster')
 
 
 
 
 @section('content')
     <div class = "container">
-        <a class="btn btn-primary" href="/poli/create">Add Data</a>
+        <a class="btn btn-secondary" href="/poli/create">Add Data</a>
         <table class="table table-white table-striped">
             <tr>
                 <th>ID</th>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PoliController;
+use App\Http\Controllers\PolipasienController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/polipasien', [PoliController::class, 'polipasien']);
+Route::get('/polipasien', [PolipasienController::class, 'index']);
+
 Route::get('/poli', [PoliController::class, 'index']);
 Route::get('/poli/create', [PoliController::class, 'create']);
 Route::post('/poli/store', [PoliController::class, 'store']);
