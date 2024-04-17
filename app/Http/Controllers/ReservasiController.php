@@ -7,11 +7,6 @@ use Illuminate\Http\Request;
 
 class ReservasiController extends Controller
 {
-    //
-    public function index(){
-        $reservasi = reservasi::all();
-        return view("index", compact("reservasi"));
-    }
     public function create ()
     {
        return view ("create");
