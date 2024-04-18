@@ -73,7 +73,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::delete('/admin/products/destroy/{id}', [ProductController::class, 'destroy'])->name('admin/products/destroy');
 });
 
-Route::get('/reservasi', [ReservasiController::class, 'index']);
+Route::get('/reservasi', [ReservasiController::class, 'create']);
 Route::get('/reservasi/create', [ReservasiController::class, 'create']);
 Route::post('/reservasi/store', [ReservasiController::class, 'store']);
 Route::get('/reservasi/{id}/edit', [ReservasiController:: class,'edit']);
