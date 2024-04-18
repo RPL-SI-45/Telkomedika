@@ -58,6 +58,10 @@
                 @enderror
             </div>
 
+            <label for="" class="form-label mt-4">Tanggal Reservasi</label>
+                    <input type="date" name="tanggal_reservasi" class="form-control" value="{{ old('tanggal') ?? date('d-m-Y') }}">
+                    <span class="text-danger">{{ $errors->first('tanggal_reservasi') }}</span>
+
             <label for="" class="form-label mt-4">Status Pelayanan</label>
             <select name="status_pelayanan" class="form-select">
                 <option value=""disabled selected>Pilih Status Pelayanan</option>

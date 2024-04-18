@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('nama_pasien');
             $table->string('jenis_kelamin');
             $table->string('poli');
+            $table->date('tanggal_reservasi');
             $table->string('status_pelayanan');
 
             $table->timestamps();

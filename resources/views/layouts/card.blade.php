@@ -21,7 +21,6 @@
 
         @foreach ($antrian as $w)
                 <h1 style="text-align: center; font-size: 50px; "><strong>{{ $w->no_antrian }}</strong></h1>
-                @break
         @endforeach
 
       <hr>

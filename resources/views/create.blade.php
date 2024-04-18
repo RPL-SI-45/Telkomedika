@@ -12,12 +12,13 @@
                     <input type="text" class="form-control" placeholder="Masukkan Nama Pasien" aria-label="Nama Pasien" style="border-color: red;width: 300px;margin-bottom: 20px;">
                 </div>
                 <div class="col">
-                    <label for="nomor_telepon" class="form-label">Nomor Telepon</label>
+                    <label for="no_telp" class="form-label">Nomor Telepon</label>
                     <input type="text" class="form-control" placeholder="Masukkan Nomor telepon" aria-label="Nomor Telepon" style="border-color: red;width: 300px;">
                 </div>
                 <div class="col">
                     <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
                     <select name="jenis_kelamin" id="jenis_kelamin" class="form-select" style="border-color: red;width: 300px;">
+                        <option value="Poli A">Laki-Laki</option>
                         <option value="Poli A">Laki-Laki</option>
                         <option value="Poli B">Perempuan</option>
                     </select>
@@ -50,7 +51,7 @@
             </div>
 
             <div class="text-center">
-            <input type="submit" name="submit" class="btn btn-danger btn-bg" style="transform: translateX(-30%); background-color: #B6252A;" value="Buat Reservasi">
+        <button type="submit" name="submit" class="btn btn-danger btn-bg" style="transform: translateX(-30%); background-color: #B6252A;">Buat Reservasi</button>
 
             </div>
         </form>

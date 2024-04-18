@@ -1,19 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\polipasien;
+use App\Models\poli;
 use Illuminate\Http\Request;
 
 class PolipasienController extends Controller
 {
     public function index() {
-        $polipasien = polipasien::all();
-        return view('polipasien.pasien_index', compact(['polipasien']));
+        $poli = poli::all();
+        return view('polipasien.pasien_index', compact(['poli']));
     }
     public function store(Request $request)
     {
-        $polipasien = polipasien::all();
-        return view('polipasien.pasien_index', compact(['polipasien']));
+        $poli = poli::all();
+        return view('polipasien.pasien_index', compact(['poli']));
     }
 
 }

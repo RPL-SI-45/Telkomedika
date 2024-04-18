@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('reservasi', function (Blueprint $table) {
             $table->id()->primary;
             $table->string("nama_pasien");
-            $table->integer("nomor_pasien");
+            $table->integer("no_telp");
             $table->string("tanggal_reservasi");
             $table->string("alamat");
             $table->text('keluhan')->nullable();

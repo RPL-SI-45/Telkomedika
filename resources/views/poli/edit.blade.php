@@ -23,7 +23,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Jadwal Dokter</label>
-                    <input type="text" name="Jadwal_Dokter" class="form-control" id="exampleFormControlInput1" value="{{$poli->Jadwal_Dokter}}">
+                    <input type="text" name="Jadwal_dokter" class="form-control" id="exampleFormControlInput1" value="{{$poli->Jadwal_dokter}}">
                 </div>
                 <input type="submit" name="submit" class="btn btn-secondary" value="save" >
         </form>

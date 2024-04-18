@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <div class="bg" style="height: 60px; background-color: #B6252A"></div>
     <div class="h3 text-white" style="position: absolute; left: 130px; transform: translateY(-150%);">Telkomedika</div>
-    <a class="text-danger btn btn-light btn-sm;" style="position: absolute; right: 50px; transform: translateY(-130%)" href="">Login</a></div>
+    <a class="text-danger btn btn-light btn-sm;" style="position: absolute; right: 50px; transform: translateY(-130%)" href="/login">Login</a></div>
 
 </div>
     <img src="{{ asset('logo/Telkomedika.png')}}" width="50px" style="position: absolute; left: 70px; transform: translateY(-115%);">
@@ -61,11 +61,11 @@
         <div class="overlay"></div>
         <div class="content">
         <h1 class="h1 text-white" style="font-size: 50px; position: absolute; left: 100px; transform: translateY(50%)"><strong> <span class="selamat">Selamat</span> <br> <span class="datangdi">Datang di</span> <br> <span class="telkomedika">Telkomedika.</span></strong></h1>
-        <h1 class="h4 text-white" style="font-size: 15px; position: absolute; left: 100px; transform: translateY(510%)">Klinik Telkomedika adalah sebuah fasilitas pelayanan kesehatan yang disediakan oleh TelkomUniversity.<br>
+        <h1 class="h4 text-white" style="font-size: 15px; position: absolute; left: 100px; transform: translateY(510%)">Klinik Telkomedika adalah sebuah fasilitas pelayanan kesehatan yang disediakan oleh Telkom University.<br>
         Klinik ini menyediakan berbagai layanan medis dan kesehatan  seperti pemeriksaan kesehatan umum,<br>  konsultasi medis,
         perawatan rawat jalan, Poli Mata, Poli Gigi, dan mungkin juga layanan kesehatan lainnya.</h1>
 
-        <a class="btn btn-danger btn-sm;" style="position: absolute; left: 100px; transform: translateY(910%); background-color: #B6252A;" href="">Register</a></div>
+        <a class="btn btn-danger btn-sm;" style="position: absolute; left: 100px; transform: translateY(910%); background-color: #B6252A;" href="/register">Register</a></div>
 
 </body>
 </html>

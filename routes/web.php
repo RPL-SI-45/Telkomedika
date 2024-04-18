@@ -1,5 +1,5 @@
 <?php
- 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductController;
@@ -12,7 +12,6 @@ use App\Http\Controllers\informasidokterController;
 use App\Http\Controllers\ReservasiController;
 use App\Http\Controllers\antrianController;
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PoliController;
 use App\Http\Controllers\PolipasienController;
 use App\Http\Controllers\FrontAntrianController;
@@ -27,20 +26,20 @@ use App\Http\Controllers\FrontAntrianController;
 | contains the "web" middleware group. Now create something great!
 |
 */
- 
+
 Route::get('/', function () {
     return view('login');
 })->name('login');
- 
+
 Route::get('/about', [UserController::class, 'about'])->name('about');
- 
+
 Route::controller(AuthController::class)->group(function () {
     Route::get('register', 'register')->name('register');
     Route::post('register', 'registerSave')->name('register.save');
- 
+
     Route::get('login', 'login')->name('login');
     Route::post('login', 'loginAction')->name('login.action');
- 
+
     Route::get('logout', 'logout')->middleware('auth')->name('logout');
 });
 
@@ -59,13 +58,13 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/profile', [UserController::class, 'userprofile'])->name('profile');
 });
- 
+
 //Admin Routes List
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin/home');
- 
+
     Route::get('/admin/profile', [AdminController::class, 'profilepage'])->name('admin/profile');
- 
+
     Route::get('/admin/products', [ProductController::class, 'index'])->name('admin/products');
     Route::get('/admin/products/create', [ProductController::class, 'create'])->name('admin/products/create');
     Route::post('/admin/products/store', [ProductController::class, 'store'])->name('admin/products/store');
@@ -75,10 +74,13 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::delete('/admin/products/destroy/{id}', [ProductController::class, 'destroy'])->name('admin/products/destroy');
 });
 
-Route::get('/reservasi/create', [ReservasiController::class, "create"]);
-Route::post('/reservasi/store', [ReservasiController::class, "store"]);
-Route::put('/reservasi/{id}', [ReservasiController::class, "update"]);
-Route::delete('/reservasi/{id}', [ReservasiController::class, "destroy"]);
+Route::get('/reservasi', [ReservasiController::class, 'index']);
+Route::get('/reservasi/create', [ReservasiController::class, 'create']);
+Route::post('/reservasi/store', [ReservasiController::class, 'store']);
+Route::get('/reservasi/{id}/edit', [ReservasiController:: class,'edit']);
+Route::put('/reservasi/{id}', [ReservasiController::class, 'update']);
+Route::delete('/reservasi/{id}', [ReservasiController::class, 'destroy']);
+
 Route::get('/polipasien', [PolipasienController::class, 'index']);
 
 Route::get('/poli', [PoliController::class, 'index']);
@@ -95,6 +97,9 @@ Route::get('/antrian/create', function () {
     return view('layouts.create'); })->name("antrian.create");
 
 Route::post('/antrian/create', [antrianController::class, 'store'])->name("antrian.home");
+Route::post('/antrian/store', [antrianController::class, 'store']);
+Route::get('/antrian/store', [antrianController::class, 'store']);
+
 Route::get('/antrian/{id}/edit',[antrianController::class, 'edit']);
 Route::put('/antrian/{id}',[antrianController::class, 'update']);
 Route::delete('/antrian/{id}',[antrianController::class, 'destroy']);

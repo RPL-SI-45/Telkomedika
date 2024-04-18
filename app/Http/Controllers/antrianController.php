@@ -28,9 +28,9 @@ class antrianController extends Controller{
                 'nama_pasien' => 'required',
                 'jenis_kelamin' => 'required',
                 'poli' => 'required',
+                'tanggal_reservasi' => 'required',
                 'status_pelayanan' => 'required'
-            ]
-            );
+            ]);
 
             $antrian=new antrian([
                 'id',
@@ -38,6 +38,7 @@ class antrianController extends Controller{
                 'nama_pasien' => $request->nama_pasien,
                 'jenis_kelamin' => $request->jenis_kelamin,
                 'poli' => $request -> poli,
+                'tanggal_reservasi' => $request -> tanggal_reservasi,
                 'status_pelayanan' => $request -> status_pelayanan, ]);
             $antrian->save();
             return redirect("/antrian");
