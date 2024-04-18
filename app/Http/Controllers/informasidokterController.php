@@ -10,7 +10,7 @@ class informasidokterController extends Controller
         $informasidokter =informasidokter::all();
         return view('informasidokter.index',compact(['informasidokter']));
     }
-    
+
 
     public function create()
     {
@@ -24,9 +24,9 @@ class informasidokterController extends Controller
        return redirect('/informasidokter');
     }
 
-    public function edit($informasidokter)
+    public function edit($id)
     {
-        $informasidokter = informasidokter::find($informasidokter);
+        $informasidokter = informasidokter::find($id);
         return view('informasidokter.edit',compact(['informasidokter']));
     }
 
