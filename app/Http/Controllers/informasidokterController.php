@@ -24,14 +24,13 @@ class informasidokterController extends Controller
        return redirect('/informasidokter');
     }
 
-    public function edit($informasidokter)
+    public function edit($id)
     {
-        $informasidokter = informasidokter::find($informasidokter);
+        $informasidokter = informasidokter::find($id);
         return view('informasidokter.edit',compact(['informasidokter']));
     }
 
     public function update($id, Request $request)
-
     {
         $informasidokter = informasidokter::find($id);
         $informasidokter->update($request->except(['_token','submit']));
