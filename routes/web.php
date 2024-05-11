@@ -42,6 +42,7 @@ Route::controller(AuthController::class)->group(function () {
     Route::get('logout', 'logout')->middleware('auth')->name('logout');
 });
 
+Route::get('/informasi',[informasidokterController::class,'informasi']);
 
 Route::get('/informasidokter',[informasidokterController::class,'index']);
 Route::get('/informasidokter/create',[informasidokterController::class,'create']);
@@ -73,15 +74,8 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::delete('/admin/products/destroy/{id}', [ProductController::class, 'destroy'])->name('admin/products/destroy');
 });
 
-Route::get('/reservasi', [ReservasiController::class, 'create']);
-Route::get('/reservasi/create', [ReservasiController::class, 'create']);
-Route::post('/reservasi/store', [ReservasiController::class, 'store']);
-Route::get('/reservasi/{id}/edit', [ReservasiController:: class,'edit']);
-Route::put('/reservasi/{id}', [ReservasiController::class, 'update']);
-Route::delete('/reservasi/{id}', [ReservasiController::class, 'destroy']);
 
 Route::get('/polipasien', [PolipasienController::class, 'index']);
-
 Route::get('/poli', [PoliController::class, 'index']);
 Route::get('/poli/create', [PoliController::class, 'create']);
 Route::post('/poli/store', [PoliController::class, 'store']);
@@ -89,23 +83,27 @@ Route::get('/poli/{id}/edit', [PoliController::class, 'edit']);
 Route::put('/poli/{id}', [PoliController::class, 'update']);
 Route::delete('/poli/{id}', [PoliController::class, 'destroy']);
 
-Route::get('/', [antrianController::class, 'welcome'])->name("antrian.home");
-Route::get('/antrian', [antrianController::class, 'index'])->name("antrian.home");
 
-Route::get('/antrian/create', function () {
-    return view('layouts.create'); })->name("antrian.create");
-
-Route::post('/antrian/create', [antrianController::class, 'store'])->name("antrian.home");
+Route::get('/', function() {
+    return view('welcome');
+});
+Route::get('/antrian',  [antrianController::class, 'informasi']);
 Route::post('/antrian/store', [antrianController::class, 'store']);
-Route::get('/antrian/store', [antrianController::class, 'store']);
 
+
+Route::get('/daftarreservasi', [antrianController::class, 'index']);
+Route::get('/reservasi/create', [antrianController::class, 'create']);
+Route::post('/reservasi/create', [antrianController::class, 'store']);
+Route::post('/reservasi/store', [antrianController::class, 'store']);
+Route::post('/antrian/create', [antrianController::class, 'store']);
+Route::post('/antrian', [antrianController::class, 'store'])->name("antrian.store");
+
+Route::put('/antrian/{id}', [antrianController::class, 'update']);
 Route::get('/antrian/{id}/edit',[antrianController::class, 'edit']);
-Route::put('/antrian/{id}',[antrianController::class, 'update']);
 Route::delete('/antrian/{id}',[antrianController::class, 'destroy']);
 
 Route::get('/antrian/{id}/show',[antrianController::class, 'informasi']);
 Route::get('/antrian/{id}/card',[antrianController::class, 'card']);
 Route::get('/antrian/{id}', [antrianController::class, 'informasi']);
-
-
 Route::get('/antrian/show', [antrianController::class,'informasi'])->name("informasi");
+

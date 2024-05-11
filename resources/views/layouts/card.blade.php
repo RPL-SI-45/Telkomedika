@@ -19,9 +19,7 @@
       <h6 class="card-subtitle mb-2 text-muted"style="text-align: center">Nomor Antrian</h6>
       <hr>
 
-        @foreach ($antrian as $w)
-                <h1 style="text-align: center; font-size: 50px; "><strong>{{ $w->no_antrian }}</strong></h1>
-        @endforeach
+                <h1 style="text-align: center; font-size: 50px; "><strong>{{ $antrian->no_antrian }}</strong></h1>
 
       <hr>
       <div class="card-footer">

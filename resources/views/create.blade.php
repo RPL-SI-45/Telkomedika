@@ -3,24 +3,24 @@
 @section('main-section')
     <div class="container">
         <div class="h1 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Buat Reservasi Online</div>
-
+</br>
         <form action="/reservasi/store" method="POST">
             @csrf
             <div class="row mb-3"; style= "transform: translateX(5%)";>
                 <div class="col">
                     <label for="nama_pasien" class="form-label">Nama Pasien</label>
-                    <input type="text" class="form-control" placeholder="Masukkan Nama Pasien" aria-label="Nama Pasien" style="border-color: red;width: 300px;margin-bottom: 20px;">
+                    <input type="text" name ="nama_pasien" class="form-control" placeholder="Masukkan Nama Pasien" aria-label="Nama Pasien" style="border-color: red;width: 300px;margin-bottom: 20px;">
                 </div>
                 <div class="col">
                     <label for="no_telp" class="form-label">Nomor Telepon</label>
-                    <input type="text" class="form-control" placeholder="Masukkan Nomor telepon" aria-label="Nomor Telepon" style="border-color: red;width: 300px;">
+                    <input type="text" name ="no_telp" class="form-control" placeholder="Masukkan Nomor telepon" aria-label="Nomor Telepon" style="border-color: red;width: 300px;">
                 </div>
                 <div class="col">
                     <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
                     <select name="jenis_kelamin" id="jenis_kelamin" class="form-select" style="border-color: red;width: 300px;">
-                        <option value="Poli A">Laki-Laki</option>
-                        <option value="Poli A">Laki-Laki</option>
-                        <option value="Poli B">Perempuan</option>
+                        <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                        <option value="">Laki-Laki</option>
+                        <option value="">Perempuan</option>
                     </select>
                 </div>
             </div>
@@ -34,9 +34,10 @@
                 <div class="col">
                     <label for="poli" class="form-label">Poli</label>
                     <select name="poli" id="poli" class="form-select" style="border-color: red;width: 300px;">
-                        <option value="Poli A">Poli Umum</option>
-                        <option value="Poli B">Poli Gigi</option>
-                        <option value="Poli C">Poli Mata</option>
+                    <option value="" disabled selected>Pilih Layanan Poli</option>
+                        <option value="Poli Umum">Poli Umum</option>
+                        <option value="Poli Gigi">Poli Gigi</option>
+                        <option value="Poli Mata">Poli Mata</option>
                     </select>
                 </div>
                 <div class="col">

@@ -13,16 +13,20 @@ return new class extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up():void
     {
         Schema::create('antrian', function (Blueprint $table) {
             $table->id();
-            $table->string('no_antrian');
+            $table->bigInteger('no_antrian') ->unique() ->nullable();
             $table->string('nama_pasien');
             $table->string('jenis_kelamin');
+            $table->string('no_telp');
+            $table->string('alamat');
             $table->string('poli');
-            $table->date('tanggal_reservasi');
-            $table->string('status_pelayanan');
+            $table->string('keluhan');
+            $table->string('tanggal_reservasi');
+            $table->string('status_pelayanan')->nullable();
+
 
             $table->timestamps();
         });

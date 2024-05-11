@@ -4,46 +4,79 @@
     <title>Informasi Antrian</title>
 @endpush
 
+
 @section('main-section')
+<div class="d-sm-flex align-items-center justify-content-between mb-4"></div>
+</br>
+
 <div class="container">
-    <div class="d-flex justify-content-between align-items-center my-3">
-        <div class="h5">Daftar Antrian</div>
+    <div class="row mb-4">
+        <div class="col-xl-2 col-md-4" style="margin-left: 10px;">
+            <div class="card border-left-warning shadow">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                        <h6 class="font-weight-bold mb-0 text-center">JUMLAH ANTRIAN : {{ session('antrian_count') ?? $antrian->where('status_pelayanan', '!=', 'Selesai')->count() }}</h6>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4" style="margin-left: 1180px;">
+        <a href='/reservasi/create' class="btn btn-secondary btn-sm" style="white-space: nowrap;">Buat Reservasi</a>
+        </div>
+
     </div>
-
-    <table class="table table-striped">
-    <thead class="table-danger">
-        <tr class="text-center">
-            <th>No Antrian</th>
-            <th>Nama Pasien</th>
-            <th>Jenis Kelamin</th>
-            <th>Poli</th>
-            <th>Status Pelayanan</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach ($antrian as $w)
-        <tr class="text-center" valign='middle'>
-            <td>{{ $w->no_antrian }}</td>
-            <td>{{ $w->nama_pasien }}</td>
-            <td>{{ $w->jenis_kelamin }}</td>
-            <td>{{ $w->poli }}</td>
-            <td>{{ $w->status_pelayanan }}</td>
-            <td>
-            <div class="btn-group" role="group" aria-label="Basic example">
-
-            <a class="btn btn-primary btn-sm" href="/antrian/{{$w->id}}/card">Kartu antrian</a>
-    </form>
 </div>
 
-
-        </td>
-
-            </td>
-        </tr>
-        @endforeach
-    </tbody>
-</table>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3"; style="background-color: #B6252A";>
+                    <h6 class="m-0 font-weight-bold text-white">Daftar Antrian</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr class="text-center">
+                                    <th>No Antrian</th>
+                                    <th>Nama Pasien</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Poli</th>
+                                    <th>Tanggal Reservasi</th>
+                                    <th>Status Pelayanan</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($antrian as $w)
+                                <tr class="text-center">
+                                    <td>{{ $w->no_antrian }}</td>
+                                    <td>{{ $w->nama_pasien }}</td>
+                                    <td>{{ $w->jenis_kelamin }}</td>
+                                    <td>{{ $w->poli }}</td>
+                                    <td>{{ $w->tanggal_reservasi }}</td>
+                                    <td>{{ $w->status_pelayanan }}</td>
+                                    <td>
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <a class="btn btn-primary btn-sm" href="/antrian/{{$w->id}}/card">Kartu antrian</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
 

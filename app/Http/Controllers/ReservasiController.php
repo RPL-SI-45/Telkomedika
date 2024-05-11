@@ -16,10 +16,9 @@ class ReservasiController extends Controller
     {
        return view ("create");
     }
-    public function store(Request $request){
-    $request->validate(
-                [
-                    'id',
+    public function store(Request $request)
+    {
+            $request->validate([
                     'nama_pasien' => 'required',
                     'jenis_kelamin' => 'required',
                     'no_telp' => 'required',
@@ -27,11 +26,9 @@ class ReservasiController extends Controller
                     'poli' => 'required',
                     'keluhan' => 'required',
                     'tanggal_reservasi' => 'required',
-                ]
-                );
+                ]);
 
-                $reservasi=new reservasi([
-                    'id',
+            reservasi::create([
                     'nama_pasien' => $request->nama_pasien,
                     'jenis_kelamin' => $request->jenis_kelamin,
                     'no_telp' => $request -> no_telp,
@@ -40,7 +37,6 @@ class ReservasiController extends Controller
                     'keluhan' => $request -> keluhan,
                     'tanggal_reservasi' => $request -> tanggal_reservasi,
                 ]);
-                $reservasi->save();
                 return redirect("/reservasi");
             }
 }

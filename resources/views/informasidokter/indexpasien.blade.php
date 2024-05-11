@@ -4,10 +4,6 @@
 <div class="container">
     <div class="h2 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Informasi Dokter Klinik Telkomedika</div>
 
-    <div class="d-flex justify-content-between align-items-center my-3">
-        <a href="/informasidokter/create" class="btn btn-secondary">Tambah Informasi Dokter</a>
-    </div>
-
     <div class="row">
         <div class="col-md-12">
             <div class="card shadow mb-4">
@@ -29,7 +25,6 @@
                                     <th scope="col">Jumat</th>
                                     <th scope="col">Sabtu</th>
                                     <th scope="col">Status Kehadiran</th>
-                                    <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -45,16 +40,6 @@
                                     <td>{{ $dokter->Jumat }}</td>
                                     <td>{{ $dokter->Sabtu }}</td>
                                     <td>{{ $dokter->Status_Kehadiran }}</td>
-                                    <td>
-                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                            <a class="btn btn-warning btn-sm" href="/informasidokter/{{ $dokter->id }}/edit">Edit</a>
-                                            <form action="/informasidokter/{{ $dokter->id }}" method="POST">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                                            </form>
-                                        </div>
-                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>

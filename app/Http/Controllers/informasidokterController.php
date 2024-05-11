@@ -45,4 +45,9 @@ class informasidokterController extends Controller
         $informasidokter->delete();
         return redirect('/informasidokter');
     }
+
+    public function informasi(){
+        $informasidokter = informasidokter::all();
+        return view('informasidokter.indexpasien', compact('informasidokter'));
+    }
 }
