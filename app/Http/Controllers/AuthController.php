@@ -7,12 +7,15 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\File;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Storage;
 
 class AuthController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('auth');
         $this->middleware('guest')->except('logout');
     }
 
@@ -25,13 +28,20 @@ class AuthController extends Controller
     {
         Validator::make($request->all(), [
             'name' => 'required',
+            'telp' => 'required',
+            'kartu' => 'required',
+            'nim' => 'required',
             'email' => 'required|email',
             'password' => 'required|confirmed'
+            
         ])->validate();
 
         User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'telp' => $request->telp,
+            'kartu' => $request->kartu,
+            'nim' => $request->nim,
             'password' => Hash::make($request->password),
             'type' => "0"
         ]);
@@ -74,15 +84,17 @@ class AuthController extends Controller
 
         return redirect('/login');
     }
-
     public function profile()
     {
         return view('userprofile');
     }
 
-    public function adminHome()
-    {
-        $this->middleware('user-access');
-        return view('dashboard');
-    }
+
+
+public function adminHome()
+{
+    $this->middleware('user-access');
+    return view('dashboard');
+}
+
 }

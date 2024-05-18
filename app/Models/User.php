@@ -12,7 +12,8 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
-
+    /** @var \App\Models\User $user */
+   
     /**
      * The attributes that are mass assignable.
      *
@@ -21,6 +22,10 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'telp',
+        'kartu',
+        'alamat',
+        'nim',
         'password',
         'type'
     ];
