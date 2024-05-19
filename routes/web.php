@@ -13,7 +13,11 @@ use App\Http\Controllers\antrianController;
 
 use App\Http\Controllers\PoliController;
 use App\Http\Controllers\PolipasienController;
+
+use App\Http\Controllers\LihatrumahsakitController;
+use App\Http\Controllers\RumahsakitController;
 use App\Http\Controllers\FrontAntrianController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +29,15 @@ use App\Http\Controllers\FrontAntrianController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/lihatrumahsakit', [LihatrumahsakitController::class, 'indexlihatrs']);
+
+Route::get('/rumahsakit', [RumahsakitController::class, 'index']);
+Route::get('/rumahsakit/createrumahsakit', [RumahsakitController::class, 'createrumahsakit']);
+Route::post('/rumahsakit/store', [RumahsakitController::class, 'store']);
+Route::get('/rumahsakit/{id}/edit', [RumahsakitController::class, 'edit']);
+Route::put('/rumahsakit/{id}', [RumahsakitController::class, 'update']);
+Route::delete('/rumahsakit/{id}', [RumahsakitController::class, 'destroy']);
 
 Route::get('/', function () {
     return view('login');
@@ -106,4 +119,5 @@ Route::get('/antrian/{id}/show',[antrianController::class, 'informasi']);
 Route::get('/antrian/{id}/card',[antrianController::class, 'card']);
 Route::get('/antrian/{id}', [antrianController::class, 'informasi']);
 Route::get('/antrian/show', [antrianController::class,'informasi'])->name("informasi");
+
 
