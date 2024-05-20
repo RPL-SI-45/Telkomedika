@@ -109,3 +109,5 @@ Route::get('/antrian/{id}', [antrianController::class, 'informasi']);
 Route::get('/antrian/show', [antrianController::class,'informasi'])->name("informasi");
 
 Route::get('/rekammedis',[RekammedisController::class, 'index']);
+Route::get('/rekammedis/{id}/view',[RekammedisController::class, 'view']);
+Route::delete('/rekammedis',[RekammedisController::class, 'destroy']);

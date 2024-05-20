@@ -19,8 +19,6 @@ return new class extends Migration
             $table->id();
             $table->string('nama_pasien');
             $table->string('tanggal_pelayanan');
-
-
             $table->timestamps();
         });
     }
