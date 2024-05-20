@@ -14,6 +14,7 @@ use App\Http\Controllers\antrianController;
 use App\Http\Controllers\PoliController;
 use App\Http\Controllers\PolipasienController;
 use App\Http\Controllers\FrontAntrianController;
+use App\Http\Controllers\RekammedisController;
 
 /*
 |--------------------------------------------------------------------------
@@ -107,3 +108,4 @@ Route::get('/antrian/{id}/card',[antrianController::class, 'card']);
 Route::get('/antrian/{id}', [antrianController::class, 'informasi']);
 Route::get('/antrian/show', [antrianController::class,'informasi'])->name("informasi");
 
+Route::get('/rekammedis',[RekammedisController::class, 'index']);
