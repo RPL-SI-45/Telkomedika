@@ -15,10 +15,11 @@ return new class extends Migration
      */
     public function up():void
     {
-        Schema::create('rekammedis', function (Blueprint $table) {
+        Schema::view('rekammedis', function (Blueprint $table) {
             $table->id();
             $table->string('nama_pasien');
             $table->string('tanggal_pelayanan');
+            $table->string('hasil_diagnosa');
             $table->timestamps();
         });
     }

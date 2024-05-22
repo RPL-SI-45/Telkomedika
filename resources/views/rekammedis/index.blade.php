@@ -34,6 +34,7 @@
                 <th>ID</th>
                 <th>Nama Pasien</th>
                 <th>Tanggal Reservasi</th>
+                <th>Hasil Diagnosa</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -43,6 +44,7 @@
                 <td>{{ $w->id}}</td>
                 <td>{{ $w->nama_pasien }}</td>
                 <td>{{ $w->tanggal_reservasi }}</td>
+                <td>Hasil Diagnosa</td>
                 <td>
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <a class="btn btn-primary btn-sm" href="/rekammedis/{{$w->id}}/view">View</a>

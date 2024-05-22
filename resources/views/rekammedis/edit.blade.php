@@ -53,7 +53,7 @@
 
             <div class="col">
                 <label for="dokter" class="form-label">Dokter Pemeriksa</label>
-                <input type="text" name="dokter" class="form-control" style="border-color: red;width: 1180px;margin-bottom: 20px;" id="dokter" aria-label="Dokter" value="{{$rekammedis->dokter}}">
+                <input type="text" name="dokter" class="form-control" id="dokter" placeholder="Masukkan Nama DOkter" aria-label="Dokter" value="{{$rekammedis->dokter}}" style="border-color: red;width: 300px;">
             </div>
             
             <div class="form-group mb-4">
@@ -64,7 +64,7 @@
 
             <div class="col">
                 <label for="diagnosis" class="form-label">Diagnosis</label>
-                <input type="text" name="diagnosis" class="form-control" id="diagnosis" aria-label="diagnosis" value="{{$rekammedis->diagnosis}}" style="border-color: red;width: 1180px;margin-bottom: 20px;">
+                <input type="text" name="diagnosis" class="form-control" id="diagnosis" placeholder="Masukkan Hasil Diagnosis" aria-label="diagnosis" value="{{$rekammedis->diagnosis}}" style="border-color: red;width: 300px;">
             </div>
 
             <div class="text-center">

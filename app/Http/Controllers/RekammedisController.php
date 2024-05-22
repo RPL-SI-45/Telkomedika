@@ -16,11 +16,13 @@ class RekammedisController extends Controller{
         $request->validate([
             'nama_pasien',
             'tanggal_pelayanan',
+            'hasil_diagnosa'
         ]);
 
         antrian::create([
             'nama_pasien' => $request->nama_pasien,
             'tanggal_pelayanan' => $request->tanggal_reservasi,
+            'hasil_diagnosa' => $request->hasil_diagnosa
 
         ]);
         return redirect("/rekammedis");
