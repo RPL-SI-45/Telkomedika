@@ -15,6 +15,9 @@ use App\Http\Controllers\PoliController;
 use App\Http\Controllers\PolipasienController;
 use App\Http\Controllers\FrontAntrianController;
 
+use App\Http\Controllers\profiladminController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -64,6 +67,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin/home');
 
     Route::get('/admin/profile', [AdminController::class, 'profilepage'])->name('admin/profile');
+    Route::post('/admin/profile/edit/{id}', [AdminController::class, 'update'])->name('admin/profile/edit');
 
     Route::get('/admin/products', [ProductController::class, 'index'])->name('admin/products');
     Route::get('/admin/products/create', [ProductController::class, 'create'])->name('admin/products/create');
@@ -107,3 +111,7 @@ Route::get('/antrian/{id}/card',[antrianController::class, 'card']);
 Route::get('/antrian/{id}', [antrianController::class, 'informasi']);
 Route::get('/antrian/show', [antrianController::class,'informasi'])->name("informasi");
 
+
+
+
+Route::get('/profiladmin',[profiladminController::class,'index']);
