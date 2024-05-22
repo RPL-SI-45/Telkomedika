@@ -11,5 +11,5 @@ class rekammedis extends Model
     protected $guarded = [];
     protected $primary_key='id';
     protected $table = 'rekammedis';
-    protected $fillable = ['nama_pasien','tanggal_reservasi'];
+    protected $fillable = ['nama_pasien','tanggal_reservasi','hasil_diagnosa'];
 }

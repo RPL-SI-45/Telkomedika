@@ -38,4 +38,24 @@ class RekammedisController extends Controller{
         $rekammedis = antrian::find($id);
         return view('rekammedis.view', compact('rekammedis'));
     }
+
+    public function edit($id){
+        $rekammedis = antrian::find($id);
+    return view('rekammedis.edit', ['rekammedis' => $rekammedis]);
+    }
+
+    public function update($id, Request $request){
+        $attributes = $request->validate([
+            'dokter' => 'required',
+            'fisik' => 'required',
+            'diagnosis' => 'required'
+        ]);
+        $rekammedis = antrian::find($id);
+        $data = antrian::where('id',$id)->update([
+            "dokter" =>$attributes['dokter'],
+            "fisik" =>$attributes['fisik'],
+            "diagnosis" =>$attributes['diagnosis'],
+        ]);
+        return redirect('/rekammedis');
+    }
 }

@@ -4,8 +4,9 @@
     <div class="container">
         <div class="h1 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Informasi Rekam Medis Pasien</div>
 </br>
-        <form action="/rekammedis" method="POST">
+        <form role="form" action="/rekammedis/{{$rekammedis->id}}/perform" method="POST">
             @csrf
+            @method('PUT')
             <div class="row mb-3"; style= "transform: translateX(5%)";>
                 <div class="col">
                     <label for="nama_pasien" class="form-label">Nama Pasien</label>
@@ -58,7 +59,7 @@
             
             <div class="form-group mb-4">
                 <label for="fisik">Hasil Pemeriksaan Fisik</label>
-                <textarea name="fisik" class="form-control" rows="5" style="border-color: red;width: 1180px;margin-bottom: 20px;">{{ old('fisik') }} </textarea>
+                <textarea name="fisik" class="form-control" rows="5" style="border-color: red;width: 1180px;margin-bottom: 20px;">{{$rekammedis->dokter}} </textarea>
                 <span class="text-danger">{{ $errors->first('keluhan') }}</span>
             </div>
 
@@ -68,7 +69,7 @@
             </div>
 
             <div class="text-center">
-        <button type="submit" name="submit" class="btn btn-danger btn-bg" style="transform: translateX(-30%); background-color: #B6252A;">Edit</button>
+            <button type="submit" name="submit" class="btn btn-danger btn-bg" style="transform: translateX(-30%); background-color: #B6252A;">Edit</button>
 
             </div>
         </form>
