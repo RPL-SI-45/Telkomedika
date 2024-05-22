@@ -9,7 +9,7 @@ class profiladminController extends Controller
 {
     public function index(){
         $profiladmin = profiladmin::all();
-          return view('profiladmin.index',compact(['profiladmin']));
+          return view('profile',compact(['profiladmin']));
          
     }
 
