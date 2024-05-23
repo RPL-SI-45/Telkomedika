@@ -1,80 +1,86 @@
 @extends("layouts.reservasimain")
 
 @section('main-section')
+<div class="container">
+    <div class="h1 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Informasi Rekam Medis Pasien</div>
+
+    @csrf
     <div class="container">
-        <div class="h1 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Informasi Rekam Medis Pasien</div>
-</br>
-
-            @csrf
-            <div class="row mb-3"; style= "transform: translateX(5%)";>
-                <div class="col">
-                    <label for="nama_pasien" class="form-label">Nama Pasien</label>
-                    <input type="text" name ="nama_pasien" class="form-control" placeholder="Masukkan Nama Pasien" aria-label="Nama Pasien" value="{{$rekammedis->nama_pasien}}" style="border-color: red;width: 300px;margin-bottom: 20px;"readonly>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3" style="background-color: #B6252A;">
+                        <h6 class="m-0 font-weight-bold text-white">Identitas Pasien</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="nama_pasien" class="form-label">Nama Pasien</label>
+                                <input type="text" name="nama_pasien" class="form-control" value="{{$rekammedis->nama_pasien}}" readonly>
+                            </div>
+                            <div class="col">
+                                <label for="no_telp" class="form-label">Nomor Telepon</label>
+                                <input type="text" name="no_telp" class="form-control" value="{{$rekammedis->no_telp}}" readonly>
+                            </div>
+                            <div class="col">
+                                <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
+                                <input type="text" name="jenis_kelamin" class="form-control" value="{{$rekammedis->jenis_kelamin}}" readonly>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="tanggal_reservasi" class="form-label">Tanggal Reservasi</label>
+                                <input type="date" name="tanggal_reservasi" class="form-control" value="{{$rekammedis->tanggal_reservasi}}" readonly>
+                                <span class="text-danger">{{ $errors->first('tanggal_reservasi') }}</span>
+                                @error('tanggal_reservasi')
+                                <div class="text-danger">{{$message}}</div>
+                                @enderror
+                            </div>
+                            <div class="col">
+                                <label for="poli" class="form-label">Poli</label>
+                                <input type="text" name="poli" class="form-control" value="{{$rekammedis->poli}}" readonly>
+                            </div>
+                            <div class="col">
+                                <label for="alamat" class="form-label">Alamat</label>
+                                <input type="text" name="alamat" class="form-control" value="{{$rekammedis->alamat}}" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="keluhan" class="form-label">Keluhan Pasien</label>
+                            <textarea name="keluhan" class="form-control" rows="5" readonly>{{ old('keluhan', $rekammedis->keluhan) }}</textarea>
+                            <span class="text-danger">{{ $errors->first('keluhan') }}</span>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="col">
-                    <label for="no_telp" class="form-label">Nomor Telepon</label>
-                    <input type="text" name ="no_telp" class="form-control" placeholder="Masukkan Nomor telepon" aria-label="Nomor Telepon" value="{{$rekammedis->no_telp}}"style="border-color: red;width: 300px;"readonly>
+
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3" style="background-color: #B6252A;">
+                        <h6 class="m-0 font-weight-bold text-white">Hasil Pemeriksaan</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="dokter" class="form-label">Dokter Pemeriksa</label>
+                            <input type="text" name="dokter" class="form-control" value="{{$rekammedis->dokter}}" readonly>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="fisik" class="form-label">Hasil Pemeriksaan Fisik</label>
+                            <textarea name="fisik" class="form-control" rows="5" readonly>{{$rekammedis->fisik}}</textarea>
+                            <span class="text-danger">{{ $errors->first('fisik') }}</span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="diagnosis" class="form-label">Diagnosis</label>
+                            <input type="text" name="diagnosis" class="form-control" value="{{$rekammedis->diagnosis}}" readonly>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col">
-                    <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
-                    <input type="text" name="jenis_kelamin" id="jenis_kelamin" class="form-control" value="{{$rekammedis->jenis_kelamin}}"style="border-color: red;width: 300px;" readonly>
+                <div class="text-center">
+                    <form action="/rekammedis/{{$rekammedis->id}}/view/edit" method="get">
+                        <input type="submit" class="btn btn-primary" value="Tambah Keterangan">
+                    </form>
                 </div>
             </div>
-
-            <div class="row mb-3"; style= "transform: translateX(5%)";>
-            <div class="col">
-            <label for="tanggal_reservasi" class="form-label">Tanggal Reservasi</label>
-            <input type="date" name="tanggal_reservasi" class="form-control" value="{{ $rekammedis->tanggal_reservasi }}" style="border-color: red;width: 300px;margin-bottom: 30px;" readonly>
-                    <span class="text-danger">{{ $errors->first('tanggal_reservasi') }}</span>
-            <div class="text-danger">
-                @error('tanggal_reservasi')
-                {{$message}}
-                @enderror
-            </div>
-                </div>
-                
-                <div class="col">
-                    <label for="poli" class="form-label">Poli</label>
-                    <input type= "text" name="poli" id="poli" class="form-control" value="{{$rekammedis->poli}}" style="border-color: red;width: 300px;" readonly>
-                </div>
-
-                <div class="col">
-                    <label for="alamat" class="form-label">Alamat</label>
-                    <input type="text" name="alamat" class="form-control" id="alamat" placeholder="Masukkan Alamat" aria-label="Alamat" value="{{$rekammedis->alamat}}" style="border-color: red;width: 300px;"readonly>
-                </div>
-
-            <div class="form-group mb-4">
-                <label for="keluhan">Keluhan Pasien</label>
-                <textarea name="keluhan" class="form-control" rows="5" style="border-color: red;width: 1180px;margin-bottom: 20px;"readonly>{{ old('keluhan', $rekammedis->keluhan) }}</textarea>
-                <span class="text-danger">{{ $errors->first('keluhan') }}</span>
-            </div>
-
-            <div class="col">
-                <label for="dokter" class="form-label">Dokter Pemeriksa</label>
-                <input type="text" name="dokter" class="form-control" style="border-color: red;width: 1180px;margin-bottom: 20px;" id="dokter" aria-label="Dokter" value="{{$rekammedis->dokter}}">
-            </div>
-            
-            <div class="form-group mb-4">
-                <label for="fisik">Hasil Pemeriksaan Fisik</label>
-                <textarea name="fisik" class="form-control" rows="5" style="border-color: red;width: 1180px;margin-bottom: 20px;">{{$rekammedis->dokter}}</textarea>
-                <span class="text-danger">{{ $errors->first('keluhan') }}</span>
-            </div>
-
-            <div class="col">
-                <label for="diagnosis" class="form-label">Diagnosis</label>
-                <input type="text" name="diagnosis" class="form-control" id="diagnosis" aria-label="diagnosis" value="{{$rekammedis->diagnosis}}" style="border-color: red;width: 1180px;margin-bottom: 20px;">
-            </div>
-
-            <div class="text-center">
-        
-           <form action="/rekammedis/{{$rekammedis->id}}/view/edit" method ="get">
-            <input type="submit"value="coba">
-           </form>
+        </div>
     </div>
-
-    </div>
+</div>
 @endsection
-
-

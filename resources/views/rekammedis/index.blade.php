@@ -31,24 +31,19 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                 <tr class="text-center">
-                <th>ID</th>
                 <th>Nama Pasien</th>
                 <th>Tanggal Reservasi</th>
-                <th>Hasil Diagnosa</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($rekammedis as $w)
             <tr class="text-center">
-                <td>{{ $w->id}}</td>
                 <td>{{ $w->nama_pasien }}</td>
                 <td>{{ $w->tanggal_reservasi }}</td>
-                <td>Hasil Diagnosa</td>
                 <td>
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <a class="btn btn-primary btn-sm" href="/rekammedis/{{$w->id}}/view">View</a>
-                        <a class="btn btn-danger btn-sm" href="">Delete</a>
 
                     </div>
                 </td>

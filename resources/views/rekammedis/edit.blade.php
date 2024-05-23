@@ -54,22 +54,22 @@
 
             <div class="col">
                 <label for="dokter" class="form-label">Dokter Pemeriksa</label>
-                <input type="text" name="dokter" class="form-control" id="dokter" placeholder="Masukkan Nama DOkter" aria-label="Dokter" value="{{$rekammedis->dokter}}" style="border-color: red;width: 300px;">
+                <input type="text" name="dokter" class="form-control" id="dokter" placeholder="Masukkan Nama DOkter" aria-label="Dokter" value="{{$rekammedis->dokter}}" style="border-color: red;width: 1180px;margin-bottom: 20px;">
             </div>
             
             <div class="form-group mb-4">
                 <label for="fisik">Hasil Pemeriksaan Fisik</label>
-                <textarea name="fisik" class="form-control" rows="5" style="border-color: red;width: 1180px;margin-bottom: 20px;">{{$rekammedis->dokter}} </textarea>
-                <span class="text-danger">{{ $errors->first('keluhan') }}</span>
+                <textarea name="fisik" class="form-control" rows="5" style="border-color: red;width: 1180px;margin-bottom: 20px;">{{$rekammedis->fisik}} </textarea>
+                <span class="text-danger">{{ $errors->first('fisik') }}</span>
             </div>
 
             <div class="col">
                 <label for="diagnosis" class="form-label">Diagnosis</label>
-                <input type="text" name="diagnosis" class="form-control" id="diagnosis" placeholder="Masukkan Hasil Diagnosis" aria-label="diagnosis" value="{{$rekammedis->diagnosis}}" style="border-color: red;width: 300px;">
+                <input type="text" name="diagnosis" class="form-control" id="diagnosis" placeholder="Masukkan Hasil Diagnosis" aria-label="diagnosis" value="{{$rekammedis->diagnosis}}" style="border-color: red;width: 1180px;margin-bottom: 20px;">
             </div>
 
             <div class="text-center">
-            <button type="submit" name="submit" class="btn btn-danger btn-bg" style="transform: translateX(-30%); background-color: #B6252A;">Edit</button>
+            <button type="submit" name="submit" class="btn btn-danger btn-bg" style="transform: translateX(-30%); background-color: #B6252A;">Simpan Perubahan</button>
 
             </div>
         </form>
