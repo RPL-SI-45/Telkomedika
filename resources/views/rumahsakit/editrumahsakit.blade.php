@@ -30,7 +30,7 @@
 
                     <form action="/rumahsakit/store" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="Gambar">Upload Gambar</label>
+                            <label for="image">Upload Gambar</label>
                             <input type="file" name="Gambar" class="form-control-file" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
