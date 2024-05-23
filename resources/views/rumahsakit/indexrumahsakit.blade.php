@@ -13,7 +13,7 @@
                         <div class="d-flex justify-content-between align-items-center my-3">
                         <h5 class="m-0 font-weight-bold text-white">Daftar Rumah Sakit Mitra</h5>
                         <div></div>
-                            <a class="btn btn-secondary" href="/rumahsakit/createrumahsakit">Tambah Data Rumah Sakit Mitra</a>
+                            <a class="btn btn-secondary" href="/rumahsakit/createrumahsakit" >Tambah Data Rumah Sakit Mitra</a>
                         </div>
                     </div>
                     <div class="card-body mb-4">

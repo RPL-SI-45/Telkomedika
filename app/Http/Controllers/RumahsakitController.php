@@ -18,7 +18,23 @@ class RumahsakitController extends Controller
 
     public function store(Request $request)
     {
-        Rumahsakit::create($request->except(['_token', 'submit']));
+        $request->validate([
+            'NamaRumahsakit' => 'required',
+            'Alamat' => 'required',
+            'Notelepon' => 'required',
+            'Lokasi' => 'required',
+            'Gambar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+            $imagePath = $request->file('Gambar')->store('Gambar', 'public');
+            Rumahsakit::create([
+                'NamaRumahsakit' => $request->NamaRumahsakit,
+                'Alamat' => $request->Alamat,
+                'Notelepon' => $request->Notelepon,
+                'Lokasi' => $request->Lokasi,
+                'Gambar' => $imagePath,
+            ]);
+            // Rumahsakit::create($request->except(['_token', 'submit']));
         return redirect('/rumahsakit');
     }
 
