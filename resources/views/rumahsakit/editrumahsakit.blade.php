@@ -28,14 +28,15 @@
                         <input type="text" name="Lokasi" class="form-control" id="exampleFormControlInput1" value="{{$rumahsakit->Lokasi}}" >
                     </div>
 
-                <form action="/rumahsakit/store" method="POST" enctype="multipart/form-data">
-
-                <div class="form-group">
-                    <label for="image">Upload Gambar</label>
-                    <input type="file" name="Gambar" class="form-control-file" required>
-                </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <form action="/rumahsakit/store" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="image">Upload Gambar</label>
+                            <input type="file" name="Gambar" class="form-control-file" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
                 </form>
-        </form>
+            </div>
+        </div>
     </div>
 @endsection
