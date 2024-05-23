@@ -11,7 +11,7 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3" style="background-color: #B6252A;">
                         <div class="d-flex justify-content-between align-items-center my-3">
-                        <h6 class="m-0 font-weight-bold text-white">Daftar Layanan Rumah Sakit Mitra</h6>
+                        <h5 class="m-0 font-weight-bold text-white">Daftar Layanan Rumah Sakit Mitra</h5>
                         <div></div>
                             <a class="btn btn-secondary ml-auto" href="/rumahsakit/createrumahsakit">Tambah Data Rumah sakit mitra</a>
                         </div>
