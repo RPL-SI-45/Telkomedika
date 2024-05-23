@@ -26,7 +26,7 @@
                                             <h5 class="card-title" style="margin-top: 130px;">{{ $rs->NamaRumahsakit }}</h5>
                                             <p class="card-text">{{ $rs->Alamat }}</p>
                                             <p class="card-text">{{ $rs->Notelepon }}</p>
-                                            <p><a class="btn btn-primary disabled" role="button" aria-disabled="true" link href="{{ $rs->Lokasi }}" target="_blank">Lihat Lokasi</a></p>
+                                            <a link href="{{ $rs->Lokasi }}" target="_blank">Lihat Lokasi</a>
                                         </div>
                                         <div class="btn-group" role="group" aria-label="Basic example" style="padding: 10px;">
                                             <a class="btn btn-warning btn-sm" href="/rumahsakit/{{$rs->id}}/edit">Edit</a>
