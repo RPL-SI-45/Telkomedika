@@ -2,7 +2,7 @@
 
 @section('main-section')
     <div class="container">
-    <div class="h2 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Informasi Layanan Poli Klinik Telkomedika</div>
+    <div class="h2 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Informasi Layanan Rumah Sakit Mitra Klinik Telkomedika</div>
         <div class = "card">
         <div class = "card-body">
         <form action="/rumahsakit/{{$rumahsakit->id}}" method="POST" enctype="multipart/form-data">
