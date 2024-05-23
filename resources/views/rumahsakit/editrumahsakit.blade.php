@@ -1,8 +1,5 @@
 @extends("layoutrumahsakit.rs")
 
-
-
-
 @section('main-section')
     <div class="container">
     <div class="h2 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Informasi Layanan Poli Klinik Telkomedika</div>
