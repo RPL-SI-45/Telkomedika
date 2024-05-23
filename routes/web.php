@@ -107,3 +107,4 @@ Route::get('/antrian/{id}/card',[antrianController::class, 'card']);
 Route::get('/antrian/{id}', [antrianController::class, 'informasi']);
 Route::get('/antrian/show', [antrianController::class,'informasi'])->name("informasi");
 
+Route::resource('medical-records', MedicalRecordController::class);
