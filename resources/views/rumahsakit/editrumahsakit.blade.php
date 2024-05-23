@@ -17,16 +17,16 @@
                         <label for="exampleFormControlInput1" class="form-label">Alamat</label>
                         <input type="text" name="Alamat" class="form-control" id="exampleFormControlInput1" value="{{$rumahsakit->Alamat}}">
                     </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Notelepon</label>
-                    <input type="text" name="Notelepon" class="form-control" id="exampleFormControlInput1" value="{{$rumahsakit->Notelepon}}">
-                </div>
 
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Notelepon</label>
+                        <input type="text" name="Notelepon" class="form-control" id="exampleFormControlInput1" value="{{$rumahsakit->Notelepon}}">
+                    </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Lokasi</label>
-                    <input type="text" name="Lokasi" class="form-control" id="exampleFormControlInput1" value="{{$rumahsakit->Lokasi}}" >
-                </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Lokasi</label>
+                        <input type="text" name="Lokasi" class="form-control" id="exampleFormControlInput1" value="{{$rumahsakit->Lokasi}}" >
+                    </div>
 
                 <form action="/rumahsakit/store" method="POST" enctype="multipart/form-data">
 
