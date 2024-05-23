@@ -69,7 +69,7 @@
             </div>
 
             <div class="text-center">
-            <button type="submit" name="submit" class="btn btn-danger btn-bg" style="transform: translateX(-30%); background-color: #B6252A;">Simpan Perubahan</button>
+            <button type="submit" name="submit" class="btn btn-danger btn-bg"  style="transform: translateX(-30%); background-color: #B6252A; ">Simpan Perubahan</button>
 
             </div>
         </form>
