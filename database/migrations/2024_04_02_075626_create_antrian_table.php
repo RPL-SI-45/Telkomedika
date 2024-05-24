@@ -27,12 +27,12 @@ return new class extends Migration
             $table->string('tanggal_reservasi');
             $table->string('status_pelayanan')->nullable();
 
-            $table->string('nama_pasien');
-            $table->string('tanggal_pelayanan');
+            $table->string('dokter')->nullable();
+            $table->string('fisik')->nullable();
 
-            $table->string('kondisi');
-            $table->string('diagnosis');
-            $table->string('tindakan');
+            $table->string('kondisi')->nullable();
+            $table->string('diagnosis')->nullable();
+            $table->string('tindakan')->nullable();
 
 
 

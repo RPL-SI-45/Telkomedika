@@ -24,7 +24,7 @@
     </form>
   </div>
 </nav>
-                
+
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
