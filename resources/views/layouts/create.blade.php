@@ -62,7 +62,7 @@
 
             <div class="form-group mb-4">
                 <label for="keluhan">Keluhan Pasien</label>
-                <textarea name="keluhan" class="form-control" rows="5" style="border-color: red;width: 1180px;margin-bottom: 20px;">{{ old('keluhan') }} </textarea>
+                <textarea name="keluhan" class="form-control" rows="5" style="border-color: red;width: 1180px;margin-bottom: 20px;">{{ old('keluhan')}} </textarea>
                 <span class="text-danger">{{ $errors->first('keluhan') }}</span>
             </div>
 

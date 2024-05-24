@@ -19,6 +19,9 @@ use App\Http\Controllers\PolipasienController;
 use App\Http\Controllers\LihatrumahsakitController;
 use App\Http\Controllers\RumahsakitController;
 use App\Http\Controllers\FrontAntrianController;
+
+use App\Http\Controllers\RekammedisController;
+
 use App\Http\Controllers\MedicalRecordController;
 
 
@@ -118,8 +121,12 @@ Route::get('/antrian/{id}/card',[antrianController::class, 'card']);
 Route::get('/antrian/{id}', [antrianController::class, 'informasi']);
 Route::get('/antrian/show', [antrianController::class,'informasi'])->name("informasi");
 
-<<<<<<< ciky2
-Route::get('/medicalrecords', [MedicalRecordController::class, 'index'])->name('record.index');
-=======
 
->>>>>>> main
+Route::get('/rekammedis',[RekammedisController::class, 'index']);
+Route::get('/rekammedis/{id}/view',[RekammedisController::class, 'view']);
+Route::delete('/rekammedis{id}',[RekammedisController::class, 'destroy']);
+Route::put('/rekammedis/{id}/perform', [RekammedisController::class, 'update'])->name('edit-rekammedis.perform');
+Route::get('/rekammedis/{id}/view/edit',[RekammedisController::class, 'edit']);
+
+Route::get('/medicalrecords', [MedicalRecordController::class, 'index'])->name('record.index');
+
