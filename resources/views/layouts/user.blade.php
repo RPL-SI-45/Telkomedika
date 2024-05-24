@@ -73,7 +73,7 @@
                 </a>
             </nav>
         </div>
-        
+
         <!-- Main Content -->
         <div class="flex-1 p-6 bg-white">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

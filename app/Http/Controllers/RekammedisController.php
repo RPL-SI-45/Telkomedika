@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class RekammedisController extends Controller{
 
     public function index(){
-    $rekammedis = antrian::all();
+    $rekammedis = antrian::where("status_pelayanan", "Selesai")->get();
     return view('rekammedis.index', compact('rekammedis'));
     }
 
@@ -57,5 +57,14 @@ class RekammedisController extends Controller{
             "diagnosis" =>$attributes['diagnosis'],
         ]);
         return redirect('/rekammedis');
+    }
+
+    public function search(Request $request){
+    if ($request->has('search')) {
+        $rekammedis = antrian::where('nama_pasien', 'LIKE', '%' . $request->search . '%')->get();
+    } else {
+        $rekammedis = antrian::all();
+    }
+    return view('rekammedis.index', ['rekammedis' => $rekammedis]);
     }
 }

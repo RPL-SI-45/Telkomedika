@@ -12,6 +12,7 @@
                     <div class="card-header py-3" style="background-color: #B6252A;">
                         <h6 class="m-0 font-weight-bold text-white">Identitas Pasien</h6>
                     </div>
+
                     <div class="card-body">
                         <div class="row mb-3">
                             <div class="col">
@@ -83,4 +84,5 @@
         </div>
     </div>
 </div>
+
 @endsection

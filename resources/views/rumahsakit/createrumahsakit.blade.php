@@ -11,7 +11,7 @@
         @csrf
         @method('post')
             <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Nama Rumahsakit</label>
+            <label for="exampleFormControlInput1" class="form-label">Nama Rumah Sakit</label>
             <input type="text" name="NamaRumahsakit" class="form-control" id="exampleFormControlInput1">
             </div>
             <div class="mb-3">
@@ -19,7 +19,7 @@
                 <input type="text" name="Alamat" class="form-control" id="exampleFormControlInput1">
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Notelepon</label>
+                <label for="exampleFormControlInput1" class="form-label">No Telepon</label>
                 <input type="text" name="Notelepon" class="form-control" id="exampleFormControlInput1" >
             </div>
 

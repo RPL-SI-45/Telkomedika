@@ -14,7 +14,7 @@ class antrianController extends Controller{
     }
 
     public function index(){
-    $antrian = antrian::all();
+    $antrian = antrian::where("status_pelayanan", "!=", "Selesai")->orWhereNull('status_pelayanan')->get();
     return view('layouts.index', compact('antrian'));
     }
 

@@ -21,7 +21,7 @@ class AuthController extends Controller
 
     public function register()
     {
-        return view('register');
+        return view('Register');
     }
 
     public function registerSave(Request $request)
@@ -33,7 +33,7 @@ class AuthController extends Controller
             'nim' => 'required',
             'email' => 'required|email',
             'password' => 'required|confirmed'
-            
+
         ])->validate();
 
         User::create([

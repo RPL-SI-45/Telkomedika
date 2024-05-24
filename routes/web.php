@@ -141,3 +141,6 @@ Route::get('/rekammedis/{id}/view/edit',[RekammedisController::class, 'edit']);
 
 Route::get('/medicalrecords', [MedicalRecordController::class, 'index'])->name('record.index');
 
+Route::get('/rekammedis/search', [RekammedisController::class, 'search'])->name('rekammedis.search');
+
+
