@@ -11,18 +11,17 @@ return new class extends Migration
      *
      * @return void
      */
-    public function up():void
+    public function up()
     {
         Schema::create('reservasi', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama_pasien');
-            $table->string('jenis_kelamin');
-            $table->string('no_telp');
-            $table->string('alamat');
-            $table->string('poli');
-            $table->string('keluhan');
-            $table->string('tanggal_reservasi');
-
+            $table->id()->primary;
+            $table->string("nama_pasien");
+            $table->integer("nomor_telepon");
+            $table->string("jenis_kelamin");
+            $table->string("tanggal_reservasi");
+            $table->string("poli");
+            $table->string("alamat");
+            $table->text('keluhan')->nullable();
             $table->timestamps();
         });
     }

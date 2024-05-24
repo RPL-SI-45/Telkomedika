@@ -5,6 +5,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
+
 
 
 use App\Http\Controllers\informasidokterController;
@@ -13,9 +15,14 @@ use App\Http\Controllers\antrianController;
 
 use App\Http\Controllers\PoliController;
 use App\Http\Controllers\PolipasienController;
+
+use App\Http\Controllers\LihatrumahsakitController;
+use App\Http\Controllers\RumahsakitController;
 use App\Http\Controllers\FrontAntrianController;
 
 use App\Http\Controllers\profiladminController;
+use App\Http\Controllers\RekammedisController;
+use App\Http\Controllers\MedicalRecordController;
 
 
 /*
@@ -29,11 +36,21 @@ use App\Http\Controllers\profiladminController;
 |
 */
 
+Route::get('/lihatrumahsakit', [LihatrumahsakitController::class, 'indexlihatrs']);
+
+Route::get('/rumahsakit', [RumahsakitController::class, 'index']);
+Route::get('/rumahsakit/createrumahsakit', [RumahsakitController::class, 'createrumahsakit']);
+Route::post('/rumahsakit/store', [RumahsakitController::class, 'store']);
+Route::get('/rumahsakit/{id}/edit', [RumahsakitController::class, 'edit']);
+Route::put('/rumahsakit/{id}', [RumahsakitController::class, 'update']);
+Route::delete('/rumahsakit/{id}', [RumahsakitController::class, 'destroy']);
+
 Route::get('/', function () {
     return view('login');
 })->name('login');
 
 Route::get('/about', [UserController::class, 'about'])->name('about');
+
 
 Route::controller(AuthController::class)->group(function () {
     Route::get('register', 'register')->name('register');
@@ -41,8 +58,9 @@ Route::controller(AuthController::class)->group(function () {
 
     Route::get('login', 'login')->name('login');
     Route::post('login', 'loginAction')->name('login.action');
-
     Route::get('logout', 'logout')->middleware('auth')->name('logout');
+
+
 });
 
 Route::get('/informasi',[informasidokterController::class,'informasi']);
@@ -113,5 +131,12 @@ Route::get('/antrian/show', [antrianController::class,'informasi'])->name("infor
 
 
 
-
 Route::get('/profiladmin',[profiladminController::class,'index']);
+Route::get('/rekammedis',[RekammedisController::class, 'index']);
+Route::get('/rekammedis/{id}/view',[RekammedisController::class, 'view']);
+Route::delete('/rekammedis{id}',[RekammedisController::class, 'destroy']);
+Route::put('/rekammedis/{id}/perform', [RekammedisController::class, 'update'])->name('edit-rekammedis.perform');
+Route::get('/rekammedis/{id}/view/edit',[RekammedisController::class, 'edit']);
+
+Route::get('/medicalrecords', [MedicalRecordController::class, 'index'])->name('record.index');
+

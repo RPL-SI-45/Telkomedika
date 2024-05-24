@@ -19,6 +19,10 @@ return new class extends Migration
             $table->string('username')->nullable();
             $table->string('alamat')->nullable();
             $table->string('profile_image')->nullable();
+            $table->string('telp');
+            $table->string('kartu');
+            $table->string('alamat')->nullable();
+            $table->string('nim');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->boolean('type')->default(false); //add type boolean Users: 0=>User, 1=>Admin, 2=>Manager
