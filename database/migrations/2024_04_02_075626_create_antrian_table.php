@@ -26,6 +26,10 @@ return new class extends Migration
             $table->string('keluhan');
             $table->string('tanggal_reservasi');
             $table->string('status_pelayanan')->nullable();
+            $table->string('kondisi');
+            $table->string('diagnosis');
+            $table->string('tindakan');
+
 
 
             $table->timestamps();
