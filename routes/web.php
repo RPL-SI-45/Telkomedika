@@ -17,6 +17,8 @@ use App\Http\Controllers\PolipasienController;
 use App\Http\Controllers\LihatrumahsakitController;
 use App\Http\Controllers\RumahsakitController;
 use App\Http\Controllers\FrontAntrianController;
+use App\Http\Controllers\MedicalRecordController;
+
 
 
 /*
@@ -120,4 +122,8 @@ Route::get('/antrian/{id}/card',[antrianController::class, 'card']);
 Route::get('/antrian/{id}', [antrianController::class, 'informasi']);
 Route::get('/antrian/show', [antrianController::class,'informasi'])->name("informasi");
 
+<<<<<<< ciky2
+Route::get('/medicalrecords', [MedicalRecordController::class, 'index'])->name('record.index');
+=======
 
+>>>>>>> main
