@@ -13,7 +13,7 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
     /** @var \App\Models\User $user */
-   
+
     /**
      * The attributes that are mass assignable.
      *
@@ -23,12 +23,12 @@ class User extends Authenticatable
         'name',
         'email',
         'telp',
+        'password',
+        'type',
+        'profile_image',
         'kartu',
         'alamat',
         'nim',
-        'password',
-        'type',
-        'profile_image'
     ];
 
     protected function type(): Attribute

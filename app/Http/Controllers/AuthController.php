@@ -15,30 +15,23 @@ class AuthController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
         $this->middleware('guest')->except('logout');
     }
 
     public function register()
     {
-        return view('Register');
+        return view('register');
     }
 
     public function registerSave(Request $request)
     {
         Validator::make($request->all(), [
             'name' => 'required',
+            'email' => 'required|email',
             'telp' => 'required',
             'kartu' => 'required',
             'nim' => 'required',
-            'email' => 'required|email',
-            'password' => 'required|confirmed',
-            'username',
-            'alamat',
-            'profile_image',
-            'kartu',
-            'type',
-
+            'password' => 'required|confirmed'
         ])->validate();
 
         User::create([
@@ -48,11 +41,8 @@ class AuthController extends Controller
             'kartu' => $request->kartu,
             'nim' => $request->nim,
             'password' => Hash::make($request->password),
-            'username',
-            'alamat',
-            'profile_image',
-            'kartu',
-            'type' => "0",
+            'type' => "0"
+
         ]);
 
         return redirect()->route('login');

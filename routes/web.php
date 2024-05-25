@@ -62,7 +62,7 @@ Route::controller(AuthController::class)->group(function () {
 
     // Route::get('login', 'login')->name('login');
     Route::post('login', 'loginAction')->name('login.action');
-//     Route::get('logout', 'logout')->middleware('auth')->name('logout');
+    Route::get('logout', 'logout')->middleware('auth')->name('logout');
 
 
 });
@@ -82,6 +82,7 @@ Route::delete('/informasidokter/{id}',[informasidokterController::class,'destroy
 Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/profile', [UserController::class, 'userprofile'])->name('profile');
+    Route::post('/profile/edit/{id}', [UserController::class, 'update'])->name('update-profile');
 });
 
 //Admin Routes List
@@ -146,5 +147,7 @@ Route::get('/rekammedis/{id}/view/edit',[RekammedisController::class, 'edit']);
 Route::get('/medicalrecords', [MedicalRecordController::class, 'index'])->name('record.index');
 
 Route::get('/rekammedis/search', [RekammedisController::class, 'search'])->name('rekammedis.search');
+
+Route::get('/profiladmin',[profiladminController::class,'index']);
 
 

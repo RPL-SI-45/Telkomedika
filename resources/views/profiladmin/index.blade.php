@@ -71,7 +71,7 @@ button {
 </head>
 <body>
 
-
+@foreach ($user as $w)
 <h1>Edit Profil Admin</h1>
 
 
@@ -80,15 +80,15 @@ button {
   <table>
     <tr>
       <th>Nama</th>
-      <td><input type="text" name="Nama" value=""></td>
+      <td><input type="text" name="Nama" value="{{$w->name}}"></td>
     </tr>
     <tr>
       <th>Nomor Telepon</th>
-      <td><input type="Nomor Telepon" name="Nomor Telepon" value=""></td>
+      <td><input type="Nomor Telepon" name="Nomor Telepon" value="{{$w->telp}}"></td>
     </tr>
     <tr>
       <th>Username</th>
-      <td><input type="Username" name="Username"></td>
+      <td><input type="Username" name="Username" value="{{$w->username}}"></td>
 </tr>
     <tr>
       <th>Level Akses</th>
@@ -104,8 +104,8 @@ button {
     </th>
     </tr>
 
-    
-    
+
+
   </table>
 
 </form>
