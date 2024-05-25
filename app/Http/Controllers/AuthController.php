@@ -32,7 +32,12 @@ class AuthController extends Controller
             'kartu' => 'required',
             'nim' => 'required',
             'email' => 'required|email',
-            'password' => 'required|confirmed'
+            'password' => 'required|confirmed',
+            'username',
+            'alamat',
+            'profile_image',
+            'kartu',
+            'type',
 
         ])->validate();
 
@@ -43,7 +48,11 @@ class AuthController extends Controller
             'kartu' => $request->kartu,
             'nim' => $request->nim,
             'password' => Hash::make($request->password),
-            'type' => "0"
+            'username',
+            'alamat',
+            'profile_image',
+            'kartu',
+            'type' => "0",
         ]);
 
         return redirect()->route('login');

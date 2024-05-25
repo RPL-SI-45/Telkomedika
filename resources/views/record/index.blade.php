@@ -25,7 +25,7 @@
     </style>
 </head>
 <body>
-
+@foreach ($rekammedis as $w)
 <div class="container">
     <div class="col-md-12">
         <div class="card shadow mb-4">
@@ -36,23 +36,23 @@
                 <form>
                     <div class="form-group">
                         <label for="name">Nama:</label>
-                        <input type="text" class="form-control" id="name" value="Cindy P Gandis Ayu">
+                        <input type="text" class="form-control" id="name" value="{{$w->nama_pasien}}">
                     </div>
                     <div class="form-group">
-                        <label for="date_of_visit">Tanggal Berobat:</label>
-                        <input type="text" class="form-control" id="date_of_visit" value="22 April 2023">
+                        <label for="date_of_visit">Tanggal Pelayanan:</label>
+                        <input type="text" class="form-control" id="date_of_visit" value="{{$w->tanggal_reservasi}}">
                     </div>
                     <div class="form-group">
-                        <label for="health_condition">Kondisi Kesehatan:</label>
-                        <textarea class="form-control" id="health_condition" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+                        <label for="dokter">Dokter Pemeriksa:</label>
+                        <textarea class="form-control" id="dokter" rows="3" readonly>{{$w->dokter}}</textarea>
                     </div>
                     <div class="form-group">
-                        <label for="diagnosis">Diagnosis:</label>
-                        <textarea class="form-control" id="diagnosis" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id metus eu libero pretium interdum. Nulla facilisi.</textarea>
+                        <label for="diagnosis">Hasil Pemekrisaan Fisik:</label>
+                        <textarea class="form-control" id="fisik" rows="3" readonly>{{$w->fisik}}</textarea>
                     </div>
                     <div class="form-group">
-                        <label for="treatment">Pengobatan:</label>
-                        <textarea class="form-control" id="treatment" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id metus eu libero pretium interdum. Nulla facilisi.</textarea>
+                        <label for="treatment">Diagnosis:</label>
+                        <textarea class="form-control" id="diagnosis" rows="3" readonly>{{$w->diagnosis}}</textarea>
                     </div>
                 </form>
             </div>
@@ -62,4 +62,5 @@
 
 </body>
 </html>
+@endforeach
 @endsection

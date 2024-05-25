@@ -77,8 +77,7 @@
 
                 <div class="text-center">
                     <form action="/rekammedis/{{$rekammedis->id}}/view/edit" method="get">
-                        <input type="submit" class="btn btn-primary" value="Tambah Keterangan">
-                    </form>
+                    <input type="submit" class="btn btn-primary" style="background-color: #B6252A" value="Tambah Keterangan">                    </form>
                 </div>
             </div>
         </div>

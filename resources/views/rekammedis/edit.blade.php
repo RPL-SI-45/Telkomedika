@@ -12,7 +12,7 @@
                     <label for="nama_pasien" class="form-label">Nama Pasien</label>
                     <input type="text" name ="nama_pasien" class="form-control" placeholder="Masukkan Nama Pasien" aria-label="Nama Pasien" value="{{$rekammedis->nama_pasien}}" style="border-color: red;width: 300px;margin-bottom: 20px;"readonly>
                 </div>
-                
+
                 <div class="col">
                     <label for="no_telp" class="form-label">Nomor Telepon</label>
                     <input type="text" name ="no_telp" class="form-control" placeholder="Masukkan Nomor telepon" aria-label="Nomor Telepon" value="{{$rekammedis->no_telp}}"style="border-color: red;width: 300px;"readonly>
@@ -35,7 +35,7 @@
                 @enderror
             </div>
                 </div>
-                
+
                 <div class="col">
                     <label for="poli" class="form-label">Poli</label>
                     <input type= "text" name="poli" id="poli" class="form-control" value="{{$rekammedis->poli}}" style="border-color: red;width: 300px;" readonly>
@@ -54,12 +54,12 @@
 
             <div class="col">
                 <label for="dokter" class="form-label">Dokter Pemeriksa</label>
-                <input type="text" name="dokter" class="form-control" id="dokter" placeholder="Masukkan Nama DOkter" aria-label="Dokter" value="{{$rekammedis->dokter}}" style="border-color: red;width: 1180px;margin-bottom: 20px;">
+                <input type="text" name="dokter" class="form-control" id="dokter" placeholder="Masukkan Nama Dokter" aria-label="Dokter" value="{{$rekammedis->dokter}}" style="border-color: red;width: 1180px;margin-bottom: 20px;">
             </div>
-            
+
             <div class="form-group mb-4">
                 <label for="fisik">Hasil Pemeriksaan Fisik</label>
-                <textarea name="fisik" class="form-control" rows="5" style="border-color: red;width: 1180px;margin-bottom: 20px;">{{$rekammedis->fisik}} </textarea>
+                <textarea name="fisik" class="form-control" rows="5" id="fisik" placeholder="Masukkan Hasil Pemeriksaan Fisik" style="border-color: red;width: 1180px;margin-bottom: 20px;">{{ $rekammedis->fisik }}</textarea>
                 <span class="text-danger">{{ $errors->first('fisik') }}</span>
             </div>
 

@@ -45,20 +45,24 @@ Route::get('/rumahsakit/{id}/edit', [RumahsakitController::class, 'edit']);
 Route::put('/rumahsakit/{id}', [RumahsakitController::class, 'update']);
 Route::delete('/rumahsakit/{id}', [RumahsakitController::class, 'destroy']);
 
-Route::get('/', function () {
-    return view('login');
+Route::get('/login', function () {
+     return view('login');
 })->name('login');
+
+Route::get('/register', function () {
+    return view('Register');
+})->name('register');
 
 Route::get('/about', [UserController::class, 'about'])->name('about');
 
 
 Route::controller(AuthController::class)->group(function () {
-    Route::get('register', 'register')->name('register');
+    // Route::get('register', 'register')->name('register');
     Route::post('register', 'registerSave')->name('register.save');
 
-    Route::get('login', 'login')->name('login');
+    // Route::get('login', 'login')->name('login');
     Route::post('login', 'loginAction')->name('login.action');
-    Route::get('logout', 'logout')->middleware('auth')->name('logout');
+//     Route::get('logout', 'logout')->middleware('auth')->name('logout');
 
 
 });

@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class MedicalRecordController extends Controller
 {
-    public function index()
-    {
-        $medicalRecords = antrian::all();
-        return view('record.index', compact('medicalRecords'));
+
+    public function index (){
+        $rekammedis = antrian::all();
+        return view('record.index', compact('rekammedis'));
     }
 }
