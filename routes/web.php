@@ -24,6 +24,8 @@ use App\Http\Controllers\profiladminController;
 use App\Http\Controllers\RekammedisController;
 use App\Http\Controllers\MedicalRecordController;
 
+use App\Http\Controllers\RatingController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -149,5 +151,12 @@ Route::get('/medicalrecords', [MedicalRecordController::class, 'index'])->name('
 Route::get('/rekammedis/search', [RekammedisController::class, 'search'])->name('rekammedis.search');
 
 Route::get('/profiladmin',[profiladminController::class,'index']);
+
+Route::get('/rating', [RatingController::class, 'indexrating']);
+Route::get('/rumahsakit/createrumahsakit', [RumahsakitController::class, 'createrumahsakit']);
+Route::post('/rumahsakit/store', [RumahsakitController::class, 'store'])->middleware('auth');
+Route::get('/rumahsakit/{id}/edit', [RumahsakitController::class, 'edit']);
+Route::put('/rumahsakit/{id}', [RumahsakitController::class, 'update']);
+Route::delete('/rumahsakit/{id}', [RumahsakitController::class, 'destroy']);
 
 
