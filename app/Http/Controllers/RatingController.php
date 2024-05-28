@@ -71,7 +71,7 @@ class RatingController extends Controller
     {
         $rating = Rating::find($id);
         $rating->delete();
-        return redirect('/rating');
+        return redirect('/ratingedit');
     }
 
 }
