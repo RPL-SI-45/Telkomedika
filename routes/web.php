@@ -154,9 +154,10 @@ Route::get('/profiladmin',[profiladminController::class,'index']);
 
 Route::get('/rating', [RatingController::class, 'indexrating']);
 Route::get('/rating/createrating', [RatingController::class, 'create']);
-Route::post('/rating/store', [RatingController::class, 'store'])->middleware('auth');
-Route::get('/rumahsakit/{id}/edit', [RumahsakitController::class, 'edit']);
-Route::put('/rumahsakit/{id}', [RumahsakitController::class, 'update']);
-Route::delete('/rumahsakit/{id}', [RumahsakitController::class, 'destroy']);
+Route::post('/rating/store', [RatingController::class, 'store'])->name('store-rating')->middleware('auth');
+Route::get('/rating/{id}/edit', [RatingController::class, 'edit']);
+Route::put('/rating/{id}', [RatingController::class, 'update']);
+Route::delete('/rating/{id}', [RatingController::class, 'destroy']);
+Route::get('/ratingedit', [RatingController::class, 'indexedit'])->middleware('auth');
 
 

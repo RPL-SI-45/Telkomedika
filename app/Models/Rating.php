@@ -9,5 +9,10 @@ class Rating extends Model
 {
     use HasFactory;
     protected $table ='rating';
-    protected $fillable = ['user_id', 'star_rating', 'ulasan'];
+    protected $fillable = ['user_id', 'name', 'star_rating', 'ulasan'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
