@@ -166,13 +166,13 @@
 
                                 <div class="md:col-span-2 text-right">
                                     <div class="inline-flex items-end">
-                                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Update</button>
+                                        <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Update</button>
                                     </div>
                                 </div>
 
                                 <div class="md:col-span-2 text-right">
                                     <div class="inline-flex items-end">
-                                        <a href="{{ route('home') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Home</a>
+                                        <a href="{{ route('home') }}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Home</a>
                                     </div>
                                 </div>
 

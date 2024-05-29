@@ -14,7 +14,7 @@
 <body>
     <div class="min-h-screen p-6 bg-red-500 flex items-center justify-center">
         <div class="container max-w-screen-lg mx-auto">
-        <form action="{{ route('profile')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('update-profiladmin', ['id' => Auth::user()->id]) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
                     <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
@@ -50,7 +50,7 @@
 
                                 <div class="md:col-span-2 text-right">
                                     <div class="inline-flex items-end">
-                                        <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Edit</button>
+                                        <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Update</button>
                                     </div>
                                 </div>
 

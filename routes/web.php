@@ -20,7 +20,6 @@ use App\Http\Controllers\LihatrumahsakitController;
 use App\Http\Controllers\RumahsakitController;
 use App\Http\Controllers\FrontAntrianController;
 
-use App\Http\Controllers\profiladminController;
 use App\Http\Controllers\RekammedisController;
 use App\Http\Controllers\MedicalRecordController;
 
@@ -88,17 +87,10 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
 //Admin Routes List
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin/home');
-
+    Route::get('/profiladmin',[AdminController::class,'profilepage']);
+    Route::post('/profiladmin/edit/{id}', [AdminController::class, 'update'])->name('update-profiladmin');
     Route::get('/admin/profile', [AdminController::class, 'profilepage'])->name('admin/profile');
     Route::post('/admin/profile/edit/{id}', [AdminController::class, 'update'])->name('admin/profile/edit');
-
-    Route::get('/admin/products', [ProductController::class, 'index'])->name('admin/products');
-    Route::get('/admin/products/create', [ProductController::class, 'create'])->name('admin/products/create');
-    Route::post('/admin/products/store', [ProductController::class, 'store'])->name('admin/products/store');
-    Route::get('/admin/products/show/{id}', [ProductController::class, 'show'])->name('admin/products/show');
-    Route::get('/admin/products/edit/{id}', [ProductController::class, 'edit'])->name('admin/products/edit');
-    Route::put('/admin/products/edit/{id}', [ProductController::class, 'update'])->name('admin/products/update');
-    Route::delete('/admin/products/destroy/{id}', [ProductController::class, 'destroy'])->name('admin/products/destroy');
 });
 
 
@@ -135,19 +127,19 @@ Route::get('/antrian/{id}', [antrianController::class, 'informasi']);
 Route::get('/antrian/show', [antrianController::class,'informasi'])->name("informasi");
 
 
-
-Route::get('/profiladmin',[profiladminController::class,'index']);
-
 Route::get('/rekammedis',[RekammedisController::class, 'index']);
 Route::get('/rekammedis/{id}/view',[RekammedisController::class, 'view']);
 Route::delete('/rekammedis{id}',[RekammedisController::class, 'destroy']);
 Route::put('/rekammedis/{id}/perform', [RekammedisController::class, 'update'])->name('edit-rekammedis.perform');
 Route::get('/rekammedis/{id}/view/edit',[RekammedisController::class, 'edit']);
 
-Route::get('/medicalrecords', [MedicalRecordController::class, 'index'])->name('record.index');
+// Route::get('/medicalrecords', [MedicalRecordController::class, 'index'])->name('record.index');
+Route::middleware('auth')->group(function () {
+Route::get('/medicalrecords', [MedicalRecordController::class, 'index']);
+});
 
 Route::get('/rekammedis/search', [RekammedisController::class, 'search'])->name('rekammedis.search');
 
-Route::get('/profiladmin',[profiladminController::class,'index']);
+
 
 
