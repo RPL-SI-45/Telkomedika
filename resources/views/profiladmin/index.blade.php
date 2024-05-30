@@ -100,7 +100,7 @@ button {
     </tr>
     <tr>
       <th>
-	  <td><button type="submit">Edit</button>  <button type="submit">Home</button></td>
+	  <td><button type="submit">Update</button>  <button type="submit">Home</button></td>
     </th>
     </tr>
 

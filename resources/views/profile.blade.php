@@ -50,7 +50,7 @@
             
                                 <div class="md:col-span-2 text-right">
                                     <div class="inline-flex items-end">
-                                        <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Edit</button>
+                                        <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Update</button>
                                     </div>
                                 </div>
 
