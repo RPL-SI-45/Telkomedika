@@ -13,7 +13,6 @@
     <div class="bg" style="height: 60px; background-color: #B6252A"></div>
     <div class="h3 text-white" style="position: absolute; left: 130px; transform: translateY(-150%);">Telkomedika</div></div>
     <img src="{{ asset('logo/Telkomedika.png')}}" width="50px" style="position: absolute; left: 70px; transform: translateY(-115%);">
-    <div class="h3 text-center mt-5" style="font-family: Montserrat, sans-serif; font-weight: bold;"><center>Informasi Antrian Layanan Klinik Telkomedika</center></div>
     @yield('main-section')
 </body>
 </html>
