@@ -1,4 +1,4 @@
-@extends('layouts.reservasimain')
+@extends('layouts.main')
 
 
 @section('main-section')
