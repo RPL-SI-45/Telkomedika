@@ -150,4 +150,7 @@ Route::get('/rekammedis/search', [RekammedisController::class, 'search'])->name(
 
 Route::get('/profiladmin',[profiladminController::class,'index']);
 
+Route::get('/resumelayanan', [App\Http\Controllers\ResumeLayananController::class, 'create'])->name('resume.index');
+Route::post('/resumelayanan', [App\Http\Controllers\ResumeLayananController::class, 'store'])->name('resume.store');
+
 

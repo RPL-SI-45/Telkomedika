@@ -130,7 +130,7 @@
                                 <img src="{{ Auth::user()->profile_image ? asset('storage/profile-image/' . Auth::user()->profile_image) : 'https://via.placeholder.com/150' }}" alt="Profile Image" class="object-cover rounded-full w-2/4">
                                 <input type="file" class="mt-5" name="profile_image"/>
                             </div>
-                        </div>
+                        </div>                    
 
                         <div class="lg:col-span-2">
                             <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
@@ -140,12 +140,12 @@
                                 </div>
 
                                 <div class="md:col-span-5">
-                                    <label for="telp">Telp</label>
+                                    <label for="telp">No Telp</label>
                                     <input type="text" name="telp" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="{{ old('telp', Auth::user()->telp) }}"/>
                                 </div>
 
                                 <div class="md:col-span-5">
-                                    <label for="kartu">Kartu</label>
+                                    <label for="kartu">Nomor Kartu</label>
                                     <input type="text" name="kartu" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="{{ old('kartu', Auth::user()->kartu) }}"/>
                                 </div>
 
@@ -155,7 +155,7 @@
                                 </div>
 
                                 <div class="md:col-span-5">
-                                   <label for="nim">Nim</label>
+                                   <label for="nim">NIM</label>
                                     <input type="text" name="nim" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="{{ old('nim', Auth::user()->nim) }}"/>
                                 </div>
 
@@ -163,7 +163,7 @@
                                    <label for="nim">User Type</label>
                                     <input type="text" name="type" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="{{ Auth::user()->type }}" disabled/>
                                 </div>
-
+            
                                 <div class="md:col-span-2 text-right">
                                     <div class="inline-flex items-end">
                                         <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Update</button>
@@ -185,3 +185,4 @@
     </div>
 </body>
 </html>
+
