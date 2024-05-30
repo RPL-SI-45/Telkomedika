@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\antrian;
+use Illuminate\Support\Facades\Auth;
 
 class antrianController extends Controller{
 
@@ -39,6 +40,7 @@ class antrianController extends Controller{
 
         antrian::create([
             'id',
+            'user_id' => auth()->id(),
             'no_antrian' => $request->no_antrian,
             'nama_pasien' => $request->nama_pasien,
             'no_telp' => $request->no_telp,
@@ -98,5 +100,11 @@ class antrianController extends Controller{
     public function card(Request $request) {
         $antrian = antrian::find($request->id);
         return view('layouts.card', compact('antrian'));
+    }
+
+    public function notifikasi(Request $request) {
+        $user = Auth::user();
+        $antrian = antrian::where('user_id', $user->id)->get();
+        return view('notifikasi.notifikasi', compact('antrian'));
     }
 }

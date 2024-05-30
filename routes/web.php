@@ -151,6 +151,8 @@ Route::get('/rekammedis/search', [RekammedisController::class, 'search'])->name(
 Route::get('/profiladmin',[profiladminController::class,'index']);
 
 Route::get('/notify',function(){
-    notify()->success('Laravel Notify is awesome!');
+    notify()->success('Login Berhasil');
     return view('notify');
 });
+
+Route::get('/notifikasi',[antrianController::class,'notifikasi']);
