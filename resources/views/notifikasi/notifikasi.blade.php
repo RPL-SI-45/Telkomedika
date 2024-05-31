@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+@extends('layoutrumahsakit.rs')
+
+@section('main-section')
 <head>
     <title>Notifications</title>
     <!-- Bootstrap CSS -->
@@ -14,8 +17,10 @@
             background-color: #f8f9fa; /* Light grey background for all cards */
         }
     </style>
+    
 </head>
 <body>
+
     <div class="container mt-5">
         <h1 class="mb-4">Notifications</h1>
         @if($antrian->isEmpty())
@@ -39,3 +44,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+@endsection
