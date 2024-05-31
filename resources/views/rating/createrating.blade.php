@@ -20,7 +20,7 @@
                 <input type="radio" name="star_rating" id="rate-1" value="1">
                 <label for="rate-1" class="fas fa-star"></label>
             <div class="textarea">
-                <textarea name="ulasan" cols="30" placeholder="Describe your experience..hhyyy"></textarea>
+                <textarea name="ulasan" cols="30" placeholder="Describe your experience..."></textarea>
             </div>
             <button type="submit">submit</button>
             </div>
