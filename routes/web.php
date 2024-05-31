@@ -152,7 +152,7 @@ Route::get('/profiladmin',[profiladminController::class,'index']);
 
 Route::get('/notify',function(){
     notify()->success('Login Berhasil');
-    return view('notify');
+    return view('home');
 });
 
 Route::get('/notifikasi',[antrianController::class,'notifikasi']);
