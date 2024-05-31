@@ -31,8 +31,7 @@
             @foreach ($antrian as $antri)
                 <div class="notification card notification-card mb-3">
                     <div class="card-body">
-                        <p class="card-text mb-0">Nomor antrian kamu: <strong>{{ $antri->no_antrian }}</strong></p>
-                        <p class="card-text mb-0">Status pelayanan kamu : <strong>{{ $antri->status_pelayanan }}</strong></p>
+                        <p class="card-text mb-0">Reservasi Baru dari  <strong>{{ $antri->nama_pasien }}</strong></p>
                     </div>
                 </div>
             @endforeach

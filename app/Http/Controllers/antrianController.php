@@ -105,7 +105,13 @@ class antrianController extends Controller{
     public function notifikasi(Request $request) {
         $user = Auth::user();
         $notifications = Auth::user()->unreadNotifications;
-        $antrian = antrian::where('user_id', $user->id)->get();
+        $antrian = antrian::where('user_id', $user->id)->whereNotNull('no_antrian')->get();
         return view('notifikasi.notifikasi', compact('antrian'));
+    }
+
+    public function notifadmin(Request $request) {
+        $notifications = Auth::user()->unreadNotifications;
+        $antrian = antrian::all();
+        return view('notifikasi.notifadmin', compact('antrian'));
     }
 }
