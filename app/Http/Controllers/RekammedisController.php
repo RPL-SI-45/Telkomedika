@@ -28,11 +28,12 @@ class RekammedisController extends Controller{
         return redirect("/rekammedis");
     }
 
-    public function destroy ($id){
-        $rekammedis = rekammedis::find($id);
+    public function destroy($id){
+        $rekammedis = antrian::find($id);
         $rekammedis->delete();
         return redirect('/rekammedis');
     }
+
 
     public function view ($id){
         $rekammedis = antrian::find($id);

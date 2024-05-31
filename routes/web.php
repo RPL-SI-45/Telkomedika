@@ -140,7 +140,7 @@ Route::get('/profiladmin',[profiladminController::class,'index']);
 
 Route::get('/rekammedis',[RekammedisController::class, 'index']);
 Route::get('/rekammedis/{id}/view',[RekammedisController::class, 'view']);
-Route::delete('/rekammedis{id}',[RekammedisController::class, 'destroy']);
+Route::delete('/rekammedis/{id}', [RekammedisController::class, 'destroy']);
 Route::put('/rekammedis/{id}/perform', [RekammedisController::class, 'update'])->name('edit-rekammedis.perform');
 Route::get('/rekammedis/{id}/view/edit',[RekammedisController::class, 'edit']);
 

@@ -24,6 +24,8 @@
                             </div>
                         </nav>
                     </div>
+    </form>
+
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -42,6 +44,11 @@
                                             <td>
                                                 <div class="btn-group" role="group" aria-label="Basic example">
                                                     <a class="btn btn-primary btn-sm" href="/rekammedis/{{$w->id}}/view">View</a>
+                                                    <form action="/rekammedis/{{$w->id}}" method="POST" style="display: inline-block;">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                                    </form>
                                                 </div>
                                             </td>
                                         </tr>
