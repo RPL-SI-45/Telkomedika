@@ -1,11 +1,11 @@
-@extends("layouts.reservasimain")
+@extends("layouts.elemen")
 
 @push('header')
     <title>Informasi Antrian</title>
 @endpush
 
 @section('main-section')
-<div class="container">
+<div class="container mt-5">
         <div class="h1 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Buat Reservasi Online</div>
 
 <div class="container">
@@ -15,7 +15,7 @@
 
     <form action = "{{route("antrian.store")}}"  method="POST">
             @csrf
-            <div class="row mb-3"; style= "transform: translateX(5%)";>
+            <div class="row mb-3";>
                 <div class="col">
                     <label for="nama_pasien" class="form-label">Nama Pasien</label>
                     <input type="text" name ="nama_pasien" class="form-control" placeholder="Masukkan Nama Pasien" aria-label="Nama Pasien" style="border-color: red;width: 300px;margin-bottom: 20px;">
@@ -36,7 +36,7 @@
                 </div>
             </div>
 
-            <div class="row mb-3"; style= "transform: translateX(5%)";>
+            <div class="row mb-3";>
             <div class="col">
                     <label for="tanggal_reservasi" class="form-label">Tanggal Reservasi</label>
                     <input type="date" name="tanggal_reservasi" class="form-control" value="{{ old('tanggal') ?? date('Y-m-d') }}"style="border-color: red;width: 300px;margin-bottom: 30px;" >
@@ -62,7 +62,7 @@
 
             <div class="form-group mb-4">
                 <label for="keluhan">Keluhan Pasien</label>
-                <textarea name="keluhan" class="form-control" rows="5" style="border-color: red;width: 1180px;margin-bottom: 20px;">{{ old('keluhan')}} </textarea>
+                <textarea name="keluhan" class="form-control" rows="5" style="border-color: red;width: 1050px;margin-bottom: 20px;">{{ old('keluhan')}} </textarea>
                 <span class="text-danger">{{ $errors->first('keluhan') }}</span>
             </div>
 
