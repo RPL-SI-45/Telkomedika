@@ -13,7 +13,7 @@
                         <div class="d-flex justify-content-between align-items-center my-3">
                         <h5 class="m-0 font-weight-bold text-white">Ulasan</h5>
                         <div></div>
-                            <a class="btn btn-secondary" href="/rating/createrating" style="background-color: #f0f0f0; color: black;">Beri Rating dan Ulasan</a>
+                            <a dusk ="tambahrating" class="btn btn-secondary" href="/rating/createrating" style="background-color: #f0f0f0; color: black;">Beri Rating dan Ulasan</a>
                         </div>
                     </div>
                     <div class="card-body mb-4" style="background-color: #f0f0f0">

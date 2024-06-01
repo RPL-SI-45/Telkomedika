@@ -14,7 +14,7 @@
                 <input type="radio" name="star_rating" id="rate-4" value="4" {{ $rating->star_rating == 4 ? 'checked' : '' }}>
                 <label for="rate-4" class="fas fa-star"></label>
                 <input type="radio" name="star_rating" id="rate-3" value="3" {{ $rating->star_rating == 3 ? 'checked' : '' }}>
-                <label for="rate-3" class="fas fa-star"></label>
+                <label dusk="rate-3" for="rate-3" class="fas fa-star"></label>
                 <input type="radio" name="star_rating" id="rate-2" value="2" {{ $rating->star_rating == 2 ? 'checked' : '' }}>
                 <label for="rate-2" class="fas fa-star"></label>
                 <input type="radio" name="star_rating" id="rate-1" value="1" {{ $rating->star_rating == 1 ? 'checked' : '' }}>
@@ -22,7 +22,7 @@
             <div class="textarea">
                 <textarea name="ulasan" cols="30" placeholder="Describe your experience..hhyyy">{{$rating->ulasan}}</textarea>
             </div>
-            <button type="submit">submit</button>
+            <button dusk = "submit" type="submit">submit</button>
             </div>
         </form>
     </div>

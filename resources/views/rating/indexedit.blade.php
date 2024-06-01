@@ -27,11 +27,11 @@
                                             <p class="card-text">{{ $r->ulasan }}</p>
                                         </div>
                                         <div class="btn-group" role="group" aria-label="Basic example" style="padding: 10px;">
-                                            <a class="btn btn-warning btn-sm" href="/rating/{{$r->id}}/edit">Edit</a>
+                                            <a dusk ="edit" class="btn btn-warning btn-sm" href="/rating/{{$r->id}}/edit">Edit</a>
                                             <form action="/rating/{{$r->id}}" method="post" style="display: inline;">
                                                 @csrf
                                                 @method('delete')
-                                                <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+                                                <input dusk ="delete" type="submit" class="btn btn-danger btn-sm" value="Delete">
                                             </form>
                                         </div>
                                     </div>
