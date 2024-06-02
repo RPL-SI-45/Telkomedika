@@ -22,7 +22,7 @@
 <body>
 
     <div class="container mt-5">
-        <h1 class="mb-4">Notifikasi</h1>
+        <h1 class="mb-4">Notifications<</h1>
         @if($antrian->isEmpty())
             <div class="alert alert-info" role="alert">
                 No notifications found.
