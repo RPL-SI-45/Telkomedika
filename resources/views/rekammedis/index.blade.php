@@ -1,10 +1,9 @@
-@extends('rekammedis.main')
-
-@push('header')
-    <title>REKAM MEDIS PASIEN</title>
-@endpush
+@extends ('layouts.elemenadmin')
 
 @section('main-section')
+
+<div class="content flex-1 p-10">
+<div class="container mt-5">
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4"></div>
 <br>

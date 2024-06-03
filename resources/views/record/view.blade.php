@@ -1,10 +1,5 @@
 @extends ('layouts.elemen')
 
-@push('header')
-    <title>Riwayat Berobat Pasien</title>
-@endpush
-
-
 @section('main-section')
 <div class="d-sm-flex align-items-center justify-content-between mb-4"></div>
 </br>
@@ -18,7 +13,7 @@
                     </div>
                 </div>
             </div>
-
+                </br>
     <div class="row mb-4">
         <div class="d-flex justify-content-between align-items-center mb-6">
     <div class="container">

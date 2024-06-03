@@ -53,7 +53,6 @@ Route::get('/register', function () {
     return view('Register');
 })->name('register');
 
-Route::get('/about', [UserController::class, 'about'])->name('about');
 
 Route::get('/infotelkomedikapasien', function () {
     return view('infotelkomedika.pasien');

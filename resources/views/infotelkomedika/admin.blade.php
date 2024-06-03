@@ -137,7 +137,6 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-6">
-                    <!-- Google Maps embed code here -->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15841.083137801683!2d107.630392!3d-6.9773433!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9ac24f5babb%3A0x2ca9f636654d9715!2sKlinik%20Telkomedika!5e0!3m2!1sid!2sid!4v1717257542757!5m2!1sid!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 <div class="col-lg-3">
