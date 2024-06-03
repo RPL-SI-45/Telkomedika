@@ -1,10 +1,9 @@
-@extends('layouts.elemen')
+@extends ('layouts.elemen')
+
 
 @section('main-section')
-
 <div class="content flex-1 p-20">
 <div class="container mt-5">
-<div class="container">
     <div class="h2 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Informasi Dokter Klinik Telkomedika</div>
 
     </br>
