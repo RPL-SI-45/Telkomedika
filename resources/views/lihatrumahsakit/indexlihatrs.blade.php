@@ -1,11 +1,17 @@
-@extends('layoutrumahsakit.rs')
+@extends('layouts.elemen')
 
 @section('main-section')
+
+<div class="content flex-1 p-10">
+<div class="container mt-5">
     <div class="container">
         <br>
-        <div class="h2 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">
-            Informasi Rumah Sakit Mitra Klinik Telkomedika
+        <div class="h2 text-center mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">
+            Informasi Rumah Sakit Mitra
+        </br> Klinik Telkomedika
         </div>
+
+    </br>
         <div class="row">
             <div class="col-md-12">
                 <div class="card shadow mb-4">

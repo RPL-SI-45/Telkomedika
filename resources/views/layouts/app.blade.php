@@ -213,7 +213,7 @@
                                 pemeriksaan mata, perawatan dan pengobatan gigi, perawatan gawat darurat,
                                 rawat jalan, rawat inap, apotik dan jasa rujukan ke rumah sakit.</p>
 
-                            <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="">Read More</a>
+                            <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="/infotelkomedikaadmin">Read More</a>
                         </div>
                     </div>
                 </div>

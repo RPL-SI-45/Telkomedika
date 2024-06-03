@@ -55,6 +55,13 @@ Route::get('/register', function () {
 
 Route::get('/about', [UserController::class, 'about'])->name('about');
 
+Route::get('/infotelkomedikapasien', function () {
+    return view('infotelkomedika.pasien');
+});
+Route::get('/infotelkomedikaadmin', function () {
+    return view('infotelkomedika.admin');
+});
+
 
 Route::controller(AuthController::class)->group(function () {
     // Route::get('register', 'register')->name('register');
@@ -144,7 +151,13 @@ Route::delete('/rekammedis{id}',[RekammedisController::class, 'destroy']);
 Route::put('/rekammedis/{id}/perform', [RekammedisController::class, 'update'])->name('edit-rekammedis.perform');
 Route::get('/rekammedis/{id}/view/edit',[RekammedisController::class, 'edit']);
 
-Route::get('/medicalrecords', [MedicalRecordController::class, 'index'])->name('record.index');
+Route::get('medicalrecords/{id}/view', [MedicalRecordController::class, 'index'])->name('record.index');
+Route::get('/medicalrecords', [MedicalRecordController::class, 'view'])->name('record.view');
+
+// Route::middleware(['auth'])->group(function () {
+//     Route::get('medicalrecords/index', [MedicalRecordController::class, 'index'])->name('record.index');
+//     Route::get('medicalrecords/view', [MedicalRecordController::class, 'view'])->name('record.view');
+// });
 
 Route::get('/rekammedis/search', [RekammedisController::class, 'search'])->name('rekammedis.search');
 
