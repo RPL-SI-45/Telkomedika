@@ -1,4 +1,4 @@
-@extends ('layouts.elemen')
+@extends ('layouts.elemenadmin')
 
 @push('header')
     <title>Informasi Antrian</title>
