@@ -118,7 +118,7 @@
             </div>
         </form>
     </div> -->
-    <div class="min-h-screen p-6 bg-red-500 flex items-center justify-center">
+    <div class="min-h-screen p-6 flex items-center justify-center" style="background-color: #B6252A;">
         <div class="container max-w-screen-lg mx-auto">
             <form action="{{ route('update-profile', ['id' => Auth::user()->id]) }}" method="POST" enctype="multipart/form-data">
                 @csrf
@@ -166,13 +166,13 @@
 
                                 <div class="md:col-span-2 text-right">
                                     <div class="inline-flex items-end">
-                                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Update</button>
+                                        <button type="submit" class="hover:bg-red-700 text-white font-bold py-2 px-4 rounded" style="background-color: #808080">Update</button>
                                     </div>
                                 </div>
 
                                 <div class="md:col-span-2 text-right">
                                     <div class="inline-flex items-end">
-                                        <a href="{{ route('home') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Home</a>
+                                        <a href="{{ route('home') }}" class="hover:bg-red-700 text-white font-bold py-2 px-4 rounded" style="background-color: #808080">Home</a>
                                     </div>
                                 </div>
 

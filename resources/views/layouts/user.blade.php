@@ -145,6 +145,12 @@
                 <a href="/rating" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
                     <i class="bi bi-star-fill mr-3"></i> Rating dan Ulasan
                 </a>
+                <a href="#" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
+                </a>
+                <a href="#" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
+                </a>
+                <a href="#" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
+                </a>
             </nav>
         </div>
 
@@ -250,6 +256,7 @@
             <p>Copyright &copy; 2024 All rights reserved | Kelompok D Telkomedika</p>
         </div>
     </footer>
+    @yield('main-section')
 </body>
 
 </html>

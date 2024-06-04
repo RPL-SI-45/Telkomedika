@@ -98,6 +98,7 @@
                     <span class="sr-only">View notifications</span>
                     <i class="bi bi-bell"></i>
                 </button>
+
                 <!-- Profile dropdown -->
                 <div x-data="{show: false}" x-on:click.away="show = false" class="relative">
                     <div>
@@ -147,6 +148,11 @@
                 </a>
                 <a href="/resume" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
                     <i class="bi bi-book mr-3"></i> Resume Pelayanan
+                <a href="#" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
+                </a>
+                <a href="#" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
+                </a>
+                <a href="#" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
                 </a>
             </nav>
         </div>
