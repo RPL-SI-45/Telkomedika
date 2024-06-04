@@ -1,7 +1,8 @@
-@extends("layouts.reservasimain")
+@extends ('layouts.elemen')
 
 @section('main-section')
-<div class="container">
+<div class="content flex-1 p-10">
+<div class="container mt-5">
     <div class="h1 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Informasi Rekam Medis Pasien</div>
 
     @csrf

@@ -1,8 +1,9 @@
-@extends('layoutrumahsakit.rs')
+@extends ('layouts.elemenadmin')
 
 
 @section('main-section')
-    <div class="container">
+<div class="content flex-1 p-20">
+<div class="container mt-5">
     <div class="h2 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Informasi Daftar Rumah Sakit Mitra Klinik Telkomedika</div>
 </br>
     <div class = "card">
@@ -34,6 +35,7 @@
                 <label for="image">Upload Gambar</label>
                 <input type="file" name="Gambar" class="form-control-file" required>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" name="submit" class="btn btn-danger btn-bg" style="transform: translateX(600%); background-color: #B6252A;">Submit</button>
+
             </form>
 @endsection

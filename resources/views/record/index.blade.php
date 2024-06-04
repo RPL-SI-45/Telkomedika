@@ -1,4 +1,9 @@
-@extends("layouts.reservasimain")
+@extends ('layouts.elemen')
+
+@push('header')
+    <title>Riwayat Berobat Pasien</title>
+@endpush
+
 
 @section('main-section')
 <!DOCTYPE html>
@@ -22,11 +27,52 @@
         .form-group label {
             font-weight: bold;
         }
+        .text-primary {
+            color: #B6252A !important;
+        }
+
+        .bg-primary {
+            background-color: #B6252A !important;
+        }
+
+        .btn-primary {
+            background-color: #B6252A !important;
+            border-color: #B6252A !important;
+        }
+
+        .border-primary {
+            border-color: #B6252A !important;
+        }
+
+        .btn-outline-primary {
+            color: #B6252A !important;
+            border-color: #B6252A !important;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #B6252A !important;
+            border-color: #B6252A !important;
+        }
+
+        .sidebar {
+            width: 280px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #4A5568;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
 @foreach ($rekammedis as $w)
-<div class="container">
+<div class="content flex-1 p-10">
+<div class="container mt-5">
     <div class="col-md-12">
         <div class="card shadow mb-4">
             <div class="card-header py-3" style="background-color: #B6252A;">

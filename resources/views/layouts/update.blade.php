@@ -1,16 +1,17 @@
-@extends ('layouts.main')
+@extends ('layouts.elemen')
 
 @push('header')
     <title>Update Informasi Antrian</title>
 @endpush
 
 @section('main-section')
-
-<div class="container">
-    <div class="d-flex justify-content-between align-items-center my-3">
-        <div class="h5">Update Data Antrian</div>
-        <a href="/antrian" class="btn btn-secondary btn-sm">Back</a>
-    </div>
+<div class="content flex-1 p-0">
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center my-3">
+            <div class="col-lg-12 margin-tb">
+                    <h2 class="text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Update Data Antrian</h2>
+            </div>
+        </div>
 
     <div class = "card">
     <div class = "card-body">
@@ -107,7 +108,7 @@
             </div>
 
             <div class="col-12 text-center mt-4 ">
-            <button class="btn btn-secondary" type="submit">Update</button>
+            <button class="btn btn-secondary" style="background-color: #B6252A;" type="submit">Update</button>
             </div>
         </form>
     </div>

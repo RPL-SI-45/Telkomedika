@@ -1,4 +1,4 @@
-@extends("layouts.elemen")
+@extends("layouts.elemenadmin")
 
 @push('header')
     <title>Informasi Antrian</title>
@@ -10,10 +10,10 @@
 
 <div class="container">
     <div class="d-flex justify-content-between align-items-center my-3">
-    <a href="/antrian" class="btn btn-secondary btn-sm ml-auto" style="margin-left: 1200px;">Back</a>
+    <a href="/daftarreservasi" class="btn btn-secondary btn-sm ml-auto" style="margin-left: 1200px;">Back</a>
     </div>
 
-    <form action = "{{route("antrian.store")}}"  method="POST">
+    <form action = "{{route("reservasi.store")}}"  method="POST">
             @csrf
             <div class="row mb-3";>
                 <div class="col">
