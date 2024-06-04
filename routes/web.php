@@ -163,4 +163,7 @@ Route::put('/rating/{id}', [RatingController::class, 'update']);
 Route::delete('/rating/{id}', [RatingController::class, 'destroy']);
 Route::get('/ratingedit', [RatingController::class, 'indexedit'])->middleware('auth');
 
+Route::get('/resumelayanan', [App\Http\Controllers\ResumeLayananController::class, 'create'])->name('resume.index');
+Route::post('/resumelayanan', [App\Http\Controllers\ResumeLayananController::class, 'store'])->name('resume.store');
+
 
