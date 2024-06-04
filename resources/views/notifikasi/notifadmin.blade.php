@@ -32,6 +32,9 @@
                 <div class="notification card notification-card mb-3">
                     <div class="card-body">
                         <p class="card-text mb-0">Reservasi Baru dari  <strong>{{ $antri->nama_pasien }}</strong></p>
+                        <div class="updated-time">
+                        Terakhir diperbarui: <strong>{{ \Carbon\Carbon::parse($antri->updated_at)->timezone('Asia/Jakarta')->format('d M Y H:i') }}</strong>
+                    </div>
                     </div>
                 </div>
             @endforeach

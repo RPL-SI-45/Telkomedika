@@ -157,3 +157,4 @@ Route::get('/notify',function(){
 
 Route::get('/notifikasi',[antrianController::class,'notifikasi']);
 Route::get('/notifadmin',[antrianController::class,'notifadmin']);
+Route::get('/notifikasibaru',[antrianController::class,'notifikasibaru']);

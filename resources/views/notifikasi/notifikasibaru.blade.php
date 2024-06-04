@@ -15,28 +15,32 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: #f8f9fa; /* Light grey background for all cards */
+            position: relative; /* Ensure positioning for absolute children */
+        }
+        .updated-time {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.9rem;
+            color: #6c757d; /* Muted text color */
         }
     </style>
-    
 </head>
 <body>
 
     <div class="container mt-5">
-        <h1 class="mb-4">Notifications<</h1>
-        @if($antrian->isEmpty())
-            <div class="alert alert-info" role="alert">
-                No notifications found.
-            </div>
-        @else
-            @foreach ($antrian as $antri)
-                <div class="notification card notification-card mb-3">
-                    <div class="card-body">
-                        <p class="card-text mb-0">Nomor antrian kamu: <strong>{{ $antri->no_antrian }}</strong></p>
-                        <p class="card-text mb-0">Status pelayanan kamu : <strong>{{ $antri->status_pelayanan }}</strong></p>
+        <h1 class="mb-4">Notifications</h1>
+        @foreach ($notifikasi as $antri)
+            <div class="notification card notification-card mb-3">
+                <div class="card-body">
+                    <p class="card-text mb-0">{{$antri->nama_pasien}} nomor antrian kamu: <strong>{{ $antri->no_antrian }}</strong></p>
+                    <p class="card-text mb-0">Status pelayanan kamu : <strong>{{ $antri->status_pelayanan }}</strong></p>
+                    <div class="updated-time">
+                        Terakhir diperbarui: <strong>{{ \Carbon\Carbon::parse($antri->updated_at)->timezone('Asia/Jakarta')->format('d M Y H:i') }}</strong>
                     </div>
                 </div>
-            @endforeach
-        @endif
+            </div>
+        @endforeach
     </div>
 
     <!-- Bootstrap JS and dependencies -->
