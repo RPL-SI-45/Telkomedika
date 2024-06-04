@@ -23,6 +23,8 @@ use App\Http\Controllers\FrontAntrianController;
 use App\Http\Controllers\RekammedisController;
 use App\Http\Controllers\MedicalRecordController;
 
+use App\Http\Controllers\RatingController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -141,5 +143,13 @@ Route::get('/medicalrecords', [MedicalRecordController::class, 'index']);
 Route::get('/rekammedis/search', [RekammedisController::class, 'search'])->name('rekammedis.search');
 
 
+
+Route::get('/rating', [RatingController::class, 'indexrating']);
+Route::get('/rating/createrating', [RatingController::class, 'create']);
+Route::post('/rating/store', [RatingController::class, 'store'])->name('store-rating')->middleware('auth');
+Route::get('/rating/{id}/edit', [RatingController::class, 'edit']);
+Route::put('/rating/{id}', [RatingController::class, 'update']);
+Route::delete('/rating/{id}', [RatingController::class, 'destroy']);
+Route::get('/ratingedit', [RatingController::class, 'indexedit'])->middleware('auth');
 
 
