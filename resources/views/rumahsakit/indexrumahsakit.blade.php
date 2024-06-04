@@ -1,11 +1,13 @@
-@extends('layoutrumahsakit.rs')
+@extends ('layouts.elemenadmin')
+
 
 @section('main-section')
-    <div class="container">
-        <br>
+<div class="content flex-1 p-20">
+<div class="container mt-5">
         <div class="h2 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">
             Informasi Rumah Sakit Mitra Klinik Telkomedika
         </div>
+            </br>
         <div class="row">
             <div class="col-md-12">
                 <div class="card shadow mb-4">
@@ -26,7 +28,7 @@
                                             <h5 class="card-title" style="margin-top: 130px;">{{ $rs->NamaRumahsakit }}</h5>
                                             <p class="card-text">{{ $rs->Alamat }}</p>
                                             <p class="card-text">{{ $rs->Notelepon }}</p>
-                                            <a link href="{{ $rs->Lokasi }}" target="_blank" class="btn btn-primary" role="button" aria-disabled="true">Lihat Lokasi</a>
+                                            <a link href="{{ $rs->Lokasi }}" target="_blank" class="btn btn-danger" style="background-color: #B6252A;" role="button" aria-disabled="true">Lihat Lokasi</a>
                                         </div>
                                         <div class="btn-group" role="group" aria-label="Basic example" style="padding: 10px;">
                                             <a class="btn btn-warning btn-sm" href="/rumahsakit/{{$rs->id}}/edit">Edit</a>

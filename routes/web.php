@@ -54,7 +54,13 @@ Route::get('/register', function () {
     return view('Register');
 })->name('register');
 
-Route::get('/about', [UserController::class, 'about'])->name('about');
+
+Route::get('/infotelkomedikapasien', function () {
+    return view('infotelkomedika.pasien');
+});
+Route::get('/infotelkomedikaadmin', function () {
+    return view('infotelkomedika.admin');
+});
 
 
 Route::controller(AuthController::class)->group(function () {
@@ -114,8 +120,9 @@ Route::post('/antrian/store', [antrianController::class, 'store']);
 
 Route::get('/daftarreservasi', [antrianController::class, 'index']);
 Route::get('/reservasi/create', [antrianController::class, 'create']);
+Route::get('/createadmin', [antrianController::class, 'createadmin']);
 Route::post('/reservasi/create', [antrianController::class, 'store']);
-Route::post('/reservasi/store', [antrianController::class, 'store']);
+Route::post('/reservasi/store', [antrianController::class, 'storeadmin'])->name("reservasi.store");
 Route::post('/antrian/create', [antrianController::class, 'store']);
 Route::post('/antrian', [antrianController::class, 'store'])->name("antrian.store");
 
@@ -135,10 +142,14 @@ Route::delete('/rekammedis{id}',[RekammedisController::class, 'destroy']);
 Route::put('/rekammedis/{id}/perform', [RekammedisController::class, 'update'])->name('edit-rekammedis.perform');
 Route::get('/rekammedis/{id}/view/edit',[RekammedisController::class, 'edit']);
 
-// Route::get('/medicalrecords', [MedicalRecordController::class, 'index'])->name('record.index');
-Route::middleware('auth')->group(function () {
-Route::get('/medicalrecords', [MedicalRecordController::class, 'index']);
-});
+Route::get('medicalrecords/{id}/view', [MedicalRecordController::class, 'index'])->name('record.index');
+Route::get('/medicalrecords', [MedicalRecordController::class, 'view'])->name('record.view');
+
+// Route::middleware(['auth'])->group(function () {
+//     Route::get('medicalrecords/index', [MedicalRecordController::class, 'index'])->name('record.index');
+//     Route::get('medicalrecords/view', [MedicalRecordController::class, 'view'])->name('record.view');
+// });
+
 
 Route::get('/rekammedis/search', [RekammedisController::class, 'search'])->name('rekammedis.search');
 

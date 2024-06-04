@@ -1,8 +1,9 @@
-@extends('layouts.reservasimain')
+@extends ('layouts.elemenadmin')
 
 
 @section('main-section')
-    <div class = "container"> </br>
+<div class="content flex-1 p-20">
+<div class="container mt-5">
     <div class="h2 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Informasi Layanan Poli Klinik Telkomedika</div>
         <div class="d-flex justify-content-between align-items-center my-3">
             <a class="btn btn-secondary" href="/poli/create">Tambah Data Poli</a>
