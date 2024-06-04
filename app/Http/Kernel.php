@@ -3,6 +3,8 @@
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class Kernel extends HttpKernel
 {

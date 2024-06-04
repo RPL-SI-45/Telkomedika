@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,18 +39,38 @@
         }
 
         .btn-primary {
-            background-color: #712cf9; /* Set button background color */
-            border-color: #712cf9; /* Set button border color */
+            background-color: #6c757d; /* Set button background color */
+            border-color: #6c757d; /* Set button border color */
         }
 
         .btn-primary:hover,
         .btn-primary:focus {
-            background-color: #6528e0; /* Set button hover color */
-            border-color: #6528e0; /* Set button hover border color */
+            background-color: #b6252a; /* Set button hover color */
+            border-color: #b6252a; /* Set button hover border color */
         }
 
         .text-body-secondary {
             color: #6c757d; /* Set secondary text color */
+        }
+
+        .custom-card {
+            max-width: 800px; /* Set card width */
+            margin: auto; /* Center the card */
+        }
+
+        .custom-form {
+            max-width: 600px; /* Set form width */
+            margin: auto; /* Center the form */
+        }
+
+        .custom-form img {
+            display: block; /* Center the image */
+            margin: 0 auto 1.5rem; /* Center the image with margin bottom */
+        }
+
+        .custom-form h1 {
+            text-align: center; /* Center the heading */
+            margin-bottom: 1.5rem; /* Add margin bottom */
         }
     </style>
 </head>
@@ -58,12 +78,13 @@
     <section class="bg-red-700 flex items-center justify-center h-screen"> <!-- Override Tailwind background color -->
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <div class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-        
+
             </div>
-            <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-                <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+            <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 custom-card">
+                <div class="p-6 space-y-4 md:space-y-6 sm:p-8 custom-form">
+                    <img class="mb-4" src="/images/telkomedika.png" alt="" width="72" height="57">
                     <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                       Welcome Back 
+                       Welcome Back
                     </h1>
                     <form class="space-y-4 md:space-y-6" method="post" action="{{ route('login.action') }}">
                         @csrf
@@ -91,7 +112,7 @@
                             <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
                             <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
                         </div>
-                        <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
+                        <button dusk ="signin" type="submit" class="flex w-full justify-center rounded-md bg-gray-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Sign in</button>
                         <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                             Don’t have an account yet? <a href="{{ route('register') }}" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
                         </p>
@@ -101,5 +122,5 @@
         </div>
     </section>
 </body>
- 
+
 </html>

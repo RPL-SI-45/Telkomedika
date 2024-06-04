@@ -1,59 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
-<div class="container">
+@extends ('layouts.elemenadmin')
 
 
-<table  class="table table-striped table-hover table-bordered table-white table-striped" border="2">
-    <tr>
-        <th scope="col">NOMOR</th>
-        <th scope="col">NAMA DOKTER</th>
-        <th scope="col">NAMA POLI</th>
-        <th scope="col">SENIN</th>
-        <th scope="col">SELASA</th>
-        <th scope="col">RABU</th>
-        <th scope="col">KAMIS</th>
-        <th scope="col">JUMAT</th>
-        <th scope="col">SABTU</th>
-        <th scope="col">STATUS KEHADIRAN</th>
-        <td></td>
-    </tr>
-    @foreach($informasidokter as $informasidokter)
-    <tr>
-        <td>{{$informasidokter->id}}</td>
-        <td>{{$informasidokter->Nama_Dokter}}</td>       
-        <td>{{$informasidokter->Nama_Poli}}</td>
-        <td>{{$informasidokter->Senin}}</td>
-        <td>{{$informasidokter->Selasa}}</td>
-        <td>{{$informasidokter->Rabu}}</td>
-        <td>{{$informasidokter->Kamis}}</td>
-        <td>{{$informasidokter->Jumat}}</td>
-        <td>{{$informasidokter->Sabtu}}</td>
-        <td>{{$informasidokter->Status_Kehadiran}}</td>
+@section('main-section')
+<div class="content flex-1 p-20">
+<div class="container mt-5">
+    <div class="h2 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Informasi Dokter Klinik Telkomedika</div>
 
-        <td>
-            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-            <a class="btn btn-warning" href="/informasidokter/{{$informasidokter->id}}/edit">Edit</a>
-            <form action="/informasidokter/{{$informasidokter->id}}" method="POST">
-                @csrf
-                @method('delete')
-                <input type="submit" class="btn btn-danger" value="delete">
-            </form>
+    <div class="d-flex justify-content-between align-items-center my-3">
+        <a href="/informasidokter/create" class="btn btn-secondary">Tambah Informasi Dokter</a>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3"; style="background-color: #B6252A";>
+                    <h6 class="m-0 font-weight-bold text-white">Daftar Informasi Dokter Telkomedika</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr class="text-center">
+                                    <th scope="col">Nomor</th>
+                                    <th scope="col">Nama Dokter</th>
+                                    <th scope="col">Nama Poli</th>
+                                    <th scope="col">Senin</th>
+                                    <th scope="col">Selasa</th>
+                                    <th scope="col">Rabu</th>
+                                    <th scope="col">Kamis</th>
+                                    <th scope="col">Jumat</th>
+                                    <th scope="col">Sabtu</th>
+                                    <th scope="col">Status Kehadiran</th>
+                                    <th scope="col">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($informasidokter as $dokter)
+                                <tr class="text-center">
+                                    <td>{{ $dokter->id }}</td>
+                                    <td>{{ $dokter->Nama_Dokter }}</td>
+                                    <td>{{ $dokter->Nama_Poli }}</td>
+                                    <td>{{ $dokter->Senin }}</td>
+                                    <td>{{ $dokter->Selasa }}</td>
+                                    <td>{{ $dokter->Rabu }}</td>
+                                    <td>{{ $dokter->Kamis }}</td>
+                                    <td>{{ $dokter->Jumat }}</td>
+                                    <td>{{ $dokter->Sabtu }}</td>
+                                    <td>{{ $dokter->Status_Kehadiran }}</td>
+                                    <td>
+                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                            <a class="btn btn-warning btn-sm" href="/informasidokter/{{ $dokter->id }}/edit">Edit</a>
+                                            <form action="/informasidokter/{{ $dokter->id }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            
-        </td>
-    </tr>
-
-    @endforeach
-</table>
-<a type="button" class="btn btn-success" href="/informasidokter/create">Tambah Informasi Dokter</a>
+        </div>
+    </div>
 </div>
+@endsection

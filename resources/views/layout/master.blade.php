@@ -9,7 +9,7 @@
     <nav style="color: white;" data-bs-theme="dark">
     <a class="navbar-brand" href="#">
         <img src="{{ asset('gambar/profile.png')}}" width="30px" style="position: absolute; right: 70px; transform: translateY(-5%);">
-        <div class="h6 text-white" style="position: absolute; right: 130px; transform: translateY(25%);">Pasien</div></div>
+        <div class="h6 text-white" style="position: auto; right: 130px; transform: translateX(-25%); translateY(50%);">Pasien</div>
     </a>
   </nav>
 </nav>
