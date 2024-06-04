@@ -78,9 +78,8 @@
                         </button>
                     </div>
                     <div x-show="show" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                        <a href="{{ url('/profile') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
-                        <a href="{{ route('logout') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+                        <a href="{{ url('/profiladmin') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0" style="color: black; text-decoration: none; border-bottom: none; transition: font-weight 0.3s;" onmouseover="this.style.fontWeight='bold';" onmouseout="this.style.fontWeight='normal';">Your Profile</a>
+                        <a href="{{ route('logout') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2" style="color: black; text-decoration: none; border-bottom: none; transition: font-weight 0.3s;" onmouseover="this.style.fontWeight='bold';" onmouseout="this.style.fontWeight='normal';">Sign out</a>
                     </div>
                 </div>
             </div>
@@ -112,10 +111,10 @@
                 <a href="/rekammedis" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
                     <i class="bi bi-journal-text mr-3"></i> Riwayat Berobat
                 </a>
-                <a href="/rating" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
+                <a href="/ratingadmin" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
                     <i class="bi bi-star-fill mr-3"></i> Rating dan Ulasan
                 </a>
-                <a href="/resume" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
+                <a href="/resumelayanan" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
                     <i class="bi bi-book mr-3"></i> Resume Pelayanan
                 </a>
                 <a href="#" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">

@@ -1,8 +1,8 @@
-@extends('layoutrumahsakit.rs')
+@extends('layout.elemen')
 
 
 @section('main-section')
-    
+
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <div class="container">
         <form role='form' action ='/rating/{{$rating->id}}' method="POST">
@@ -26,7 +26,7 @@
             </div>
         </form>
     </div>
-    
+
         <!-- <script>
         const btn = document.querySelector("button");
         const post = document.querySelector(".post");

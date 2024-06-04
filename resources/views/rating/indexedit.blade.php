@@ -1,4 +1,4 @@
-@extends('layoutrumahsakit.rs')
+@extends('layouts.elemen')
 
 @section('main-section')
     <div class="container">

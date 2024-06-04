@@ -1,4 +1,4 @@
-@extends('layoutrumahsakit.rs')
+@extends('layouts.elemen')
 
 @section('main-section')
     <div class="container">
@@ -25,7 +25,7 @@
                                             <h5 class="card-text" style="margin-top: 20px;">{{ $r->name }}</h5>
                                             <p class="card-text">★{{ $r->star_rating }}/5</p>
                                             <p class="card-text">{{ $r->ulasan }}</p>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
