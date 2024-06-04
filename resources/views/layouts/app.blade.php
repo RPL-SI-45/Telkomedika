@@ -133,7 +133,7 @@
                 <a href="/rumahsakit" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
                     <i class="bi bi-building mr-3"></i> Informasi Rumah Sakit
                 </a>
-                <a href="/antrian/create" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
+                <a href="/createadmin" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
                     <i class="bi bi-calendar-check-fill mr-3"></i> Reservasi Online
                 </a>
                 <a href="/daftarreservasi" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">

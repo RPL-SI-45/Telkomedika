@@ -97,14 +97,6 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
     Route::get('/admin/profile', [AdminController::class, 'profilepage'])->name('admin/profile');
     Route::post('/admin/profile/edit/{id}', [AdminController::class, 'update'])->name('admin/profile/edit');
-
-    Route::get('/admin/products', [ProductController::class, 'index'])->name('admin/products');
-    Route::get('/admin/products/create', [ProductController::class, 'create'])->name('admin/products/create');
-    Route::post('/admin/products/store', [ProductController::class, 'store'])->name('admin/products/store');
-    Route::get('/admin/products/show/{id}', [ProductController::class, 'show'])->name('admin/products/show');
-    Route::get('/admin/products/edit/{id}', [ProductController::class, 'edit'])->name('admin/products/edit');
-    Route::put('/admin/products/edit/{id}', [ProductController::class, 'update'])->name('admin/products/update');
-    Route::delete('/admin/products/destroy/{id}', [ProductController::class, 'destroy'])->name('admin/products/destroy');
 });
 
 
@@ -126,8 +118,9 @@ Route::post('/antrian/store', [antrianController::class, 'store']);
 
 Route::get('/daftarreservasi', [antrianController::class, 'index']);
 Route::get('/reservasi/create', [antrianController::class, 'create']);
+Route::get('/createadmin', [antrianController::class, 'createadmin']);
 Route::post('/reservasi/create', [antrianController::class, 'store']);
-Route::post('/reservasi/store', [antrianController::class, 'store']);
+Route::post('/reservasi/store', [antrianController::class, 'storeadmin'])->name("reservasi.store");
 Route::post('/antrian/create', [antrianController::class, 'store']);
 Route::post('/antrian', [antrianController::class, 'store'])->name("antrian.store");
 
