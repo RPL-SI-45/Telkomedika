@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <div class="bg" style="height: 60px; background-color: #B6252A"></div>
     <div class="h3 text-white" style="position: absolute; left: 130px; transform: translateY(-150%);">Telkomedika</div>
-    <a class="text-danger btn btn-light btn-sm;" style="position: absolute; right: 50px; transform: translateY(-130%)" href="/login">Login</a></div>
+    <a dusk='login' class="text-danger btn btn-light btn-sm;" style="position: absolute; right: 50px; transform: translateY(-130%)" href="/login">Login</a></div>
 
 </div>
     <img src="{{ asset('logo/Telkomedika.png')}}" width="50px" style="position: absolute; left: 70px; transform: translateY(-115%);">
