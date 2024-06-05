@@ -81,6 +81,9 @@ Route::get('/informasi',[informasidokterController::class,'informasi']);
 Route::get('/informasidokter',[informasidokterController::class,'index']);
 Route::get('/informasidokter/create',[informasidokterController::class,'create']);
 Route::post('/informasidokter/store',[informasidokterController::class,'store']);
+Route::get('/informasidokter/{id}/edit',[informasidokterController::class,'edit']);
+Route::put('/informasidokter/{id}',[informasidokterController::class,'update']);
+Route::delete('/informasidokter/{id}',[informasidokterController::class,'destroy']);
 
 
 
@@ -132,6 +135,7 @@ Route::delete('/antrian/{id}',[antrianController::class, 'destroy']);
 Route::get('/antrian/{id}/show',[antrianController::class, 'informasi']);
 Route::get('/antrian/{id}/showadmin',[antrianController::class, 'informasiadmin']);
 Route::get('/antrian/{id}/card',[antrianController::class, 'card']);
+Route::get('/antrian/{id}/cardadmin',[antrianController::class, 'cardadmin']);
 Route::get('/antrian/{id}', [antrianController::class, 'informasi']);
 Route::get('/antrian/show', [antrianController::class,'informasi'])->name("informasi");
 

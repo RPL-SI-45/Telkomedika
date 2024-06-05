@@ -67,7 +67,7 @@
                                     <td>{{ $w->status_pelayanan }}</td>
                                     <td>
                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                            <a class="btn btn-primary btn-sm" href="/antrian/{{$w->id}}/card">Kartu antrian</a>
+                                            <a class="btn btn-primary btn-sm" href="/antrian/{{$w->id}}/cardadmin">Kartu antrian</a>
                                         </div>
                                     </td>
                                 </tr>

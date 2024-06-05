@@ -32,6 +32,7 @@ class antrianController extends Controller{
     public function store(Request $request){
         $request->validate([
             'id',
+            'user_id',
             'no_antrian',
             'nama_pasien',
             'no_telp',
@@ -68,6 +69,7 @@ class antrianController extends Controller{
     public function storeadmin(Request $request){
         $request->validate([
             'id',
+            'user_id',
             'no_antrian',
             'nama_pasien',
             'no_telp',
@@ -82,6 +84,7 @@ class antrianController extends Controller{
 
         antrian::create([
             'id',
+            'user_id' => auth()->id(),
             'no_antrian' => $request->no_antrian,
             'nama_pasien' => $request->nama_pasien,
             'no_telp' => $request->no_telp,
@@ -106,6 +109,7 @@ class antrianController extends Controller{
     public function update(Request $request, $id){
     $request->validate([
         'id',
+        'user_id',
         'no_antrian' => 'required|string',
         'nama_pasien' => 'required|string',
         'no_telp' => 'required|string',
@@ -124,7 +128,7 @@ class antrianController extends Controller{
     }
 
     notifikasi::create([
-        'user_id' => auth()->user()->id,  
+        'user_id' => auth()->user()->id,
         'no_antrian' => $request->no_antrian,
         'status_pelayanan' => $request->status_pelayanan,
         'nama_pasien' => $antrian->nama_pasien
@@ -158,6 +162,11 @@ class antrianController extends Controller{
         return view('layouts.card', compact('antrian'));
     }
 
+    public function cardadmin(Request $request) {
+        $antrian = antrian::find($request->id);
+        return view('layouts.cardadmin', compact('antrian'));
+    }
+
     public function notifikasi(Request $request) {
         $user = Auth::user();
         $notifications = Auth::user()->unreadNotifications;
@@ -169,7 +178,7 @@ class antrianController extends Controller{
         $antrian = resevasi::orderBy('created_at', 'desc')->get();
         return view('notifikasi.notifadmin', compact('antrian'));
     }
-    
+
 
     public function notifikasibaru(Request $request) {
         $user = Auth::user();
@@ -178,6 +187,6 @@ class antrianController extends Controller{
                                 ->get();
         return view('notifikasi.notifikasibaru', compact('notifikasi'));
     }
-    
-    
+
+
 }

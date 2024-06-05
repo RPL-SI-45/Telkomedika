@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-<html>
-@extends('layoutrumahsakit.rs')
+
+@extends('layouts.elemenadmin')
 
 @section('main-section')
+<!DOCTYPE html>
+<html>
 <head>
     <title>Notifications</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -32,7 +33,7 @@
     </style>
 </head>
 <body>
-
+<div class="content flex-1 p-20">
     <div class="container mt-5">
         <h1 class="mb-4">Notifications</h1>
         @if($antrian->isEmpty())

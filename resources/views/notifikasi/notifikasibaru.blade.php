@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-@extends('layoutrumahsakit.rs')
+@extends('layouts.elemen')
 
 @section('main-section')
 <head>
@@ -26,7 +26,7 @@
     </style>
 </head>
 <body>
-
+<div class="content flex-1 p-20">
     <div class="container mt-5">
         <h1 class="mb-4">Notifications</h1>
         @foreach ($notifikasi as $antri)

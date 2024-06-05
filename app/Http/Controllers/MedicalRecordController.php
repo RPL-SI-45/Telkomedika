@@ -12,7 +12,7 @@ class MedicalRecordController extends Controller
     public function view()
     {
         $rekammedis = Auth::id();
-        $rekammedis = antrian::where('id', $rekammedis)->get();
+        $rekammedis = antrian::where('user_id', $rekammedis)->get();
         return view('record.view', compact('rekammedis'));
     }
 
