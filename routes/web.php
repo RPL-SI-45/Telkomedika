@@ -172,7 +172,6 @@ Route::put('/rating/{id}', [RatingController::class, 'update']);
 Route::delete('/rating/{id}', [RatingController::class, 'destroy']);
 Route::get('/ratingedit', [RatingController::class, 'indexedit'])->middleware('auth');
 
-<<<<<<< daffa3
 Route::get('/resumelayanan', [ResumeLayananController::class, 'index']);
 Route::get('/resumelayanan/create', [ResumeLayananController::class, 'create']);
 Route::post('/resumelayanan/store', [ResumeLayananController::class, 'store'])->name('resume.store');
@@ -181,10 +180,6 @@ Route::put('/resumelayanan/{id}', [ResumeLayananController::class, 'update']);
 Route::delete('/resumelayanan/{id}', [ResumeLayananController::class, 'destroy']);
 Route::get('/resumelayanan/viewresume/{id}', [ResumeLayananController::class, 'viewresume']);
 
-=======
-Route::get('/resumelayanan', [ResumeLayananController::class, 'create'])->name('resume.index');
-Route::post('/resumelayanan', [ResumeLayananController::class, 'store'])->name('resume.store');
->>>>>>> main
 
 Route::get('/notifikasi',[antrianController::class,'notifikasi']);
 Route::get('/notifadmin',[antrianController::class,'notifadmin']);

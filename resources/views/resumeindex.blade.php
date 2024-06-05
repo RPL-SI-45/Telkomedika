@@ -1,4 +1,4 @@
-@extends ('resume')
+@extends ('layouts.elemenadmin')
 
 
 @section('main-section')

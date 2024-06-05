@@ -64,12 +64,8 @@
                 {{ session('success') }}
             </div>
         @endif
-<<<<<<< daffa3
-        <form action="/resumelayanan/store" method="POST">
-=======
 
-        <form action="{{ route('resume.index') }}" method="POST">
->>>>>>> main
+        <form action="/resumelayanan/store" method="POST">
             @csrf
             <div class="form-group">
                 <label for="nama_resume" class="form-label">Nama Resume</label>
@@ -112,6 +108,6 @@
             <div class="form-actions">
                 <button type="submit" class="btn-submit" style="transform: translateX(350%);">Kirim</button>
             </div>
-        </form> 
+        </form>
     </div>
 @endsection
