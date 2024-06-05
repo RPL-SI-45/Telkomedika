@@ -1,4 +1,4 @@
-@extends ('layouts.main')
+@extends ('layouts.elemen')
 
 @section('main-section')
 <!DOCTYPE html>
@@ -12,13 +12,13 @@
 </head>
 <body>
 
-<div class="container">
-  <div class="card" style="border: 2px solid black">
-    <div class="card-body">
-      <h5 class="card-title" style="text-align: center">Klinik Telkomedika</h5>
-      <h6 class="card-subtitle mb-2 text-muted"style="text-align: center">Nomor Antrian</h6>
-      <hr>
-
+<div class="content flex-1 p-10">
+    <div class="container mt-5">
+        <div class="card" style="border: 2px solid black">
+            <div class="card-body">
+            <h5 class="card-title" style="text-align: center">Klinik Telkomedika</h5>
+            <h6 class="card-subtitle mb-2 text-muted"style="text-align: center">Nomor Antrian</h6>
+            <hr>
                 <h1 style="text-align: center; font-size: 50px; "><strong>{{ $antrian->no_antrian }}</strong></h1>
 
       <hr>

@@ -25,6 +25,10 @@ class antrianController extends Controller{
         return view('layouts.create');
     }
 
+    public function createadmin(){
+        return view('layouts.createadmin');
+    }
+
     public function store(Request $request){
         $request->validate([
             'id',
@@ -59,6 +63,37 @@ class antrianController extends Controller{
             'nama_pasien' => $request->nama_pasien,
         ]);
         return redirect("/antrian");
+    }
+
+    public function storeadmin(Request $request){
+        $request->validate([
+            'id',
+            'no_antrian',
+            'nama_pasien',
+            'no_telp',
+            'jenis_kelamin',
+            'tanggal_reservasi',
+            'poli',
+            'alamat',
+            'keluhan',
+            'status_pelayanan'
+
+        ]);
+
+        antrian::create([
+            'id',
+            'no_antrian' => $request->no_antrian,
+            'nama_pasien' => $request->nama_pasien,
+            'no_telp' => $request->no_telp,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'tanggal_reservasi' => $request->tanggal_reservasi,
+            'poli' => $request->poli,
+            'alamat' => $request->alamat,
+            'keluhan' => $request->keluhan,
+            'status_pelayanan' => $request->status_pelayanan
+
+        ]);
+        return redirect("/daftarreservasi");
     }
 
     public function edit($id){
@@ -105,8 +140,15 @@ class antrianController extends Controller{
     }
 
     public function informasi(){
-        $antrian = antrian::all();
+        $antrian = antrian::where("status_pelayanan", "!=", "Selesai")->orWhereNull('status_pelayanan')->get();
         return view('informasi', compact('antrian'));
+        $count = Antrian::where('status_pelayanan', '!=', 'selesai')->count();
+        session()->flash('antrian_count', $count);
+    }
+
+    public function informasiadmin(){
+        $antrian = antrian::where("status_pelayanan", "!=", "Selesai")->orWhereNull('status_pelayanan')->get();
+        return view('informasiadmin', compact('antrian'));
         $count = Antrian::where('status_pelayanan', '!=', 'selesai')->count();
         session()->flash('antrian_count', $count);
     }

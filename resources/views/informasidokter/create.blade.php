@@ -1,4 +1,4 @@
-@extends ('layouts.reservasimain')
+@extends ('layouts.elemenadmin')
 
 @section('main-section')
 <!DOCTYPE html>
@@ -10,9 +10,11 @@
     <title>Tambah Informasi Dokter</title>
 </head>
 <body>
-    <div class="container">
+<div class="content flex-1 p-20">
+    <div class="container mt-5">
     <div class="h2 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Informasi Dokter Klinik Telokomedika</div>
-        <div class = "card">
+        </br>
+    <div class = "card">
         <div class = "card-body">
         <form action="/informasidokter/store" method="POST">
             @csrf

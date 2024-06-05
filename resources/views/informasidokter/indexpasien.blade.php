@@ -1,9 +1,12 @@
-@extends('layouts.reservasimain')
+@extends ('layouts.elemen')
+
 
 @section('main-section')
-<div class="container">
+<div class="content flex-1 p-20">
+<div class="container mt-5">
     <div class="h2 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Informasi Dokter Klinik Telkomedika</div>
 
+    </br>
     <div class="row">
         <div class="col-md-12">
             <div class="card shadow mb-4">
