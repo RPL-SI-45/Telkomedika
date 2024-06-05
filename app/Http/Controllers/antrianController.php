@@ -130,6 +130,13 @@ class antrianController extends Controller{
         session()->flash('antrian_count', $count);
     }
 
+    public function informasiadmin(){
+        $antrian = antrian::where("status_pelayanan", "!=", "Selesai")->orWhereNull('status_pelayanan')->get();
+        return view('informasiadmin', compact('antrian'));
+        $count = Antrian::where('status_pelayanan', '!=', 'selesai')->count();
+        session()->flash('antrian_count', $count);
+    }
+
     public function card(Request $request) {
         $antrian = antrian::find($request->id);
         return view('layouts.card', compact('antrian'));

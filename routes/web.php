@@ -130,6 +130,7 @@ Route::get('/antrian/{id}/edit',[antrianController::class, 'edit']);
 Route::delete('/antrian/{id}',[antrianController::class, 'destroy']);
 
 Route::get('/antrian/{id}/show',[antrianController::class, 'informasi']);
+Route::get('/antrian/{id}/showadmin',[antrianController::class, 'informasiadmin']);
 Route::get('/antrian/{id}/card',[antrianController::class, 'card']);
 Route::get('/antrian/{id}', [antrianController::class, 'informasi']);
 Route::get('/antrian/show', [antrianController::class,'informasi'])->name("informasi");
