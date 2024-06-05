@@ -15,6 +15,8 @@ class CreateResumeLayanansTable extends Migration
     {
         Schema::create('resume_layanans', function (Blueprint $table) {
             $table->id();
+            $table->text('nama_resume');
+            $table->date('tanggal_dibuat');
             $table->text('kinerja_dokter');
             $table->text('kinerja_operasional');
             $table->text('penyakit_terbanyak');

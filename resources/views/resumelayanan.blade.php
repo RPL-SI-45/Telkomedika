@@ -53,8 +53,22 @@
                 {{ session('success') }}
             </div>
         @endif
-        <form action="{{ route('resume.index') }}" method="POST">
+        <form action="/resumelayanan/store" method="POST">
             @csrf
+            <div class="form-group">
+                <label for="nama_resume" class="form-label">Nama Resume</label>
+                <textarea name="nama_resume" id="nama_resume" class="form-control" rows="3">{{ old('nama_resume') }}</textarea>
+                @error('nama_resume')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="form-group">
+                <label for="tanggal_dibuat" class="form-label">Tanggal Dibuat</label>
+                <input type= "date" name="tanggal_dibuat" id="tanggal_dibuat" class="form-control" rows="3">{{ old('tanggal_dibuat') }}
+                @error('tanggal_dibuat')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+            </div>
             <div class="form-group">
                 <label for="kinerja_dokter" class="form-label">Kinerja Dokter</label>
                 <textarea name="kinerja_dokter" id="kinerja_dokter" class="form-control" rows="3">{{ old('kinerja_dokter') }}</textarea>
@@ -79,6 +93,6 @@
             <div class="form-actions">
                 <button type="submit" class="btn-submit">Kirim</button>
             </div>
-        </form>
+        </form> 
     </div>
 @endsection

@@ -9,6 +9,8 @@ class ResumeLayanan extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'nama_resume',
+        'tanggal_dibuat',
         'kinerja_dokter',
         'kinerja_operasional',
         'penyakit_terbanyak',
