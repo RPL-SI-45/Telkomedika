@@ -138,7 +138,7 @@ Route::get('/antrian/show', [antrianController::class,'informasi'])->name("infor
 
 Route::get('/rekammedis',[RekammedisController::class, 'index']);
 Route::get('/rekammedis/{id}/view',[RekammedisController::class, 'view']);
-Route::delete('/rekammedis/{id}',[RekammedisController::class, 'destroy']);
+Route::delete('/rekammedis/{id}', [RekammedisController::class, 'destroy']);
 Route::put('/rekammedis/{id}/perform', [RekammedisController::class, 'update'])->name('edit-rekammedis.perform');
 Route::get('/rekammedis/{id}/view/edit',[RekammedisController::class, 'edit']);
 
@@ -154,6 +154,11 @@ Route::get('/medicalrecords', [MedicalRecordController::class, 'view'])->name('r
 Route::get('/rekammedis/search', [RekammedisController::class, 'search'])->name('rekammedis.search');
 
 
+Route::get('/notify',function(){
+    notify()->success('Login Berhasil');
+    return view('notify');
+});
+
 Route::get('/ratingadmin', [RatingController::class, 'indexratingadmin']);
 
 Route::get('/rating', [RatingController::class, 'indexrating']);
@@ -167,3 +172,6 @@ Route::get('/ratingedit', [RatingController::class, 'indexedit'])->middleware('a
 Route::get('/resumelayanan', [ResumeLayananController::class, 'create'])->name('resume.index');
 Route::post('/resumelayanan', [ResumeLayananController::class, 'store'])->name('resume.store');
 
+Route::get('/notifikasi',[antrianController::class,'notifikasi']);
+Route::get('/notifadmin',[antrianController::class,'notifadmin']);
+Route::get('/notifikasibaru',[antrianController::class,'notifikasibaru']);
