@@ -31,7 +31,6 @@ class informasidokterController extends Controller
     }
 
     public function update($id, Request $request)
-
     {
         $informasidokter = informasidokter::find($id);
         $informasidokter->update($request->except(['_token','submit']));

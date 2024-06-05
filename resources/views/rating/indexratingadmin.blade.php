@@ -1,24 +1,17 @@
-@extends('layouts.elemen')
+@extends('layouts.elemenadmin')
 
 @section('main-section')
 <div class="content flex-1 p-20">
     <div class="container mt-5">
-        <div class="h2 text-center mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">
-                Rating dan Ulasan
-            </div>
-
-            <div class="d-flex justify-content-between align-items-center mt-5">
-                <a class="btn btn-secondary" href="/rating/createrating">Beri Rating dan Ulasan</a>
-            </div>
+        <div class="text-center mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">
+            <h2>Rating dan Ulasan</h2>
         </div>
         <br>
-
         <div class="row">
             <div class="col-md-12">
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex justify-content-between align-items-center" style="background-color: #B6252A;">
                         <h5 class="m-0 font-weight-bold text-white">Ulasan</h5>
-                        <a href="/ratingedit" style="color: white; text-decoration: none; border-bottom: none; transition: font-weight 0.3s;" onmouseover="this.style.fontWeight='bold';" onmouseout="this.style.fontWeight='normal';">Lihat Rating Saya</a>
                     </div>
                     <div class="card-body" style="background-color: #f0f0f0;">
                         <div class="row">

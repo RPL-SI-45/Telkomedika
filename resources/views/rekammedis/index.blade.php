@@ -1,6 +1,7 @@
 @extends('layouts.elemenadmin')
 
 @section('main-section')
+
 <div class="content flex-1 p-20">
     <div class="container mt-5">
         <div class="card shadow mb-4">

@@ -17,9 +17,15 @@ class RatingController extends Controller
         $rating = Rating::all();
         return view('rating.indexrating', compact(['rating']));
         }
+
+    public function indexratingadmin() {
+        $rating = Rating::all();
+        return view('rating.indexratingadmin', compact(['rating']));
+        }
+
     public function indexedit() {
-        $user = Auth::user(); 
-        $rating = Rating::where('user_id', $user->id)->get(); 
+        $user = Auth::user();
+        $rating = Rating::where('user_id', $user->id)->get();
 
         return view('rating.indexedit', compact('rating'));
     }
@@ -31,7 +37,7 @@ class RatingController extends Controller
 
     public function store(Request $request)
     {
-    
+
     // Validate the incoming request data
     $request->validate([
         'star_rating' => 'required|integer|min:1|max:5',
@@ -41,10 +47,10 @@ class RatingController extends Controller
 
     $user = Auth::user();
 
-    
+
     $rating = Rating::create([
         'user_id' => $user->id,
-        'name' => $user->name, 
+        'name' => $user->name,
         'star_rating' => $request->star_rating,
         'ulasan' => $request->ulasan,
     ]);

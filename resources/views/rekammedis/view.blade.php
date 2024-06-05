@@ -1,4 +1,4 @@
-@extends ('layouts.elemen')
+@extends ('layouts.elemenadmin')
 
 @section('main-section')
 <div class="content flex-1 p-10">

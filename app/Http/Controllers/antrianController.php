@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\antrian;
+use App\Models\notifikasi;
+use App\Models\resevasi;
+use Illuminate\Support\Facades\Auth;
 
 class antrianController extends Controller{
 
@@ -29,6 +32,7 @@ class antrianController extends Controller{
     public function store(Request $request){
         $request->validate([
             'id',
+            'user_id',
             'no_antrian',
             'nama_pasien',
             'no_telp',
@@ -43,6 +47,7 @@ class antrianController extends Controller{
 
         antrian::create([
             'id',
+            'user_id' => auth()->id(),
             'no_antrian' => $request->no_antrian,
             'nama_pasien' => $request->nama_pasien,
             'no_telp' => $request->no_telp,
@@ -54,12 +59,17 @@ class antrianController extends Controller{
             'status_pelayanan' => $request->status_pelayanan
 
         ]);
+
+        resevasi::create([
+            'nama_pasien' => $request->nama_pasien,
+        ]);
         return redirect("/antrian");
     }
 
     public function storeadmin(Request $request){
         $request->validate([
             'id',
+            'user_id',
             'no_antrian',
             'nama_pasien',
             'no_telp',
@@ -74,6 +84,7 @@ class antrianController extends Controller{
 
         antrian::create([
             'id',
+            'user_id' => auth()->id(),
             'no_antrian' => $request->no_antrian,
             'nama_pasien' => $request->nama_pasien,
             'no_telp' => $request->no_telp,
@@ -98,6 +109,7 @@ class antrianController extends Controller{
     public function update(Request $request, $id){
     $request->validate([
         'id',
+        'user_id',
         'no_antrian' => 'required|string',
         'nama_pasien' => 'required|string',
         'no_telp' => 'required|string',
@@ -114,6 +126,14 @@ class antrianController extends Controller{
     if ($request->status_pelayanan === 'Selesai') {
         $antrian->update(['no_antrian' => null]);
     }
+
+    notifikasi::create([
+        'user_id' => auth()->user()->id,
+        'no_antrian' => $request->no_antrian,
+        'status_pelayanan' => $request->status_pelayanan,
+        'nama_pasien' => $antrian->nama_pasien
+    ]);
+
     return redirect("/daftarreservasi");
 }
 
@@ -130,8 +150,43 @@ class antrianController extends Controller{
         session()->flash('antrian_count', $count);
     }
 
+    public function informasiadmin(){
+        $antrian = antrian::where("status_pelayanan", "!=", "Selesai")->orWhereNull('status_pelayanan')->get();
+        return view('informasiadmin', compact('antrian'));
+        $count = Antrian::where('status_pelayanan', '!=', 'selesai')->count();
+        session()->flash('antrian_count', $count);
+    }
+
     public function card(Request $request) {
         $antrian = antrian::find($request->id);
         return view('layouts.card', compact('antrian'));
     }
+
+    public function cardadmin(Request $request) {
+        $antrian = antrian::find($request->id);
+        return view('layouts.cardadmin', compact('antrian'));
+    }
+
+    public function notifikasi(Request $request) {
+        $user = Auth::user();
+        $notifications = Auth::user()->unreadNotifications;
+        $antrian = antrian::where('user_id', $user->id)->whereNotNull('no_antrian')->get();
+        return view('notifikasi.notifikasi', compact('antrian'));
+    }
+
+    public function notifadmin(Request $request) {
+        $antrian = resevasi::orderBy('created_at', 'desc')->get();
+        return view('notifikasi.notifadmin', compact('antrian'));
+    }
+
+
+    public function notifikasibaru(Request $request) {
+        $user = Auth::user();
+        $notifikasi = notifikasi::where('user_id', $user->id)
+                                ->orderBy('created_at', 'desc')
+                                ->get();
+        return view('notifikasi.notifikasibaru', compact('notifikasi'));
+    }
+
+
 }

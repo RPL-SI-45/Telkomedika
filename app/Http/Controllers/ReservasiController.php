@@ -29,6 +29,7 @@ class ReservasiController extends Controller
                 ]);
 
             reservasi::create([
+                    'user_id' => auth()->id(),
                     'nama_pasien' => $request->nama_pasien,
                     'jenis_kelamin' => $request->jenis_kelamin,
                     'no_telp' => $request -> no_telp,
