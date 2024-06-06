@@ -67,7 +67,7 @@
             </div>
 
             <div class="text-center">
-            <button type="submit" name="submit" class="btn btn-danger btn-bg" style="transform: translateX(-30%); background-color: #B6252A;">Buat Reservasi</button>
+            <button dusk="buatreservasi" type="submit" name="submit" class="btn btn-danger btn-bg" style="transform: translateX(-30%); background-color: #B6252A;">Buat Reservasi</button>
             </div>
 
         </form>

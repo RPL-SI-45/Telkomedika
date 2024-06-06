@@ -94,14 +94,14 @@
                 <div class="h3 text-white mb-0">Telkomedika</div>
             </div>
             <div class="d-flex align-items-center">
-                <a href="/notifikasibaru" class="bg-red-700 p-1 rounded-full text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-red-700 focus:ring-white me-3">
+                <a dusk="lonceng" href="/notifikasibaru" class="bg-red-700 p-1 rounded-full text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-red-700 focus:ring-white me-3">
                     <span class="sr-only">View notifications</span>
                     <i class="bi bi-bell"></i>
                 </a>
                 <!-- Profile dropdown -->
                 <div x-data="{show: false}" x-on:click.away="show = false" class="relative">
                     <div>
-                        <button x-on:click="show = !show" type="button" class="max-w-xs bg-red-700 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-red-700 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                        <button dusk="profilepasien" x-on:click="show = !show" type="button" class="max-w-xs bg-red-700 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-red-700 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                             <span class="sr-only">Open user menu</span>
                             <img class="h-8 w-8 rounded-full" src="{{ Auth::user()->profile_image ? asset('/storage/profile-image/' . Auth::user()->profile_image) : 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'}}" alt="">
                             @if(Auth::user())
@@ -113,7 +113,7 @@
                     </div>
                     <div x-show="show" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                         <a href="{{ url('/profile') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0" style="color: black; text-decoration: none; border-bottom: none; transition: font-weight 0.3s;" onmouseover="this.style.fontWeight='bold';" onmouseout="this.style.fontWeight='normal';">Your Profile</a>
-                        <a href="{{ route('logout') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2" style="color: black; text-decoration: none; border-bottom: none; transition: font-weight 0.3s;" onmouseover="this.style.fontWeight='bold';" onmouseout="this.style.fontWeight='normal';">Sign out</a>
+                        <a dusk="logoutpasien" href="{{ route('logout') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2" style="color: black; text-decoration: none; border-bottom: none; transition: font-weight 0.3s;" onmouseover="this.style.fontWeight='bold';" onmouseout="this.style.fontWeight='normal';">Sign out</a>
                     </div>
                 </div>
             </div>
@@ -136,13 +136,13 @@
                 <a href="/lihatrumahsakit" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
                     <i class="bi bi-building mr-3"></i> Informasi Rumah Sakit
                 </a>
-                <a href="/reservasi/create" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
+                <a dusk="reservasipasien" href="/reservasi/create" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
                     <i class="bi bi-calendar-check-fill mr-3"></i> Reservasi Online
                 </a>
                 <a href="/antrian" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
                     <i class="bi bi-people-fill mr-3"></i> Antrian Pasien
                 </a>
-                <a href="/medicalrecords" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
+                <a dusk= "riwayatpasien" href="/medicalrecords" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
                     <i class="bi bi-journal-text mr-3"></i> Riwayat Berobat
                 </a>
                 <a href="/rating" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">

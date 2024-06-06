@@ -106,7 +106,7 @@
             </div>
         <br>
             <div class="form-actions">
-                <button type="submit" class="btn-submit" style="transform: translateX(350%);">Kirim</button>
+                <button dusk = "kirim" type="submit" class="btn-submit" style="transform: translateX(350%);">Kirim</button>
             </div>
         </form>
     </div>

@@ -9,7 +9,7 @@ use Tests\DuskTestCase;
 class RatingTest extends DuskTestCase
 {
     /**
-     * A Dusk test example.
+     * @group rating
      */
     public function testExample(): void
     {
@@ -19,7 +19,7 @@ class RatingTest extends DuskTestCase
                     ->click('@login')
                     ->assertPathIs('/login')
                     ->assertSee('Welcome Back')
-                    ->type('email', '1@gmail.com')
+                    ->type('email', 'lelan@gmail.com')
                     ->type('password', '123')
                     ->press('@signin')
                     ->assertPathIs('/home')
@@ -34,7 +34,7 @@ class RatingTest extends DuskTestCase
                     ->assertPathIs('/rating')
                     ->visit('/ratingedit')
                     ->press('@edit')
-                    ->assertPathIs('/rating/3/edit')
+                    ->assertPathIs('/rating/1/edit')
                     ->assertVisible('@rate-3')
                     ->click('@rate-3')
                     ->type('ulasan', 'testing ini')
@@ -43,7 +43,8 @@ class RatingTest extends DuskTestCase
                     ->visit('/ratingedit')
                     ->press('@delete')
                     ->assertPathIs('/ratingedit')
-                    
+                    ->screenshot('rating')
+
                     ;
         });
     }

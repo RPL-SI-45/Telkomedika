@@ -42,7 +42,7 @@
                                     <td>{{ $w->tanggal_reservasi }}</td>
                                     <td>
                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                            <a class="btn btn-primary btn-sm" href="/medicalrecords/{{$w->id}}/view">View</a>
+                                            <a dusk="viewriwayat" class="btn btn-primary btn-sm" href="/medicalrecords/{{$w->id}}/view">View</a>
                                         </div>
                                     </td>
                                 </tr>

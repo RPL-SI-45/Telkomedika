@@ -8,7 +8,7 @@
             </div>
 
             <div class="d-flex justify-content-between align-items-center mt-5">
-                <a class="btn btn-secondary" href="/rating/createrating">Beri Rating dan Ulasan</a>
+                <a dusk = "tambahrating" class="btn btn-secondary" href="/rating/createrating">Beri Rating dan Ulasan</a>
             </div>
         </div>
         <br>

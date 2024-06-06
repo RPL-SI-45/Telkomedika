@@ -44,7 +44,7 @@
                     <div class="rate">
                         @for ($i = 1; $i <= 5; $i++)
                             <input type="radio" name="star_rating" id="rate-{{ $i }}" value="{{ $i }}" {{ $rating->star_rating == $i ? 'checked' : '' }}>
-                            <label for="rate-{{ $i }}" class="fas fa-star"></label>
+                            <label dusk ="rate-{{$i}}" for="rate-{{ $i }}" class="fas fa-star"></label>
                         @endfor
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                     <textarea name="ulasan" id="ulasan" cols="30" rows="5" class="form-control" style="border-radius: 5px; border: 1px solid #ccc; padding: 10px;" placeholder="Describe your experience...">{{$rating->ulasan}}</textarea>
                 </div>
                 <div class="form-group text-center">
-                    <button type="submit" class="btn btn-primary" style="background-color: #B6252A; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px;">
+                    <button dusk ="submit" type="submit" class="btn btn-primary" style="background-color: #B6252A; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px;">
                         Update
                     </button>
                 </div>

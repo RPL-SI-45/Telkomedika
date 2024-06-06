@@ -15,7 +15,7 @@
             <div class="form-group text-center">
                 <div class="rate">
                     <input type="radio" name="star_rating" id="rate-5" value="5">
-                    <label for="rate-5" class="fas fa-star"></label>
+                    <label dusk ="rate-5" for="rate-5" class="fas fa-star"></label>
                     <input type="radio" name="star_rating" id="rate-4" value="4">
                     <label for="rate-4" class="fas fa-star"></label>
                     <input type="radio" name="star_rating" id="rate-3" value="3">
@@ -32,7 +32,7 @@
             </div>
 
             <div class="text-center mt-4">
-                <button type="submit" class="btn btn-primary" style="background-color: #B6252A; border: none;">Kirim Ulasan</button>
+                <button dusk="submit" type="submit" class="btn btn-primary" style="background-color: #B6252A; border: none;">Kirim Ulasan</button>
             </div>
         </form>
     </div>

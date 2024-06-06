@@ -6,7 +6,7 @@
 <div class="container mt-5">
     <div class="h2 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Resume Layanan</div>
         <div class="d-flex justify-content-between align-items-center my-3">
-            <a class="btn btn-secondary" href="/resumelayanan/create">Input Resume Layanan</a>
+            <a dusk="buatresume" class="btn btn-secondary" href="/resumelayanan/create">Input Resume Layanan</a>
         </div>
         <div class="row">
         <div class="col-md-12">
@@ -33,12 +33,12 @@
                 <td>{{$b->tanggal_dibuat}}</td>
                 <td>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <a class="btn btn-info btn-sm" href="/resumelayanan/viewresume/{{$b->id}}">View</a>
-                        <a class="btn btn-warning btn-sm" href="/resumelayanan/{{$b->id}}/edit">Edit</a>
+                        <a dusk ="view" class="btn btn-info btn-sm" href="/resumelayanan/viewresume/{{$b->id}}">View</a>
+                        <a dusk ="edit" class="btn btn-warning btn-sm" href="/resumelayanan/{{$b->id}}/edit">Edit</a>
                         <form action="/resumelayanan/{{$b->id}}" method="post">
                             @csrf
                             @method('delete')
-                            <input type="submit" class="btn btn-danger btn-sm"value="Delete">
+                            <input dusk ="delete" type="submit" class="btn btn-danger btn-sm"value="Delete">
                         </form>
                     </div>
                 </td>

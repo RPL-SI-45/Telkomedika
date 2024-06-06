@@ -22,7 +22,7 @@
                             <p class="font-medium text-lg">Profile Settings</p>
                             <div class="mt-5">
                             <img src="{{ Auth::check() && Auth::user()->profile_image ? asset('storage/profile-image/' . Auth::user()->profile_image) : 'https://via.placeholder.com/150' }}" alt="Profile Image" class="object-cover rounded-full w-2/4">
-                                <input type="file" class="mt-5" name="profile_image"/>
+                                <input dusk="inputfoto" type="file" class="mt-5" name="profile_image"/>
                             </div>
                         </div>
 
@@ -50,13 +50,13 @@
 
                                 <div class="md:col-span-2 text-right">
                                     <div class="inline-flex items-end">
-                                        <button type="submit" class="hover:bg-red-700 text-white font-bold py-2 px-4 rounded" style="background-color: #808080;">Update</button>
+                                        <button dusk="update" type="submit" class="hover:bg-red-700 text-white font-bold py-2 px-4 rounded" style="background-color: #808080;">Update</button>
                                     </div>
                                 </div>
 
                                 <div class="md:col-span-2 text-right">
                                     <div class="inline-flex items-end">
-                                        <a href="{{ route('admin/home') }}" class="hover:bg-red-700 text-white font-bold py-2 px-4 rounded" style="background-color: #808080;">Home</a>
+                                        <a dusk="home" href="{{ route('admin/home') }}" class="hover:bg-red-700 text-white font-bold py-2 px-4 rounded" style="background-color: #808080;">Home</a>
                                     </div>
                                 </div>
 

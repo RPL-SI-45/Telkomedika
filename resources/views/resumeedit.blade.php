@@ -76,7 +76,7 @@
                     @enderror
                 </div>
                 <div class="form-actions">
-                    <button type="submit" class="btn-submit">Kirim</button>
+                    <button dusk ="kirimedit" type="submit" class="btn-submit">Kirim</button>
                 </div>
                 </form>
             </div>

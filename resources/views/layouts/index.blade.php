@@ -71,7 +71,7 @@
                                         <td>
                                             <div class="btn-group" role="group" aria-label="Basic example">
                                                 <a class="btn btn-primary btn-sm" href="/antrian/{{$w->id}}/showadmin">Show</a>
-                                                <a class="btn btn-warning btn-sm" href="/antrian/{{$w->id}}/edit">Edit</a>
+                                                <a dusk = "editreservasi" class="btn btn-warning btn-sm" href="/antrian/{{$w->id}}/edit">Edit</a>
                                                 <form action="/antrian/{{$w->id}}" method="POST" style="display:inline-block;">
                                                     @csrf
                                                     @method('DELETE')

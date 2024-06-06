@@ -1,4 +1,4 @@
-@extends ('layouts.elemen')
+@extends ('layouts.elemenadmin')
 
 @push('header')
     <title>Update Informasi Antrian</title>
@@ -108,7 +108,7 @@
             </div>
 
             <div class="col-12 text-center mt-4 ">
-            <button class="btn btn-secondary" style="background-color: #B6252A;" type="submit">Update</button>
+            <button dusk="updatereservasi" class="btn btn-secondary" style="background-color: #B6252A;" type="submit">Update</button>
             </div>
         </form>
     </div>
