@@ -16,10 +16,9 @@ class MedicalRecordController extends Controller
         return view('record.view', compact('rekammedis'));
     }
 
-    public function index()
+    public function index($id)
     {
-        $id = Auth::id();
-        $rekammedis = antrian::where('id', $id)->get();
+        $rekammedis = antrian::findOrFail($id);
         return view('record.index', compact('rekammedis'));
     }
 }

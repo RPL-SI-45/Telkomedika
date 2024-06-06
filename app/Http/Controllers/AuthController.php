@@ -83,17 +83,16 @@ class AuthController extends Controller
 
         return redirect('/login');
     }
+
     public function profile()
     {
         return view('userprofile');
     }
 
-
-
-public function adminHome()
-{
-    $this->middleware('user-access');
-    return view('dashboard');
-}
+    public function adminHome()
+    {
+        $this->middleware('user-access');
+        return view('dashboard');
+    }
 
 }

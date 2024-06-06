@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\Auth;
 class RatingController extends Controller
 {
     public function __construct()
-    {
-        $this->middleware('auth');
-    }
+        {
+            $this->middleware('auth');
+        }
 
     public function indexrating() {
         $rating = Rating::all();
@@ -46,7 +46,6 @@ class RatingController extends Controller
 
 
     $user = Auth::user();
-
 
     $rating = Rating::create([
         'user_id' => $user->id,

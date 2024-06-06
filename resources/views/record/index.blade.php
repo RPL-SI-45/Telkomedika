@@ -70,7 +70,7 @@
     </style>
 </head>
 <body>
-@foreach ($rekammedis as $w)
+
 <div class="content flex-1 p-10">
 <div class="container mt-5">
     <div class="col-md-12">
@@ -82,23 +82,23 @@
                 <form>
                     <div class="form-group">
                         <label for="name">Nama:</label>
-                        <input type="text" class="form-control" id="name" value="{{$w->nama_pasien}}">
+                        <input type="text" class="form-control" id="name" value="{{$rekammedis->nama_pasien}}">
                     </div>
                     <div class="form-group">
                         <label for="date_of_visit">Tanggal Pelayanan:</label>
-                        <input type="text" class="form-control" id="date_of_visit" value="{{$w->tanggal_reservasi}}">
+                        <input type="text" class="form-control" id="date_of_visit" value="{{$rekammedis->tanggal_reservasi}}">
                     </div>
                     <div class="form-group">
                         <label for="dokter">Dokter Pemeriksa:</label>
-                        <textarea class="form-control" id="dokter" rows="3" readonly>{{$w->dokter}}</textarea>
+                        <textarea class="form-control" id="dokter" rows="3" readonly>{{$rekammedis->dokter}}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="diagnosis">Hasil Pemekrisaan Fisik:</label>
-                        <textarea class="form-control" id="fisik" rows="3" readonly>{{$w->fisik}}</textarea>
+                        <textarea class="form-control" id="fisik" rows="3" readonly>{{$rekammedis->fisik}}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="treatment">Diagnosis:</label>
-                        <textarea class="form-control" id="diagnosis" rows="3" readonly>{{$w->diagnosis}}</textarea>
+                        <textarea class="form-control" id="diagnosis" rows="3" readonly>{{$rekammedis->diagnosis}}</textarea>
                     </div>
                 </form>
             </div>
@@ -108,5 +108,5 @@
 
 </body>
 </html>
-@endforeach
+
 @endsection

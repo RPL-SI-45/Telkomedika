@@ -1,4 +1,3 @@
-
 @extends('layouts.elemenadmin')
 
 @section('main-section')
@@ -6,7 +5,6 @@
 <html>
 <head>
     <title>Notifications</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
