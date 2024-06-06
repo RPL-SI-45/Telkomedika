@@ -8,6 +8,7 @@ use App\Models\notifikasi;
 use App\Models\resevasi;
 use Illuminate\Support\Facades\Auth;
 
+
 class antrianController extends Controller{
 
 
@@ -123,16 +124,17 @@ class antrianController extends Controller{
 
     $antrian = antrian::findOrFail($id);
     $antrian->update($request->except(['_token', 'submit']));
-    if ($request->status_pelayanan === 'Selesai') {
-        $antrian->update(['no_antrian' => null]);
-    }
+
+    $antrianRecord = antrian::where('no_antrian', $request->no_antrian)->firstOrFail();
+    $user_id = $antrianRecord->user_id;
 
     notifikasi::create([
-        'user_id' => auth()->user()->id,
+        'user_id' => $user_id,
         'no_antrian' => $request->no_antrian,
         'status_pelayanan' => $request->status_pelayanan,
         'nama_pasien' => $antrian->nama_pasien
     ]);
+
 
     return redirect("/daftarreservasi");
 }
@@ -168,7 +170,7 @@ class antrianController extends Controller{
     }
 
     public function notifikasi(Request $request) {
-        $user = Auth::user();
+        $user = Auth::auth()->user()->id;
         $notifications = Auth::user()->unreadNotifications;
         $antrian = antrian::where('user_id', $user->id)->whereNotNull('no_antrian')->get();
         return view('notifikasi.notifikasi', compact('antrian'));
@@ -185,6 +187,7 @@ class antrianController extends Controller{
         $notifikasi = notifikasi::where('user_id', $user->id)
                                 ->orderBy('created_at', 'desc')
                                 ->get();
+
         return view('notifikasi.notifikasibaru', compact('notifikasi'));
     }
 
