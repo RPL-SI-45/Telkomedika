@@ -33,7 +33,7 @@
                 <td>{{$b->Nama_Poli}}</td>
                 <td>{{$b->Deskripsi_Poli}}</td>
                 <td>{{$b->Nama_Dokter}}</td>
-                <td>{{$b->Jadwal_dokter}}</td>
+                <td>{{$b->Jadwal_Dokter}}</td>
             </tr>
             @endforeach
             </tbody>
