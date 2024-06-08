@@ -48,6 +48,7 @@
 @section('main-section')
 <div class="content flex-1 p-20">
 <div class="container mt-5">
+    <div class="h2 text-center mt-3 mb-3" style="font-family: Montserrat, sans-serif; font-weight: bold;">Edit Resume Layanan Klinik Telkomedika</div></br>
         <div class = "card">
             <div class = "card-body">
                 <form action="/resumelayanan/{{$ResumeLayanan->id}}" method="POST">
@@ -76,7 +77,7 @@
                     @enderror
                 </div>
                 <div class="form-actions">
-                    <button dusk ="kirimedit" type="submit" class="btn-submit">Kirim</button>
+                    <button dusk ="kirimedit" type="submit" class="btn-submit" style="transform: translateX(-660%);">Kirim</button>
                 </div>
                 </form>
             </div>

@@ -67,6 +67,7 @@
 
 @section('main-section')
     <div class="container p-10">
+    <div class="h2 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Resume Layanan Klinik Telkomedika</div></br>
         @if (session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}

@@ -56,7 +56,7 @@
 <div class="content flex-1 p-10">
     <div class="container mt-5">
         <div class="form-header">
-            <h2>Pelaporan Resume Kinerja Telkomedika</h2>
+            <h2>Pelaporan Resume Kinerja Klinik Telkomedika</h2>
         </div>
 
         @if (session('success'))

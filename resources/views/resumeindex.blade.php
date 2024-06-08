@@ -4,7 +4,7 @@
 @section('main-section')
 <div class="content flex-1 p-20">
 <div class="container mt-5">
-    <div class="h2 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Resume Layanan</div>
+    <div class="h2 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Resume Layanan Klinik Telkomedika</div>
         <div class="d-flex justify-content-between align-items-center my-3">
             <a dusk="buatresume" class="btn btn-secondary" href="/resumelayanan/create">Input Resume Layanan</a>
         </div>
