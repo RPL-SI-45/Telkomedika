@@ -3,9 +3,9 @@
 @section('main-section')
 <div class="content flex-1 p-20">
     <div class="container mt-5">
-        <div class="text-center mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">
-            <h2>Rating dan Ulasan</h2>
-        </div>
+        <div class="h2 text-center mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">
+                Rating dan Ulasan
+            </div>
         <br>
         <div class="row">
             <div class="col-md-12">
