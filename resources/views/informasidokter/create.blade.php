@@ -33,29 +33,85 @@
             </select>
             </div>
             <div class="mb-3">
+
+            <div class="mb-3">
                 <label for="Senin" class="form-label">Senin</label>
-                <input type="text" name="Senin" class="form-control" placeholder="Senin">
+                <select name="Senin" id="Senin" class="form-select">
+                    <option value="" disabled selected>Pilih Jam Kerja</option>
+                    <option value="-">Libur</option>
+                    <option value="08.00 - 12.00">08.00 - 12.00</option>
+                    <option value="09.30 - 13.00">09.30 - 13.00</option>
+                    <option value="11.00 - 16.00">11.00 - 16.00</option>
+                    <option value="13.30 - 16.30">13.30 - 16.30</option>
+                    <option value="14.00 - 18.00">14.00 - 18.00</option>
+                </select>
             </div>
+
             <div class="mb-3">
                 <label for="Selasa" class="form-label">Selasa</label>
-                <input type="text" name="Selasa" class="form-control" placeholder="Selasa">
+                <select name="Selasa" id="Selasa" class="form-select">
+                    <option value="" disabled selected>Pilih Jam Kerja</option>
+                    <option value="-">Libur</option>
+                    <option value="08.00 - 12.00">08.00 - 12.00</option>
+                    <option value="09.30 - 13.00">09.30 - 13.00</option>
+                    <option value="11.00 - 16.00">11.00 - 16.00</option>
+                    <option value="13.30 - 16.30">13.30 - 16.30</option>
+                    <option value="14.00 - 18.00">14.00 - 18.00</option>
+                </select>
             </div>
+
             <div class="mb-3">
                 <label for="Rabu" class="form-label">Rabu</label>
-                <input type="text" name="Rabu" class="form-control" placeholder="Rabu">
+                <select name="Rabu" id="Rabu" class="form-select">
+                    <option value="" disabled selected>Pilih Jam Kerja</option>
+                    <option value="-">Libur</option>
+                    <option value="08.00 - 12.00">08.00 - 12.00</option>
+                    <option value="09.30 - 13.00">09.30 - 13.00</option>
+                    <option value="11.00 - 16.00">11.00 - 16.00</option>
+                    <option value="13.30 - 16.30">13.30 - 16.30</option>
+                    <option value="14.00 - 18.00">14.00 - 18.00</option>
+                </select>
             </div>
+
             <div class="mb-3">
                 <label for="Kamis" class="form-label">Kamis</label>
-                <input type="text" name="Kamis" class="form-control" placeholder="Kamis">
+                <select name="Kamis" id="Kamis" class="form-select">
+                    <option value="" disabled selected>Pilih Jam Kerja</option>
+                    <option value="-">Libur</option>
+                    <option value="08.00 - 12.00">08.00 - 12.00</option>
+                    <option value="09.30 - 13.00">09.30 - 13.00</option>
+                    <option value="11.00 - 16.00">11.00 - 16.00</option>
+                    <option value="13.30 - 16.30">13.30 - 16.30</option>
+                    <option value="14.00 - 18.00">14.00 - 18.00</option>
+                </select>
             </div>
+
             <div class="mb-3">
                 <label for="Jumat" class="form-label">Jumat</label>
-                <input type="text" name="Jumat" class="form-control" placeholder="Jumat">
+                <select name="Jumat" id="Jumat" class="form-select">
+                    <option value="" disabled selected>Pilih Jam Kerja</option>
+                    <option value="-">Libur</option>
+                    <option value="08.00 - 12.00">08.00 - 12.00</option>
+                    <option value="09.30 - 13.00">09.30 - 13.00</option>
+                    <option value="11.00 - 16.00">11.00 - 16.00</option>
+                    <option value="13.30 - 16.30">13.30 - 16.30</option>
+                    <option value="14.00 - 18.00">14.00 - 18.00</option>
+                </select>
             </div>
+
             <div class="mb-3">
                 <label for="Sabtu" class="form-label">Sabtu</label>
-                <input type="text" name="Sabtu" class="form-control" placeholder="Sabtu">
+                <select name="Sabtu" id="Sabtu" class="form-select">
+                    <option value="" disabled selected>Pilih Jam Kerja</option>
+                    <option value="-">Libur</option>
+                    <option value="08.00 - 12.00">08.00 - 12.00</option>
+                    <option value="09.30 - 13.00">09.30 - 13.00</option>
+                    <option value="11.00 - 16.00">11.00 - 16.00</option>
+                    <option value="13.30 - 16.30">13.30 - 16.30</option>
+                    <option value="14.00 - 18.00">14.00 - 18.00</option>
+                </select>
             </div>
+
             <div class="mb-3">
                 <label for="Status_Kehadiran" class="form-label">Status Kehadiran</label>
                 <select name="Status_Kehadiran" id="Status_Kehadiran" class="form-select">

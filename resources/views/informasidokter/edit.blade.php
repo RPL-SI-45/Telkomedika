@@ -27,29 +27,78 @@
             </select>
         </div>
         <div class="mb-3">
-            <label for="Senin" class="form-label">Senin</label>
-            <input type="text" name="Senin" class="form-control" id="Senin" placeholder="Senin" value="{{ $informasidokter->Senin }}">
+        <label for="Senin" class="form-label">Senin</label>
+            <select name="Senin" id="Senin" class="form-select">
+                <option value="" disabled>Pilih Jam Kerja</option>
+                <option value="-" {{ $informasidokter->Senin === "-" ? 'selected' : '' }}>Libur</option>
+                <option value="08.00 - 12.00" {{ $informasidokter->Senin === "08.00 - 12.00" ? 'selected' : '' }}>08.00 - 12.00</option>
+                <option value="09.30 - 13.00" {{ $informasidokter->Senin === "09.30 - 13.00" ? 'selected' : '' }}>09.30 - 13.00</option>
+                <option value="11.00 - 16.00" {{ $informasidokter->Senin === "11.00 - 16.00" ? 'selected' : '' }}>11.00 - 16.00</option>
+                <option value="13.30 - 16.30" {{ $informasidokter->Senin === "13.30 - 16.30" ? 'selected' : '' }}>13.30 - 16.30</option>
+                <option value="14.00 - 18.00" {{ $informasidokter->Senin === "14.00 - 18.00" ? 'selected' : '' }}>14.00 - 18.00</option>
+            </select>
         </div>
         <div class="mb-3">
             <label for="Selasa" class="form-label">Selasa</label>
-            <input type="text" name="Selasa" class="form-control" id="Selasa" placeholder="Selasa" value="{{ $informasidokter->Selasa }}">
+            <select name="Selasa" id="Selasa" class="form-select">
+                <option value="" disabled>Pilih Jam Kerja</option>
+                <option value="-" {{ $informasidokter->Selasa === "-" ? 'selected' : '' }}>Libur</option>
+                <option value="08.00 - 12.00" {{ $informasidokter->Selasa === "08.00 - 12.00" ? 'selected' : '' }}>08.00 - 12.00</option>
+                <option value="09.30 - 13.00" {{ $informasidokter->Selasa === "09.30 - 13.00" ? 'selected' : '' }}>09.30 - 13.00</option>
+                <option value="11.00 - 16.00" {{ $informasidokter->Selasa === "11.00 - 16.00" ? 'selected' : '' }}>11.00 - 16.00</option>
+                <option value="13.30 - 16.30" {{ $informasidokter->Selasa === "13.30 - 16.30" ? 'selected' : '' }}>13.30 - 16.30</option>
+                <option value="14.00 - 18.00" {{ $informasidokter->Selasa === "14.00 - 18.00" ? 'selected' : '' }}>14.00 - 18.00</option>
+            </select>
         </div>
         <div class="mb-3">
             <label for="Rabu" class="form-label">Rabu</label>
-            <input type="text" name="Rabu" class="form-control" id="Rabu" placeholder="Rabu" value="{{ $informasidokter->Rabu }}">
+            <select name="Rabu" id="Rabu" class="form-select">
+                <option value="" disabled>Pilih Jam Kerja</option>
+                <option value="-" {{ $informasidokter->Rabu === "-" ? 'selected' : '' }}>Libur</option>
+                <option value="08.00 - 12.00" {{ $informasidokter->Rabu === "08.00 - 12.00" ? 'selected' : '' }}>08.00 - 12.00</option>
+                <option value="09.30 - 13.00" {{ $informasidokter->Rabu === "09.30 - 13.00" ? 'selected' : '' }}>09.30 - 13.00</option>
+                <option value="11.00 - 16.00" {{ $informasidokter->Rabu === "11.00 - 16.00" ? 'selected' : '' }}>11.00 - 16.00</option>
+                <option value="13.30 - 16.30" {{ $informasidokter->Rabu === "13.30 - 16.30" ? 'selected' : '' }}>13.30 - 16.30</option>
+                <option value="14.00 - 18.00" {{ $informasidokter->Rabu === "14.00 - 18.00" ? 'selected' : '' }}>14.00 - 18.00</option>
+            </select>
         </div>
         <div class="mb-3">
             <label for="Kamis" class="form-label">Kamis</label>
-            <input type="text" name="Kamis" class="form-control" id="Kamis" placeholder="Kamis" value="{{ $informasidokter->Kamis }}">
+            <select name="Kamis" id="Kamis" class="form-select">
+                <option value="" disabled>Pilih Jam Kerja</option>
+                <option value="-" {{ $informasidokter->Kamis === "-" ? 'selected' : '' }}>Libur</option>
+                <option value="08.00 - 12.00" {{ $informasidokter->Kamis === "08.00 - 12.00" ? 'selected' : '' }}>08.00 - 12.00</option>
+                <option value="09.30 - 13.00" {{ $informasidokter->Kamis === "09.30 - 13.00" ? 'selected' : '' }}>09.30 - 13.00</option>
+                <option value="11.00 - 16.00" {{ $informasidokter->Kamis === "11.00 - 16.00" ? 'selected' : '' }}>11.00 - 16.00</option>
+                <option value="13.30 - 16.30" {{ $informasidokter->Kamis === "13.30 - 16.30" ? 'selected' : '' }}>13.30 - 16.30</option>
+                <option value="14.00 - 18.00" {{ $informasidokter->Kamis === "14.00 - 18.00" ? 'selected' : '' }}>14.00 - 18.00</option>
+            </select>
         </div>
         <div class="mb-3">
             <label for="Jumat" class="form-label">Jumat</label>
-            <input type="text" name="Jumat" class="form-control" id="Jumat" placeholder="Jumat" value="{{ $informasidokter->Jumat }}">
+            <select name="Jumat" id="Jumat" class="form-select">
+                <option value="" disabled>Pilih Jam Kerja</option>
+                <option value="-" {{ $informasidokter->Jumat === "-" ? 'selected' : '' }}>Libur</option>
+                <option value="08.00 - 12.00" {{ $informasidokter->Jumat === "08.00 - 12.00" ? 'selected' : '' }}>08.00 - 12.00</option>
+                <option value="09.30 - 13.00" {{ $informasidokter->Jumat === "09.30 - 13.00" ? 'selected' : '' }}>09.30 - 13.00</option>
+                <option value="11.00 - 16.00" {{ $informasidokter->Jumat === "11.00 - 16.00" ? 'selected' : '' }}>11.00 - 16.00</option>
+                <option value="13.30 - 16.30" {{ $informasidokter->Jumat === "13.30 - 16.30" ? 'selected' : '' }}>13.30 - 16.30</option>
+                <option value="14.00 - 18.00" {{ $informasidokter->Jumat === "14.00 - 18.00" ? 'selected' : '' }}>14.00 - 18.00</option>
+            </select>
         </div>
         <div class="mb-3">
             <label for="Sabtu" class="form-label">Sabtu</label>
-            <input type="text" name="Sabtu" class="form-control" id="Sabtu" placeholder="Sabtu" value="{{ $informasidokter->Sabtu }}">
+            <select name="Sabtu" id="Sabtu" class="form-select">
+                <option value="" disabled>Pilih Jam Kerja</option>
+                <option value="-" {{ $informasidokter->Sabtu === "-" ? 'selected' : '' }}>Libur</option>
+                <option value="08.00 - 12.00" {{ $informasidokter->Sabtu === "08.00 - 12.00" ? 'selected' : '' }}>08.00 - 12.00</option>
+                <option value="09.30 - 13.00" {{ $informasidokter->Sabtu === "09.30 - 13.00" ? 'selected' : '' }}>09.30 - 13.00</option>
+                <option value="11.00 - 16.00" {{ $informasidokter->Sabtu === "11.00 - 16.00" ? 'selected' : '' }}>11.00 - 16.00</option>
+                <option value="13.30 - 16.30" {{ $informasidokter->Sabtu === "13.30 - 16.30" ? 'selected' : '' }}>13.30 - 16.30</option>
+                <option value="14.00 - 18.00" {{ $informasidokter->Sabtu === "14.00 - 18.00" ? 'selected' : '' }}>14.00 - 18.00</option>
+            </select>
         </div>
+
         <div class="mb-3">
             <label for="Status_Kehadiran" class="form-label">Status Kehadiran</label>
             <select name="Status_Kehadiran" id="Status_Kehadiran" class="form-select">
