@@ -18,7 +18,7 @@ return new class extends Migration
         Schema::create('antrian', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users', 'id')->onDelete('cascade')-> nullable;
-            $table->bigInteger('no_antrian')->nullable();
+            $table->bigInteger('no_antrian')->unique()->nullable();
             $table->string('nama_pasien');
             $table->string('jenis_kelamin');
             $table->string('no_telp');

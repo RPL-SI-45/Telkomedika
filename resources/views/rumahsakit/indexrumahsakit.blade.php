@@ -8,16 +8,18 @@
             Informasi Rumah Sakit Mitra Klinik Telkomedika
         </div>
             </br>
+            <div>
+                <a class="btn btn-secondary" href="/rumahsakit/createrumahsakit">Tambah Data Rumah Sakit Mitra</a>
+            </div>
+            </br>
         <div class="row">
             <div class="col-md-12">
                 <div class="card shadow mb-4">
-                    <div class="card-header py-3" style="background-color: #B6252A;">
-                        <div class="d-flex justify-content-between align-items-center my-3">
+                <div class="card-header" style="background-color: #B6252A; padding: 10px;">
+                    <div class="d-flex justify-content-between align-items-center">
                         <h5 class="m-0 font-weight-bold text-white">Daftar Rumah Sakit Mitra</h5>
-                        <div></div>
-                            <a class="btn btn-secondary" href="/rumahsakit/createrumahsakit" style="background-color: #C0C0C0; color: black;">Tambah Data Rumah Sakit Mitra</a>
-                        </div>
                     </div>
+                </div>
                     <div class="card-body mb-4">
                         <div class="row">
                             @foreach ($rumahsakit as $rs)
