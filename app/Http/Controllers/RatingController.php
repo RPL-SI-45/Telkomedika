@@ -27,11 +27,10 @@ class RatingController extends Controller
 
     public function indexedit() {
         $user = Auth::user();
-        $rating = Rating::where('user_id', $user->id)->get();
-        $rating = Rating::latest()->get();
+        $rating = Rating::where('user_id', $user->id)->latest()->get();
 
         return view('rating.indexedit', compact('rating'));
-    }
+        }
 
     public function create()
     {

@@ -4,6 +4,8 @@
 
 <div class="content flex-1 p-20">
     <div class="container mt-5">
+    <div class="h2 text-center mt-5 mb-4" style="font-family: Montserrat, sans-serif; font-weight: bold;">Daftar Riwayat Berobat Pasien</div>
+    <br>
         <div class="card shadow mb-4">
             <div class="card-header py-3" style="background-color: #B6252A;">
                 <nav class="navbar bg-body-tertiary">
