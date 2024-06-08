@@ -30,14 +30,7 @@ return new class extends Migration
 
             $table->string('dokter')->nullable();
             $table->string('fisik')->nullable();
-
-            $table->string('kondisi')->nullable();
             $table->string('diagnosis')->nullable();
-            $table->string('tindakan')->nullable();
-
-
-
-
             $table->timestamps();
         });
     }

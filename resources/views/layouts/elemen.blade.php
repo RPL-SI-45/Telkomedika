@@ -56,7 +56,7 @@
 </head>
 
 <body class="bg-gray-100">
-    <!-- Custom Top Bar with Navbar -->
+    <!-- Top Bar with Navbar -->
     <div class="bg" style="height: 60px; background-color: #B6252A; width: 100%; position: fixed; top: 0; left: 0; z-index: 1000;">
         <div class="container-fluid d-flex align-items-center justify-between h-100">
             <div class="d-flex align-items-center">
@@ -117,6 +117,12 @@
                 </a>
                 <a href="/rating" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
                     <i class="bi bi-star-fill mr-3"></i> Rating dan Ulasan
+                </a>
+                <a href="#" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
+                </a>
+                <a href="#" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
+                </a>
+                <a href="#" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
                 </a>
                 <a href="#" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
                 </a>

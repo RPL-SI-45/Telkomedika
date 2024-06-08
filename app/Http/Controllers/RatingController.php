@@ -15,17 +15,20 @@ class RatingController extends Controller
 
     public function indexrating() {
         $rating = Rating::all();
+        $rating = Rating::latest()->get();
         return view('rating.indexrating', compact(['rating']));
         }
 
     public function indexratingadmin() {
         $rating = Rating::all();
+        $rating = Rating::latest()->get();
         return view('rating.indexratingadmin', compact(['rating']));
         }
 
     public function indexedit() {
         $user = Auth::user();
         $rating = Rating::where('user_id', $user->id)->get();
+        $rating = Rating::latest()->get();
 
         return view('rating.indexedit', compact('rating'));
     }

@@ -86,7 +86,7 @@
 </head>
 
 <body class="bg-gray-100">
-    <!-- Custom Top Bar with Navbar -->
+    <!-- Top Bar with Navbar -->
     <div class="bg" style="height: 60px; background-color: #B6252A; width: 100%; position: fixed; top: 0; left: 0; z-index: 1000;">
         <div class="container-fluid d-flex align-items-center justify-between h-100">
             <div class="d-flex align-items-center">
@@ -231,36 +231,34 @@
         </div>
     </div>
     <!-- Footer Start -->
-<div class="container-fluid text-light footer" data-wow-delay="0.1s" style="background-color: #1F2937; padding: 10px;">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <!-- Google Maps embed code here -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15841.083137801683!2d107.630392!3d-6.9773433!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9ac24f5babb%3A0x2ca9f636654d9715!2sKlinik%20Telkomedika!5e0!3m2!1sid!2sid!4v1717257542757!5m2!1sid!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-                <div class="col-lg-3">
-                    <h4 class="text-light mb-4">Address</h4>
-                    <p class="mb-2"><i class="fa fa-map-marked"></i> Gedung Business Center, Jl. Telekomunikasi, Sukapura, Dayeuhkolot, Bandung, Jawa Barat, Indonesia 40257</p>
+        <div class="container-fluid text-light footer" data-wow-delay="0.1s" style="background-color: #1F2937; padding: 10px;">
+                <div class="container py-5">
+                    <div class="row g-5">
+                        <div class="col-lg-6">
+                            <!-- Google Maps embed  -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15841.083137801683!2d107.630392!3d-6.9773433!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9ac24f5babb%3A0x2ca9f636654d9715!2sKlinik%20Telkomedika!5e0!3m2!1sid!2sid!4v1717257542757!5m2!1sid!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4 class="text-light mb-4">Address</h4>
+                            <p class="mb-2"><i class="fa fa-map-marked"></i> Gedung Business Center, Jl. Telekomunikasi, Sukapura, Dayeuhkolot, Bandung, Jawa Barat, Indonesia 40257</p>
 
-                </div>
-                <div class="col-lg-3">
-                    <h4 class="text-light mb-4">Contact</h4>
-                    <p class="mb-2"><i class="bi bi-whatsapp me-3"></i>Whatsapp +62-811-2473-069</p>
-                    <p class="mb-2"><i class="bi bi-telephone me-3"></i>Call Center 1500115</p>
-                    <p class="mb-2"><i class="bi bi-envelope me-3"></i>Email cs@telkomedika.co.id</p>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4 class="text-light mb-4">Contact</h4>
+                            <p class="mb-2"><i class="bi bi-whatsapp me-3"></i>Whatsapp +62-811-2473-069</p>
+                            <p class="mb-2"><i class="bi bi-telephone me-3"></i>Call Center 1500115</p>
+                            <p class="mb-2"><i class="bi bi-envelope me-3"></i>Email cs@telkomedika.co.id</p>
 
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-<!-- Footer End -->
+     <!-- Footer End -->
+     </body>
     <footer>
-        <div class="bg" style="height: 60px; background-color:  #2D3748; width: 100%; position: fixed; top: 700px; left: 0; z-index: 1000; color: #fff; text-align: center;">
+        <div class="container-fluid text-light" style="height: 30px; position= fixed; background-color: #2D3748; width: 100%; color: #fff; text-align: center;">
             <p>Copyright &copy; 2024 All rights reserved | Kelompok D Telkomedika</p>
         </div>
     </footer>
-    @yield('main-section')
-</body>
-
 </html>
 

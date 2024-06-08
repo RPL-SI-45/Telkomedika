@@ -11,15 +11,21 @@
         <form action="/poli/{{$poli->id}}" method="POST">
         @method('put')
         @csrf
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Nama Poli</label>
-                    <select name="Nama_Poli" id="Nama_Poli" class="form-select">
-                    <option value="" disabled selected>Pilih Poli</option>
-                        <option value="Poli Umum">Poli Umum</option>
-                        <option value="Poli Gigi">Poli Gigi</option>
-                        <option value="Poli Mata">Poli Mata</option>
-            </select>
-        </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nama Poli</label>
+                <select name="Nama_Poli" class="form-select">
+                    <option value="" disabled selected>Pilih Layanan Poli</option>
+                    <option value="Poli Umum" @if ($poli->Nama_Poli=="Poli Umum") selected @endif>Poli Umum</option>
+                    <option value="Poli Gigi" @if ($poli->Nama_Poli=="Poli Gigi") selected @endif>Poli Gigi</option>
+                    <option value="Poli Mata" @if ($poli->Nama_Poli=="Poli Mata") selected @endif>Poli Mata</option>
+                </select>
+                    <div class="text-danger">
+                        @error('Nama_Poli')
+                        {{$message}}
+                        @enderror
+                    </div>
+            </div>
+
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Deskripsi Poli</label>
                     <input type="text" name="Deskripsi_Poli" class="form-control" id="exampleFormControlInput1" value="{{$poli->Deskripsi_Poli}}">
@@ -30,8 +36,15 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Jadwal Dokter</label>
-                    <input type="text" name="Jadwal_Dokter" class="form-control" id="exampleFormControlInput1" value="{{$poli->Jadwal_Dokter}}">
+                    <input type="text" name="Jadwal_Dokter" class="form-control" id="exampleFormControlInput1" value="{{ old('Jadwal_Dokter', $poli->Jadwal_Dokter) }}">
+                    <div class="text-danger">
+                        @error('Jadwal_Dokter')
+                        {{$message}}
+                        @enderror
+                    </div>
                 </div>
+
+
 
                 <div class="col-12 text-center mt-4 ">
                 <input type="submit" name="submit" class="btn btn-secondary" value="Update">

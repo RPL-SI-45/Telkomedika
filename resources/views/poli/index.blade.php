@@ -34,7 +34,7 @@
                 <td>{{$b->Nama_Poli}}</td>
                 <td>{{$b->Deskripsi_Poli}}</td>
                 <td>{{$b->Nama_Dokter}}</td>
-                <td>{{$b->Jadwal_dokter}}</td>
+                <td>{{$b->Jadwal_Dokter}}</td>
                 <td>
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <a class="btn btn-warning btn-sm" href="/poli/{{$b->id}}/edit">Edit</a>

@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('poli', function (Blueprint $table) {
             $table->id();
-            $table->string('Nama_Poli');
-            $table->string('Deskripsi_Poli');
-            $table->string('Nama_Dokter');
-            $table->string('Jadwal_dokter');
+            $table->string('Nama_Poli')->nullable();
+            $table->string('Deskripsi_Poli')->nullable();
+            $table->string('Nama_Dokter')->nullable();
+            $table->string('Jadwal_Dokter')->nullable();
             $table->timestamps();
         });
     }

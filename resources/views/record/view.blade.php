@@ -43,6 +43,7 @@
                                     <td>
                                         <div class="btn-group" role="group" aria-label="Basic example">
                                             <a dusk="viewriwayat" class="btn btn-primary btn-sm" href="/medicalrecords/{{$w->id}}/view">View</a>
+                                            <a dusk = "berirating" class="btn btn-warning btn-sm" href="/rating/createrating">Rating</a>
                                         </div>
                                     </td>
                                 </tr>

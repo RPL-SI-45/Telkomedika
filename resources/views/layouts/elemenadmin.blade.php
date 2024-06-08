@@ -56,7 +56,7 @@
 </head>
 
 <body class="bg-gray-100">
-    <!-- Custom Top Bar with Navbar -->
+    <!-- Top Bar with Navbar -->
     <div class="bg" style="height: 60px; background-color: #B6252A; width: 100%; position: fixed; top: 0; left: 0; z-index: 1000;">
         <div class="container-fluid d-flex align-items-center justify-between h-100">
             <div class="d-flex align-items-center">
